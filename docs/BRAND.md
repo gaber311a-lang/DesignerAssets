@@ -10,7 +10,7 @@
 A clean **electronic designs showcase / gallery** only:
 واجهات، موكأب، بوسترات، قوالب، أيقونات، ملصقات رقمية، وهويات بصرية.
 
-Site structure: header (logo + سدرة + tagline) → hero «معرض عرض التصاميم» → filters + search → masonry grid → detail → optional Saved → footer brand.
+Site structure: header (logo + سدرة + tagline) → hero «معرض تصاميم إلكترونية» → filters + search → masonry (~50 designs) → detail → Saved → footer brand.
 
 Live: https://gaber311a-lang.github.io/DesignerAssets/
 

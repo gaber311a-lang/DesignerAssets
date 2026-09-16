@@ -1,4 +1,4 @@
-# SEDRA / سدرة — معرض عرض التصاميم
+# SEDRA / سدرة — معرض تصاميم إلكترونية
 
 Clean **electronic designs showcase** (تصاميم إلكترونية فقط). Not a honey store, not a marketplace pitch.
 
@@ -16,11 +16,11 @@ Full lock: [BRAND.md](./BRAND.md).
 
 ## Site
 1. Header — logo + سدرة + tagline  
-2. Hero — «معرض عرض التصاميم»  
+2. Hero — «معرض تصاميم إلكترونية»  
 3. Filters by design type + catalog search  
 4. Masonry grid of design works (SVG/CSS art)  
 5. Detail view  
 6. Saved (optional)  
 7. Footer brand only  
 
-Catalog: 47 electronic designs · 7 categories (واجهات، موكأب، قوالب، أيقونات، بوسترات، ملصقات، هويات).
+Catalog: 50 electronic designs · 7 categories (واجهات، موكأب، قوالب، أيقونات، بوسترات، ملصقات، هويات).

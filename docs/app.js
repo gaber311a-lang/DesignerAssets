@@ -421,6 +421,40 @@
         <text x="60" y="186" text-anchor="middle" fill="${S}" font-family="Georgia, serif" font-size="11">Aa</text>
         <rect x="110" y="150" width="60" height="60" rx="8" fill="none" stroke="${K}" stroke-width="2"/>
         <text x="140" y="186" text-anchor="middle" fill="${K}" font-family="Georgia, serif" font-size="11">١٢</text>`),
+      "ui-wallet": svgWrap(200, 260, title, `
+        <rect x="36" y="40" width="128" height="180" rx="16" fill="none" stroke="${K}" stroke-width="2.5"/>
+        <rect x="36" y="40" width="128" height="44" rx="16" fill="${S}" opacity=".3"/>
+        <circle cx="64" cy="62" r="12" fill="${S}" opacity=".7"/>
+        <rect x="84" y="54" width="56" height="8" rx="4" fill="${S}"/>
+        <rect x="84" y="68" width="40" height="5" rx="2.5" fill="${K}" opacity=".5"/>
+        <rect x="52" y="108" width="96" height="36" rx="8" fill="${K}" opacity=".22"/>
+        <rect x="52" y="156" width="44" height="28" rx="6" fill="${S}" opacity=".4"/>
+        <rect x="104" y="156" width="44" height="28" rx="6" fill="${K}" opacity=".3"/>
+        <rect x="52" y="198" width="96" height="10" rx="5" fill="${S}" opacity=".55"/>`),
+      "mock-fold": svgWrap(200, 150, title, `
+        <rect x="18" y="30" width="78" height="100" rx="8" fill="none" stroke="${S}" stroke-width="2.5"/>
+        <rect x="104" y="30" width="78" height="100" rx="8" fill="none" stroke="${K}" stroke-width="2.5"/>
+        <rect x="28" y="42" width="58" height="8" rx="4" fill="${S}"/>
+        <rect x="28" y="58" width="58" height="54" rx="6" fill="${S}" opacity=".28"/>
+        <rect x="114" y="42" width="58" height="8" rx="4" fill="${K}"/>
+        <rect x="114" y="58" width="58" height="54" rx="6" fill="${K}" opacity=".22"/>
+        <line x1="100" y1="30" x2="100" y2="130" stroke="${S}" stroke-width="2" opacity=".5"/>`),
+      "tpl-calendar": svgWrap(200, 220, title, `
+        <rect x="28" y="24" width="144" height="172" rx="12" fill="none" stroke="${K}" stroke-width="2.5"/>
+        <rect x="28" y="24" width="144" height="32" rx="12" fill="${S}" opacity=".35"/>
+        <rect x="52" y="34" width="96" height="10" rx="5" fill="${S}"/>
+        <rect x="44" y="72" width="22" height="18" rx="4" fill="${S}" opacity=".45"/>
+        <rect x="72" y="72" width="22" height="18" rx="4" fill="${K}" opacity=".3"/>
+        <rect x="100" y="72" width="22" height="18" rx="4" fill="${K}" opacity=".22"/>
+        <rect x="128" y="72" width="22" height="18" rx="4" fill="${S}" opacity=".3"/>
+        <rect x="44" y="100" width="22" height="18" rx="4" fill="${K}" opacity=".25"/>
+        <rect x="72" y="100" width="22" height="18" rx="4" fill="${S}" opacity=".55"/>
+        <rect x="100" y="100" width="22" height="18" rx="4" fill="${K}" opacity=".2"/>
+        <rect x="128" y="100" width="22" height="18" rx="4" fill="${K}" opacity=".28"/>
+        <rect x="44" y="128" width="22" height="18" rx="4" fill="${K}" opacity=".18"/>
+        <rect x="72" y="128" width="22" height="18" rx="4" fill="${K}" opacity=".22"/>
+        <rect x="100" y="128" width="22" height="18" rx="4" fill="${S}" opacity=".35"/>
+        <rect x="128" y="128" width="22" height="18" rx="4" fill="${K}" opacity=".2"/>`),
     };
     if (byId[d.id]) return byId[d.id];
     return svgWrap(200, 250, title, `<rect x="40" y="80" width="120" height="12" rx="6" fill="${S}"/>`);
@@ -473,6 +507,9 @@
     { id: "br-social", title: "غلاف سوشيال", titleEn: "Social Cover", cat: "brand", format: "PNG", tags: ["هوية", "غلاف", "سوشيال"], desc: "غلاف ملف شخصي بشعار سدرة ونمط هادئ.", ratio: "16/9" },
     { id: "br-letterhead", title: "ترويسة رقمية", titleEn: "Digital Letterhead", cat: "brand", format: "PDF", tags: ["هوية", "ترويسة", "مستند"], desc: "ترويسة مستند رقمي بشعار ومساحات نص.", ratio: "10/13" },
     { id: "br-pattern", title: "نمط هوية", titleEn: "Brand Pattern", cat: "brand", format: "SVG", tags: ["هوية", "نمط", "pattern"], desc: "شبكة دوائر متكررة من ألوان سدرة للخلفيات.", ratio: "1/1" },
+    { id: "ui-wallet", title: "محفظة رقمية", titleEn: "Digital Wallet UI", cat: "ui", format: "Figma", tags: ["واجهة", "محفظة", "دفع"], desc: "شاشة محفظة رقمية برصيد وبطاقات إجراءات سريعة بهوية سدرة.", ratio: "10/13" },
+    { id: "mock-fold", title: "موكأب مطوية", titleEn: "Fold Brochure Mockup", cat: "mockup", format: "PNG", tags: ["موكأب", "مطوية", "عرض"], desc: "موكأب مطوية مفتوحة لعرض تصاميم مطبوعة رقمياً.", ratio: "4/3" },
+    { id: "tpl-calendar", title: "قالب تقويم", titleEn: "Calendar Template", cat: "template", format: "Figma", tags: ["قالب", "تقويم", "تخطيط"], desc: "شبكة تقويم شهرية أنيقة بألوان الغابة والنعناع.", ratio: "10/11" },
     { id: "br-guidelines", title: "دليل ألوان", titleEn: "Color Guidelines", cat: "brand", format: "PDF", tags: ["هوية", "ألوان", "دليل"], desc: "عينات ألوان وخطوط عربية/لاتينية لدليل العلامة.", ratio: "4/5" },
   ];
 
