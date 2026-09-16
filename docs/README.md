@@ -1,4 +1,4 @@
-# SEDRA / سدرة — معرض تصاميم إلكترونية
+# SEDRA / سدرة — معرض عرض التصاميم
 
 Clean **electronic designs showcase** (تصاميم إلكترونية فقط). Not a honey store, not a marketplace pitch.
 
@@ -16,7 +16,7 @@ Full lock: [BRAND.md](./BRAND.md).
 
 ## Site
 1. Header — logo + سدرة + tagline  
-2. Hero — «معرض تصاميم إلكترونية»  
+2. Hero — «معرض عرض التصاميم»  
 3. Filters by design type + catalog search  
 4. Masonry grid of design works (SVG/CSS art)  
 5. Detail view  

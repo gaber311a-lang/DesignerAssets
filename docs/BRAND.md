@@ -10,7 +10,7 @@
 A clean **electronic designs showcase / gallery** only:
 واجهات، موكأب، بوسترات، قوالب، أيقونات، ملصقات رقمية، وهويات بصرية.
 
-Site structure: header (logo + سدرة + tagline) → hero «معرض تصاميم إلكترونية» → filters + search → masonry (~50 designs) → detail → Saved → footer brand.
+Site structure: header (logo + سدرة + tagline) → hero «معرض عرض التصاميم» → filters + search → masonry (~50 designs) → detail → Saved → footer brand.
 
 Live: https://gaber311a-lang.github.io/DesignerAssets/
 
@@ -25,7 +25,7 @@ Live: https://gaber311a-lang.github.io/DesignerAssets/
 
 ## Logo
 - Path: `assets/logo.jpeg` — **only** mark (deep forest + mint calligraphy). Never substitute.
-- Crop as circle in UI (`object-fit: cover; object-position: center 40%`) so any older lockup text on the JPEG does not dominate.
+- Crop as circle in UI (`object-fit: cover; object-position: center 32%`) so any older lockup text on the JPEG does not dominate.
 - Adjacent copy is always **تصاميم إلكترونية / Electronic Designs**.
 
 ## Typography
