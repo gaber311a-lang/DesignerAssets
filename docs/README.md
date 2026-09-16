@@ -10,7 +10,7 @@ Source: this `docs/` folder on `main` (GitHub Pages `/docs`). RTL, mobile-first.
 - Name: سدرة / SEDRA
 - Tagline: تصاميم إلكترونية · Electronic Designs
 - Palette: Forest `#003626`, Mint `#CFEDC2`, Stroke `#C7E6BC`, Cream `#F5F7F2`
-- Logo: `assets/logo.jpeg` only (circle-cropped in UI)
+- Logo: `assets/logo.jpeg` only (circle-cropped + scaled in UI so older lockup text is not the message)
 
 Full lock: [BRAND.md](./BRAND.md).
 
@@ -19,8 +19,8 @@ Full lock: [BRAND.md](./BRAND.md).
 2. Hero — «معرض عرض التصاميم»  
 3. Filters by design type + catalog search  
 4. Masonry grid of design works (SVG/CSS art)  
-5. Detail view  
-6. Saved (optional)  
+5. Detail view — حفظ / تنزيل  
+6. Saved tab  
 7. Footer brand only  
 
-Catalog: 50 electronic designs · 7 categories (واجهات، موكأب، قوالب، أيقونات، بوسترات، ملصقات، هويات).
+Catalog: 54 electronic designs · 7 categories (واجهات، موكأب، قوالب، أيقونات، بوسترات، ملصقات، هويات).

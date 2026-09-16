@@ -455,6 +455,41 @@
         <rect x="72" y="128" width="22" height="18" rx="4" fill="${K}" opacity=".22"/>
         <rect x="100" y="128" width="22" height="18" rx="4" fill="${S}" opacity=".35"/>
         <rect x="128" y="128" width="22" height="18" rx="4" fill="${K}" opacity=".2"/>`),
+
+      "ui-music": svgWrap(200, 280, title, `
+        <rect x="40" y="24" width="120" height="232" rx="18" fill="none" stroke="${K}" stroke-width="2.5"/>
+        <circle cx="100" cy="88" r="36" fill="${S}" opacity=".25"/>
+        <circle cx="100" cy="88" r="14" fill="${S}" opacity=".7"/>
+        <rect x="56" y="140" width="88" height="8" rx="4" fill="${S}"/>
+        <rect x="68" y="156" width="64" height="6" rx="3" fill="${K}" opacity=".45"/>
+        <rect x="52" y="180" width="20" height="40" rx="4" fill="${S}" opacity=".55"/>
+        <rect x="80" y="188" width="20" height="32" rx="4" fill="${K}" opacity=".4"/>
+        <rect x="108" y="172" width="20" height="48" rx="4" fill="${S}" opacity=".35"/>
+        <rect x="136" y="196" width="16" height="24" rx="4" fill="${K}" opacity=".3"/>`),
+      "mock-billboard": svgWrap(200, 140, title, `
+        <rect x="16" y="28" width="168" height="72" rx="6" fill="none" stroke="${S}" stroke-width="2.5"/>
+        <rect x="24" y="36" width="152" height="56" rx="3" fill="${K}" opacity=".16"/>
+        <rect x="36" y="48" width="72" height="8" rx="4" fill="${S}"/>
+        <rect x="36" y="64" width="120" height="16" rx="4" fill="${S}" opacity=".3"/>
+        <rect x="70" y="108" width="8" height="18" fill="${K}" opacity=".4"/>
+        <rect x="122" y="108" width="8" height="18" fill="${K}" opacity=".4"/>
+        <rect x="50" y="126" width="100" height="6" rx="2" fill="${K}" opacity=".25"/>`),
+      "tpl-podcast": svgWrap(200, 200, title, `
+        <rect x="30" y="30" width="140" height="140" rx="16" fill="none" stroke="${K}" stroke-width="2"/>
+        <circle cx="100" cy="90" r="28" fill="${S}" opacity=".35"/>
+        <rect x="92" y="70" width="16" height="40" rx="8" fill="${S}"/>
+        <path d="M78 96c0 14 10 24 22 24s22-10 22-24" fill="none" stroke="${K}" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="100" y1="120" x2="100" y2="138" stroke="${S}" stroke-width="2.5" stroke-linecap="round"/>
+        <rect x="50" y="148" width="100" height="8" rx="4" fill="${S}" opacity=".5"/>`),
+      "ico-edit": svgWrap(200, 200, title, `
+        <g fill="none" stroke="${S}" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M58 142l80-80 14 14-80 80H58z"/>
+          <path d="M128 72l14 14"/>
+          <path d="M48 158h40"/>
+        </g>
+        <rect x="120" y="120" width="36" height="36" rx="8" fill="${K}" opacity=".25"/>
+        <circle cx="138" cy="138" r="6" fill="${S}"/>`),
+
     };
     if (byId[d.id]) return byId[d.id];
     return svgWrap(200, 250, title, `<rect x="40" y="80" width="120" height="12" rx="6" fill="${S}"/>`);
@@ -511,6 +546,10 @@
     { id: "mock-fold", title: "موكأب مطوية", titleEn: "Fold Brochure Mockup", cat: "mockup", format: "PNG", tags: ["موكأب", "مطوية", "عرض"], desc: "موكأب مطوية مفتوحة لعرض تصاميم مطبوعة رقمياً.", ratio: "4/3" },
     { id: "tpl-calendar", title: "قالب تقويم", titleEn: "Calendar Template", cat: "template", format: "Figma", tags: ["قالب", "تقويم", "تخطيط"], desc: "شبكة تقويم شهرية أنيقة بألوان الغابة والنعناع.", ratio: "10/11" },
     { id: "br-guidelines", title: "دليل ألوان", titleEn: "Color Guidelines", cat: "brand", format: "PDF", tags: ["هوية", "ألوان", "دليل"], desc: "عينات ألوان وخطوط عربية/لاتينية لدليل العلامة.", ratio: "4/5" },
+    { id: "ui-music", title: "مشغّل موسيقى", titleEn: "Music Player UI", cat: "ui", format: "Figma", tags: ["واجهة", "موسيقى", "مشغل"], desc: "شاشة مشغّل صوتي بقرص ألبوم وموجات صوتية بهوية سدرة.", ratio: "5/7" },
+    { id: "mock-billboard", title: "موكأب لوحة عرض", titleEn: "Billboard Mockup", cat: "mockup", format: "PNG", tags: ["موكأب", "لوحة", "عرض"], desc: "إطار لوحة عرض أفقية لعرض البوسترات الرقمية.", ratio: "10/7" },
+    { id: "tpl-podcast", title: "غلاف بودكاست", titleEn: "Podcast Cover", cat: "template", format: "PNG", tags: ["قالب", "بودكاست", "غلاف"], desc: "غلاف حلقة بودكاست بمكبر صوت وكتلة عنوان.", ratio: "1/1" },
+    { id: "ico-edit", title: "أيقونات تحرير", titleEn: "Edit Tool Icons", cat: "icon", format: "SVG", tags: ["أيقونة", "تحرير", "قلم"], desc: "رمز قلم وتحرير للواجهات الإبداعية.", ratio: "1/1" },
   ];
 
   const SUGGESTIONS = [

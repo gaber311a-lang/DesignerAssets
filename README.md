@@ -1,6 +1,6 @@
 # SEDRA / سدرة — تصاميم إلكترونية
 
-**Electronic designs showcase / gallery only** — موقع عرض تصاميم إلكترونية.
+**Electronic designs showcase / gallery only** — معرض تصاميم إلكترونية.
 
 **https://gaber311a-lang.github.io/DesignerAssets/**
 
@@ -9,9 +9,10 @@
 | Brand | سدرة / SEDRA |
 | Tagline | تصاميم إلكترونية · Electronic Designs |
 | Colors | Forest `#003626` · Mint `#CFEDC2` · Stroke `#C7E6BC` · Cream `#F5F7F2` |
-| Logo | `docs/assets/logo.jpeg` only (circle crop in UI) |
+| Logo | `docs/assets/logo.jpeg` only (circle crop + scale in UI) |
 | Pages source | [`docs/`](./docs/) on `main` |
 | Brand lock | [`docs/BRAND.md`](./docs/BRAND.md) |
+| Catalog | 54 electronic designs · 7 categories |
 
 Not honey / food / Abu Ezz. Not a generic assets marketplace. Not “Pinterest clone” marketing.
 
