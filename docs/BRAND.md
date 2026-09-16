@@ -4,43 +4,41 @@
 - **Arabic:** سدرة
 - **English:** SEDRA
 - **Tagline:** تصاميم إلكترونية · Electronic Designs
-- **Established:** ESTB 2025 (small mark only — never a product line)
+- **Established:** ESTB 2025 (small mark only)
 
 ## What this is
-A **gallery that only displays electronic designs** (تصاميم إلكترونية):
-UI kits, app mockups, posters, social templates, icons, digital stickers, brand layouts, and similar design assets.
+A clean **electronic designs showcase / gallery** only:
+واجهات، موكأب، بوسترات، قوالب، أيقونات، ملصقات رقمية، وهويات بصرية.
 
-Pinterest-like discovery UI in Sedra brand — search (title / tags / type / format), filter chips, masonry pins, detail + حفظ/تنزيل, Saved tab.
+Site structure: header (logo + سدرة + tagline) → hero «معرض عرض التصاميم» → filters + search → masonry grid → detail → optional Saved → footer brand.
 
-Built mobile-first for **iPhone Safari**. Live: https://gaber311a-lang.github.io/DesignerAssets/
+Live: https://gaber311a-lang.github.io/DesignerAssets/
 
-## Colors (exact — locked from official logo)
+## Colors (locked)
 | Role | Hex | Usage |
 |------|-----|--------|
 | Forest green | `#003626` | bg / primary dark / text on light |
-| Sage / mint | `#CFEDC2` | logo accent / CTAs on dark |
-| Stroke variant | `#C7E6BC` | borders, soft accents |
+| Mint / sage | `#CFEDC2` | logo accent / CTAs on dark (alt `#C5E0C1`) |
+| Stroke | `#C7E6BC` | borders, soft accents |
 | Soft cream | `#F5F7F2` | light sections |
 | White | `#FFFFFF` | sparingly on dark |
 
 ## Logo
-- Site path: `assets/logo.jpeg` — the **only** mark. Never fake calligraphy.
-- Header / hero / footer use that JPEG, CSS-cropped as a circle (`object-position: center 40%`) so the lockup’s older product line is not the on-screen message.
-- Adjacent site copy is always **تصاميم إلكترونية / Electronic Designs**.
+- Path: `assets/logo.jpeg` — **only** mark (deep forest + mint calligraphy). Never substitute.
+- Crop as circle in UI (`object-fit: cover; object-position: center 40%`) so any older lockup text on the JPEG does not dominate.
+- Adjacent copy is always **تصاميم إلكترونية / Electronic Designs**.
 
 ## Typography
-- English brand bits: Cormorant Garamond (serif)
-- Arabic: system stack (`"SF Arabic"`, `"Segoe UI"`, Tahoma, sans-serif)
-- Layout: Arabic-first RTL · mobile-first (iPhone Safari)
+- English brand: Cormorant Garamond
+- Arabic: system (`"SF Arabic"`, `"Segoe UI"`, Tahoma, sans-serif)
+- Layout: Arabic-first RTL · mobile-first
 
 ## Do not use
-- Honey / organic / food product copy (عسل، منتجات عضوية، نحل، برطمانات، هدايا عسل، منتجاتنا as honey cards، إلخ)
-- «Organic Honey Products» or any food-store / bee / jar messaging
-- Order forms for physical products
-- DesignerAssets violet UI
-- Abu Ezz / أبو عز red brand
+- Honey / organic / food copy (عسل، منتجات عضوية، نحل، برطمانات، «Organic Honey Products»)
+- Abu Ezz / أبو عز
+- DesignerAssets violet UI (`#5B4DFF` / `#8B82FF`) or generic assets-marketplace pitch
+- “Pinterest clone” marketing language
 - Random mismatched stock photos — coherent SVG/CSS art matching each design title only
 
-## SHIP LOCK (2026)
-Live Pages must stay **electronic designs only**. Logo JPEG may contain older lockup text — CSS circle crop + site copy override; never surface honey/food messaging in HTML/JS/CSS/README.
-
+## SHIP LOCK
+GitHub Pages stays **electronic designs gallery only**. Logo JPEG may retain older lockup text — CSS circle crop + site copy override; never surface honey/food messaging in HTML/JS visible UI.

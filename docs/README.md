@@ -1,21 +1,26 @@
-# SEDRA / سدرة — Electronic Designs Gallery
+# SEDRA / سدرة — معرض عرض التصاميم
 
-GitHub Pages site for **تصاميم إلكترونية** (electronic designs showcase only).
+Clean **electronic designs showcase** (تصاميم إلكترونية فقط). Not a honey store, not a marketplace pitch.
 
 **Live:** https://gaber311a-lang.github.io/DesignerAssets/
 
-Source of this site: this `docs/` folder on `main` (GitHub Pages `/docs`). iPhone Safari, RTL, mobile-first.
+Source: this `docs/` folder on `main` (GitHub Pages `/docs`). RTL, mobile-first.
 
 ## Brand
 - Name: سدرة / SEDRA
 - Tagline: تصاميم إلكترونية · Electronic Designs
-- Palette: Forest `#003626`, Sage `#CFEDC2`, Stroke `#C7E6BC`, Cream `#F5F7F2`
-- Logo: `assets/logo.jpeg` only (CSS-cropped circle mark; site copy is always electronic designs)
+- Palette: Forest `#003626`, Mint `#CFEDC2`, Stroke `#C7E6BC`, Cream `#F5F7F2`
+- Logo: `assets/logo.jpeg` only (circle-cropped in UI)
 
 Full lock: [BRAND.md](./BRAND.md).
 
-## Catalog
-UI kits, mockups, templates, icons, posters, digital stickers, brand layouts — unique SVG art in the Sedra palette. Search covers title, English title, tags, type, format, and description (Arabic-normalized).
+## Site
+1. Header — logo + سدرة + tagline  
+2. Hero — «معرض عرض التصاميم»  
+3. Filters by design type + catalog search  
+4. Masonry grid of design works (SVG/CSS art)  
+5. Detail view  
+6. Saved (optional)  
+7. Footer brand only  
 
-## Status
-**SHIPPED** on GitHub Pages (`main` → `/docs`). Catalog: 47 electronic designs · 7 categories.
+Catalog: 47 electronic designs · 7 categories (واجهات، موكأب، قوالب، أيقونات، بوسترات، ملصقات، هويات).
