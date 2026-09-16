@@ -82,6 +82,37 @@
         <circle cx="78" cy="262" r="3.5" fill="${S}"/>
         <circle cx="100" cy="262" r="3.5" fill="${K}"/>
         <circle cx="122" cy="262" r="3.5" fill="${K}" opacity=".5"/>`),
+      "ui-chat": svgWrap(200, 280, title, `
+        <rect x="24" y="24" width="152" height="232" rx="14" fill="none" stroke="${K}" stroke-width="2"/>
+        <circle cx="48" cy="48" r="10" fill="${S}" opacity=".7"/>
+        <rect x="66" y="42" width="60" height="7" rx="3.5" fill="${S}"/>
+        <rect x="66" y="54" width="40" height="5" rx="2.5" fill="${K}" opacity=".4"/>
+        <rect x="40" y="80" width="90" height="28" rx="12" fill="${K}" opacity=".25"/>
+        <rect x="70" y="120" width="90" height="28" rx="12" fill="${S}" opacity=".45"/>
+        <rect x="40" y="160" width="70" height="24" rx="12" fill="${K}" opacity=".2"/>
+        <rect x="36" y="214" width="100" height="22" rx="11" fill="${K}" opacity=".18"/>
+        <circle cx="156" cy="225" r="12" fill="${S}"/>`),
+      "ui-profile": svgWrap(200, 250, title, `
+        <circle cx="100" cy="70" r="32" fill="none" stroke="${S}" stroke-width="3"/>
+        <circle cx="100" cy="70" r="14" fill="${S}" opacity=".4"/>
+        <rect x="55" y="118" width="90" height="10" rx="5" fill="${S}"/>
+        <rect x="70" y="136" width="60" height="7" rx="3.5" fill="${K}" opacity=".5"/>
+        <rect x="28" y="168" width="48" height="48" rx="10" fill="${S}" opacity=".3"/>
+        <rect x="84" y="168" width="48" height="48" rx="10" fill="${K}" opacity=".28"/>
+        <rect x="140" y="168" width="32" height="48" rx="10" fill="${K}" opacity=".18"/>`),
+      "ui-login": svgWrap(200, 260, title, `
+        <rect x="36" y="36" width="128" height="188" rx="14" fill="none" stroke="${K}" stroke-width="2"/>
+        <circle cx="100" cy="72" r="18" fill="${S}" opacity=".5"/>
+        <rect x="52" y="110" width="96" height="14" rx="7" fill="${K}" opacity=".25"/>
+        <rect x="52" y="136" width="96" height="14" rx="7" fill="${K}" opacity=".18"/>
+        <rect x="52" y="168" width="96" height="28" rx="14" fill="${S}" opacity=".8"/>
+        <rect x="70" y="208" width="60" height="6" rx="3" fill="${K}" opacity=".35"/>`),
+      "ui-cards": svgWrap(200, 220, title, `
+        <rect x="20" y="40" width="100" height="130" rx="12" fill="${K}" opacity=".2" transform="rotate(-6 70 105)"/>
+        <rect x="50" y="30" width="110" height="140" rx="12" fill="none" stroke="${S}" stroke-width="2.5"/>
+        <rect x="66" y="50" width="70" height="8" rx="4" fill="${S}"/>
+        <rect x="66" y="70" width="78" height="50" rx="8" fill="${S}" opacity=".28"/>
+        <rect x="66" y="132" width="50" height="8" rx="4" fill="${K}" opacity=".45"/>`),
       "mock-phone": svgWrap(200, 333, title, `
         <rect x="52" y="22" width="96" height="250" rx="18" fill="none" stroke="${S}" stroke-width="3"/>
         <circle cx="100" cy="36" r="3" fill="${K}"/>
@@ -106,6 +137,26 @@
         <rect x="28" y="56" width="64" height="60" rx="6" fill="${S}" opacity=".3"/>
         <rect x="100" y="56" width="70" height="18" rx="4" fill="${K}" opacity=".35"/>
         <rect x="100" y="80" width="70" height="36" rx="4" fill="${K}" opacity=".18"/>`),
+      "mock-watch": svgWrap(200, 220, title, `
+        <rect x="78" y="18" width="44" height="28" rx="6" fill="${K}" opacity=".35"/>
+        <rect x="62" y="44" width="76" height="100" rx="22" fill="none" stroke="${S}" stroke-width="3"/>
+        <circle cx="100" cy="94" r="22" fill="${S}" opacity=".25"/>
+        <text x="100" y="100" text-anchor="middle" fill="${S}" font-family="Georgia, serif" font-size="14">9:41</text>
+        <rect x="78" y="152" width="44" height="40" rx="6" fill="${K}" opacity=".3"/>`),
+      "mock-desktop": svgWrap(200, 160, title, `
+        <rect x="20" y="22" width="160" height="96" rx="6" fill="none" stroke="${S}" stroke-width="2.5"/>
+        <rect x="28" y="30" width="144" height="72" rx="3" fill="${K}" opacity=".16"/>
+        <rect x="36" y="40" width="50" height="6" rx="3" fill="${S}"/>
+        <rect x="36" y="54" width="120" height="36" rx="4" fill="${S}" opacity=".28"/>
+        <rect x="70" y="122" width="60" height="8" rx="2" fill="${K}" opacity=".4"/>
+        <rect x="50" y="132" width="100" height="10" rx="3" fill="${K}" opacity=".25"/>`),
+      "mock-laptop": svgWrap(200, 150, title, `
+        <rect x="36" y="22" width="128" height="82" rx="6" fill="none" stroke="${S}" stroke-width="2.5"/>
+        <rect x="44" y="30" width="112" height="60" rx="3" fill="${K}" opacity=".18"/>
+        <rect x="52" y="40" width="40" height="6" rx="3" fill="${S}"/>
+        <rect x="52" y="54" width="80" height="28" rx="4" fill="${S}" opacity=".3"/>
+        <path d="M20 110h160l-10 18H30z" fill="${K}" opacity=".35"/>
+        <rect x="80" y="114" width="40" height="4" rx="2" fill="${S}" opacity=".5"/>`),
       "tpl-social": svgWrap(200, 250, title, `
         <rect x="22" y="22" width="74" height="74" rx="10" fill="${S}" opacity=".45"/>
         <rect x="104" y="22" width="74" height="74" rx="10" fill="${K}" opacity=".3"/>
@@ -143,6 +194,43 @@
         <rect x="70" y="132" width="8" height="8" rx="2" fill="${S}"/>
         <rect x="84" y="132" width="8" height="8" rx="2" fill="${K}" opacity=".5"/>
         <rect x="98" y="132" width="8" height="8" rx="2" fill="${K}" opacity=".3"/>`),
+      "tpl-youtube": svgWrap(200, 130, title, `
+        <rect x="12" y="22" width="176" height="86" rx="8" fill="none" stroke="${K}" stroke-width="2"/>
+        <rect x="12" y="22" width="176" height="86" rx="8" fill="${K}" opacity=".12"/>
+        <polygon points="92,50 92,80 118,65" fill="${S}"/>
+        <rect x="24" y="90" width="80" height="6" rx="3" fill="${S}" opacity=".6"/>
+        <rect x="24" y="100" width="48" height="4" rx="2" fill="${K}" opacity=".4"/>`),
+      "tpl-linkedin": svgWrap(200, 200, title, `
+        <rect x="24" y="24" width="152" height="152" rx="10" fill="none" stroke="${K}" stroke-width="2"/>
+        <circle cx="56" cy="56" r="14" fill="${S}" opacity=".7"/>
+        <rect x="80" y="46" width="72" height="8" rx="4" fill="${S}"/>
+        <rect x="80" y="60" width="48" height="6" rx="3" fill="${K}" opacity=".45"/>
+        <rect x="40" y="90" width="120" height="6" rx="3" fill="${K}" opacity=".35"/>
+        <rect x="40" y="104" width="100" height="6" rx="3" fill="${K}" opacity=".25"/>
+        <rect x="40" y="128" width="120" height="32" rx="6" fill="${S}" opacity=".22"/>`),
+      "tpl-invoice": svgWrap(200, 267, title, `
+        <rect x="28" y="16" width="144" height="236" rx="6" fill="none" stroke="${K}" stroke-width="2"/>
+        <rect x="40" y="28" width="50" height="10" rx="5" fill="${S}"/>
+        <rect x="120" y="30" width="36" height="6" rx="3" fill="${K}" opacity=".4"/>
+        <line x1="40" y1="52" x2="160" y2="52" stroke="${K}" stroke-width="1"/>
+        <rect x="40" y="64" width="80" height="6" rx="3" fill="${K}" opacity=".5"/>
+        <rect x="40" y="80" width="120" height="6" rx="3" fill="${K}" opacity=".3"/>
+        <rect x="40" y="96" width="100" height="6" rx="3" fill="${K}" opacity=".25"/>
+        <rect x="40" y="130" width="120" height="8" rx="4" fill="${S}" opacity=".2"/>
+        <rect x="40" y="148" width="120" height="8" rx="4" fill="${K}" opacity=".15"/>
+        <rect x="40" y="166" width="120" height="8" rx="4" fill="${S}" opacity=".15"/>
+        <rect x="100" y="210" width="60" height="14" rx="4" fill="${S}" opacity=".55"/>`),
+      "tpl-resume": svgWrap(200, 280, title, `
+        <rect x="24" y="16" width="152" height="248" rx="6" fill="none" stroke="${K}" stroke-width="2"/>
+        <rect x="24" y="16" width="52" height="248" fill="${S}" opacity=".18"/>
+        <circle cx="50" cy="48" r="14" fill="${S}" opacity=".6"/>
+        <rect x="36" y="78" width="28" height="5" rx="2.5" fill="${S}"/>
+        <rect x="36" y="92" width="28" height="5" rx="2.5" fill="${K}" opacity=".4"/>
+        <rect x="90" y="36" width="70" height="8" rx="4" fill="${S}"/>
+        <rect x="90" y="54" width="50" height="5" rx="2.5" fill="${K}" opacity=".4"/>
+        <rect x="90" y="80" width="70" height="5" rx="2.5" fill="${K}" opacity=".3"/>
+        <rect x="90" y="96" width="60" height="5" rx="2.5" fill="${K}" opacity=".22"/>
+        <rect x="90" y="130" width="70" height="40" rx="4" fill="${K}" opacity=".15"/>`),
       "ico-set": svgWrap(200, 200, title, `
         <g fill="none" stroke="${S}" stroke-width="2.4" stroke-linecap="round">
           <circle cx="58" cy="58" r="18"/>
@@ -176,6 +264,23 @@
         <circle cx="78" cy="152" r="8" fill="none" stroke="${S}" stroke-width="2.5"/>
         <circle cx="122" cy="152" r="8" fill="none" stroke="${S}" stroke-width="2.5"/>
         <rect x="70" y="84" width="60" height="8" rx="4" fill="${K}" opacity=".45"/>`),
+      "ico-media": svgWrap(200, 200, title, `
+        <circle cx="70" cy="100" r="36" fill="none" stroke="${S}" stroke-width="2.5"/>
+        <polygon points="62,82 62,118 90,100" fill="${S}"/>
+        <rect x="118" y="60" width="48" height="36" rx="6" fill="none" stroke="${K}" stroke-width="2"/>
+        <circle cx="142" cy="78" r="6" fill="${S}" opacity=".6"/>
+        <rect x="118" y="108" width="48" height="32" rx="6" fill="${K}" opacity=".25"/>`),
+      "ico-finance": svgWrap(200, 200, title, `
+        <rect x="50" y="50" width="100" height="100" rx="12" fill="none" stroke="${S}" stroke-width="2.5"/>
+        <text x="100" y="112" text-anchor="middle" fill="${S}" font-family="Georgia, serif" font-size="36">﷼</text>
+        <polyline points="60,150 85,120 110,135 140,95" fill="none" stroke="${K}" stroke-width="2.5" stroke-linecap="round"/>`),
+      "ico-social": svgWrap(200, 180, title, `
+        <circle cx="60" cy="70" r="22" fill="none" stroke="${S}" stroke-width="2.5"/>
+        <circle cx="140" cy="70" r="22" fill="none" stroke="${K}" stroke-width="2.5"/>
+        <circle cx="100" cy="120" r="22" fill="none" stroke="${S}" stroke-width="2.5"/>
+        <line x1="78" y1="80" x2="122" y2="80" stroke="${K}" stroke-width="2"/>
+        <line x1="75" y1="88" x2="90" y2="108" stroke="${K}" stroke-width="2"/>
+        <line x1="125" y1="88" x2="110" y2="108" stroke="${K}" stroke-width="2"/>`),
       "pos-event": svgWrap(200, 300, title, `
         <rect x="22" y="18" width="156" height="264" rx="4" fill="none" stroke="${K}" stroke-width="2"/>
         <text x="100" y="70" text-anchor="middle" fill="${S}" font-family="Georgia, serif" font-size="20">SEDRA</text>
@@ -210,6 +315,28 @@
         <rect x="40" y="184" width="36" height="48" rx="4" fill="${K}" opacity=".25"/>
         <rect x="82" y="184" width="36" height="48" rx="4" fill="${S}" opacity=".3"/>
         <rect x="124" y="184" width="36" height="48" rx="4" fill="${K}" opacity=".18"/>`),
+      "pos-typo": svgWrap(200, 280, title, `
+        <text x="28" y="90" fill="${S}" font-family="Georgia, serif" font-size="42">سدرة</text>
+        <text x="28" y="130" fill="${K}" font-family="Georgia, serif" font-size="18" letter-spacing="4">SEDRA</text>
+        <line x1="28" y1="150" x2="120" y2="150" stroke="${S}" stroke-width="2"/>
+        <rect x="28" y="170" width="100" height="6" rx="3" fill="${K}" opacity=".4"/>
+        <rect x="28" y="186" width="70" height="6" rx="3" fill="${K}" opacity=".25"/>
+        <text x="28" y="240" fill="${S}" font-family="Georgia, serif" font-size="11" letter-spacing="2">TYPE POSTER</text>`),
+      "pos-minimal": svgWrap(200, 300, title, `
+        <circle cx="100" cy="100" r="50" fill="none" stroke="${S}" stroke-width="1.5"/>
+        <circle cx="100" cy="100" r="2" fill="${S}"/>
+        <line x1="100" y1="160" x2="100" y2="220" stroke="${K}" stroke-width="1.5"/>
+        <rect x="60" y="232" width="80" height="6" rx="3" fill="${S}" opacity=".5"/>
+        <rect x="75" y="250" width="50" height="4" rx="2" fill="${K}" opacity=".35"/>`),
+      "pos-workshop": svgWrap(200, 280, title, `
+        <rect x="20" y="20" width="160" height="240" rx="4" fill="none" stroke="${K}" stroke-width="2"/>
+        <rect x="20" y="20" width="160" height="50" fill="${S}" opacity=".2"/>
+        <text x="100" y="52" text-anchor="middle" fill="${S}" font-family="Georgia, serif" font-size="16">WORKSHOP</text>
+        <rect x="40" y="90" width="120" height="10" rx="5" fill="${S}"/>
+        <rect x="50" y="112" width="100" height="7" rx="3.5" fill="${K}" opacity=".45"/>
+        <rect x="40" y="150" width="50" height="50" rx="6" fill="${S}" opacity=".3"/>
+        <rect x="110" y="150" width="50" height="50" rx="6" fill="${K}" opacity=".25"/>
+        <rect x="55" y="220" width="90" height="20" rx="10" fill="${S}" opacity=".4"/>`),
       "stk-pack": svgWrap(200, 200, title, `
         <rect x="28" y="36" width="64" height="64" rx="16" fill="${S}" opacity=".85"/>
         <circle cx="140" cy="64" r="30" fill="${K}" opacity=".7"/>
@@ -227,6 +354,23 @@
         <path d="M100 70l4 8 9 1-7 6 2 9-8-5-8 5 2-9-7-6 9-1z" fill="${G}"/>
         <rect x="138" y="70" width="20" height="6" rx="3" fill="${G}" opacity=".7"/>
         <rect x="138" y="84" width="20" height="6" rx="3" fill="${G}" opacity=".4"/>`),
+      "stk-badges": svgWrap(200, 200, title, `
+        <polygon points="100,30 118,70 162,70 126,98 140,142 100,116 60,142 74,98 38,70 82,70" fill="${S}" opacity=".75"/>
+        <circle cx="100" cy="92" r="18" fill="${G}" opacity=".35"/>
+        <text x="100" y="98" text-anchor="middle" fill="${G}" font-family="Georgia, serif" font-size="12">★</text>`),
+      "stk-frames": svgWrap(200, 220, title, `
+        <rect x="40" y="30" width="120" height="160" rx="20" fill="none" stroke="${S}" stroke-width="4" stroke-dasharray="8 6"/>
+        <circle cx="100" cy="100" r="36" fill="${K}" opacity=".25"/>
+        <rect x="70" y="150" width="60" height="8" rx="4" fill="${S}" opacity=".5"/>`),
+      "stk-emoji": svgWrap(200, 180, title, `
+        <circle cx="55" cy="90" r="32" fill="${S}" opacity=".85"/>
+        <circle cx="100" cy="90" r="32" fill="${K}" opacity=".7"/>
+        <circle cx="145" cy="90" r="32" fill="${S}" opacity=".5"/>
+        <circle cx="48" cy="82" r="3.5" fill="${G}"/><circle cx="62" cy="82" r="3.5" fill="${G}"/>
+        <path d="M48 98c5 7 12 7 14 0" stroke="${G}" stroke-width="2" fill="none"/>
+        <path d="M88 82h24M100 74v16" stroke="${G}" stroke-width="2.5" stroke-linecap="round"/>
+        <circle cx="138" cy="84" r="3" fill="${G}"/><circle cx="152" cy="84" r="3" fill="${G}"/>
+        <path d="M138 100c5-6 14-6 18 0" stroke="${G}" stroke-width="2" fill="none"/>`),
       "br-kit": svgWrap(200, 250, title, `
         <circle cx="100" cy="72" r="30" fill="none" stroke="${S}" stroke-width="3"/>
         <text x="100" y="78" text-anchor="middle" fill="${S}" font-family="Georgia, serif" font-size="14">سدرة</text>
@@ -247,6 +391,36 @@
         <circle cx="44" cy="56" r="16" fill="${S}" opacity=".7"/>
         <rect x="70" y="44" width="96" height="8" rx="4" fill="${S}"/>
         <rect x="70" y="60" width="64" height="6" rx="3" fill="${K}" opacity=".45"/>`),
+      "br-letterhead": svgWrap(200, 260, title, `
+        <rect x="24" y="16" width="152" height="228" rx="4" fill="none" stroke="${K}" stroke-width="1.5"/>
+        <circle cx="48" cy="40" r="12" fill="${S}" opacity=".7"/>
+        <rect x="68" y="32" width="60" height="7" rx="3.5" fill="${S}"/>
+        <rect x="68" y="44" width="40" height="5" rx="2.5" fill="${K}" opacity=".4"/>
+        <line x1="36" y1="64" x2="164" y2="64" stroke="${K}" stroke-width="1"/>
+        <rect x="40" y="84" width="120" height="5" rx="2.5" fill="${K}" opacity=".3"/>
+        <rect x="40" y="100" width="100" height="5" rx="2.5" fill="${K}" opacity=".22"/>
+        <rect x="40" y="116" width="110" height="5" rx="2.5" fill="${K}" opacity=".18"/>
+        <rect x="40" y="132" width="90" height="5" rx="2.5" fill="${K}" opacity=".15"/>`),
+      "br-pattern": svgWrap(200, 200, title, `
+        <circle cx="50" cy="50" r="18" fill="${S}" opacity=".4"/>
+        <circle cx="100" cy="50" r="18" fill="${K}" opacity=".35"/>
+        <circle cx="150" cy="50" r="18" fill="${S}" opacity=".3"/>
+        <circle cx="50" cy="100" r="18" fill="${K}" opacity=".3"/>
+        <circle cx="100" cy="100" r="18" fill="${S}" opacity=".5"/>
+        <circle cx="150" cy="100" r="18" fill="${K}" opacity=".28"/>
+        <circle cx="50" cy="150" r="18" fill="${S}" opacity=".28"/>
+        <circle cx="100" cy="150" r="18" fill="${K}" opacity=".4"/>
+        <circle cx="150" cy="150" r="18" fill="${S}" opacity=".35"/>`),
+      "br-guidelines": svgWrap(200, 250, title, `
+        <rect x="30" y="30" width="50" height="50" rx="8" fill="${S}"/>
+        <rect x="90" y="30" width="50" height="50" rx="8" fill="${K}"/>
+        <rect x="150" y="30" width="20" height="50" rx="6" fill="#F5F7F2" stroke="${K}"/>
+        <rect x="30" y="100" width="140" height="8" rx="4" fill="${S}" opacity=".4"/>
+        <rect x="30" y="120" width="100" height="8" rx="4" fill="${K}" opacity=".35"/>
+        <rect x="30" y="150" width="60" height="60" rx="8" fill="none" stroke="${S}" stroke-width="2"/>
+        <text x="60" y="186" text-anchor="middle" fill="${S}" font-family="Georgia, serif" font-size="11">Aa</text>
+        <rect x="110" y="150" width="60" height="60" rx="8" fill="none" stroke="${K}" stroke-width="2"/>
+        <text x="140" y="186" text-anchor="middle" fill="${K}" font-family="Georgia, serif" font-size="11">١٢</text>`),
     };
     if (byId[d.id]) return byId[d.id];
     return svgWrap(200, 250, title, `<rect x="40" y="80" width="120" height="12" rx="6" fill="${S}"/>`);
@@ -257,26 +431,49 @@
     { id: "ui-mobile", title: "تطبيق جوال أنيق", titleEn: "Elegant Mobile App", cat: "ui", format: "Figma", tags: ["واجهة", "موبايل", "تطبيق"], desc: "شاشات تدفق رقمية بألوان الغابة والنعناع لتطبيق جوال.", ratio: "3/5" },
     { id: "ui-settings", title: "شاشة إعدادات", titleEn: "Settings Screen", cat: "ui", format: "SVG", tags: ["واجهة", "إعدادات", "SVG"], desc: "مكوّنات إعدادات قابلة لإعادة الاستخدام بمفاتيح وتسميات واضحة.", ratio: "1/1" },
     { id: "ui-onboard", title: "شاشات ترحيب", titleEn: "Onboarding Screens", cat: "ui", format: "Figma", tags: ["واجهة", "ترحيب", "onboarding"], desc: "ثلاث شاشات ترحيب بتقدّم نقطي وزر أساسي sage.", ratio: "5/7" },
+    { id: "ui-chat", title: "واجهة محادثة", titleEn: "Chat UI", cat: "ui", format: "Figma", tags: ["واجهة", "محادثة", "رسائل"], desc: "فقاعات رسائل وترويسة محادثة بهوية سدرة الهادئة.", ratio: "5/7" },
+    { id: "ui-profile", title: "ملف شخصي", titleEn: "Profile Screen", cat: "ui", format: "Figma", tags: ["واجهة", "بروفايل", "حساب"], desc: "شاشة ملف شخصي بصورة دائرية وبطاقات إحصاءات.", ratio: "4/5" },
+    { id: "ui-login", title: "شاشة دخول", titleEn: "Login Screen", cat: "ui", format: "SVG", tags: ["واجهة", "دخول", "نموذج"], desc: "نموذج دخول نظيف بحقول وحدّ زر sage.", ratio: "10/13" },
+    { id: "ui-cards", title: "بطاقات واجهة", titleEn: "UI Card Stack", cat: "ui", format: "Figma", tags: ["واجهة", "بطاقات", "مكوّنات"], desc: "تكديس بطاقات واجهة بظل ناعم ولون سدرة.", ratio: "10/11" },
     { id: "mock-phone", title: "موكأب هاتف", titleEn: "Phone Mockup", cat: "mockup", format: "PNG", tags: ["موكأب", "هاتف", "عرض"], desc: "إطار هاتف لعرض شاشات التطبيق بخلفية سدرة.", ratio: "3/5" },
     { id: "mock-tablet", title: "موكأب جهاز لوحي", titleEn: "Tablet Mockup", cat: "mockup", format: "PNG", tags: ["موكأب", "تابلت"], desc: "موكأب أفقي للعروض التقديمية والواجهات العريضة.", ratio: "5/4" },
     { id: "mock-browser", title: "موكأب متصفح", titleEn: "Browser Mockup", cat: "mockup", format: "SVG", tags: ["موكأب", "ويب"], desc: "نافذة متصفح خفيفة لعرض المواقع واللوحات.", ratio: "4/3" },
+    { id: "mock-watch", title: "موكأب ساعة", titleEn: "Watch Mockup", cat: "mockup", format: "PNG", tags: ["موكأب", "ساعة", "wearable"], desc: "إطار ساعة ذكية لعرض واجهات صغيرة.", ratio: "10/11" },
+    { id: "mock-desktop", title: "موكأب شاشة", titleEn: "Desktop Monitor", cat: "mockup", format: "SVG", tags: ["موكأب", "سطح مكتب", "شاشة"], desc: "شاشة مكتبية لعرض لوحات الويب والداشبورد.", ratio: "5/4" },
+    { id: "mock-laptop", title: "موكأب لابتوب", titleEn: "Laptop Mockup", cat: "mockup", format: "PNG", tags: ["موكأب", "لابتوب"], desc: "لابتوب مفتوح لعرض تطبيقات سطح المكتب.", ratio: "4/3" },
     { id: "tpl-social", title: "قوالب سوشيال", titleEn: "Social Templates", cat: "template", format: "Figma", tags: ["قالب", "سوشيال", "إنستغرام"], desc: "مجموعة منشورات مربعة وقصص عمودية بهوية سدرة.", ratio: "4/5" },
     { id: "tpl-story", title: "قالب قصة", titleEn: "Story Template", cat: "template", format: "PNG", tags: ["قالب", "ستوري"], desc: "إطار قصة جاهز للنص والصورة مع شريط علوي ناعم.", ratio: "9/16" },
     { id: "tpl-email", title: "قالب نشرة بريدية", titleEn: "Email Newsletter", cat: "template", format: "HTML", tags: ["قالب", "بريد", "نشرة", "HTML"], desc: "تخطيط رسالة بريدية نظيف للعلامات الهادئة.", ratio: "3/4" },
     { id: "tpl-slides", title: "قالب عرض تقديمي", titleEn: "Slide Deck", cat: "template", format: "PDF", tags: ["قالب", "شرائح", "عرض"], desc: "شريحة عنوان بهوية سدرة للعروض الرقمية.", ratio: "4/3" },
+    { id: "tpl-youtube", title: "غلاف يوتيوب", titleEn: "YouTube Thumbnail", cat: "template", format: "PNG", tags: ["قالب", "يوتيوب", "غلاف"], desc: "غلاف فيديو بنسبة عريضة مع أيقونة تشغيل sage.", ratio: "16/9" },
+    { id: "tpl-linkedin", title: "منشور لينكدإن", titleEn: "LinkedIn Post", cat: "template", format: "Figma", tags: ["قالب", "لينكدإن", "مهني"], desc: "قالب منشور مهني بصورة وترويسة وهوية سدرة.", ratio: "1/1" },
+    { id: "tpl-invoice", title: "قالب فاتورة", titleEn: "Invoice Template", cat: "template", format: "PDF", tags: ["قالب", "فاتورة", "مستند"], desc: "فاتورة رقمية بجدول بنود وملخص بلون سدرة.", ratio: "3/4" },
+    { id: "tpl-resume", title: "قالب سيرة ذاتية", titleEn: "Resume Layout", cat: "template", format: "PDF", tags: ["قالب", "سيرة", "CV"], desc: "تخطيط سيرة ذاتية بعمود جانبي وكتلة محتوى.", ratio: "5/7" },
     { id: "ico-set", title: "حزمة أيقونات خطية", titleEn: "Line Icon Pack", cat: "icon", format: "SVG", tags: ["أيقونة", "خطية", "SVG"], desc: "أيقونات خطية بوزن موحّد ولون sage على خلفية داكنة.", ratio: "1/1" },
     { id: "ico-nav", title: "أيقونات تنقل", titleEn: "Nav Icons", cat: "icon", format: "SVG", tags: ["أيقونة", "تنقل", "تاب بار"], desc: "مجموعة أيقونات شريط سفلي لتطبيقات الجوال.", ratio: "5/4" },
     { id: "ico-weather", title: "أيقونات طقس", titleEn: "Weather Icons", cat: "icon", format: "SVG", tags: ["أيقونة", "طقس"], desc: "رموز طقس بسيطة بضربات sage.", ratio: "1/1" },
     { id: "ico-commerce", title: "أيقونات تجارة", titleEn: "Commerce Icons", cat: "icon", format: "SVG", tags: ["أيقونة", "تجارة", "سلة"], desc: "أيقونة سلة وتجارة إلكترونية بخطوط سدرة.", ratio: "1/1" },
+    { id: "ico-media", title: "أيقونات وسائط", titleEn: "Media Icons", cat: "icon", format: "SVG", tags: ["أيقونة", "وسائط", "تشغيل"], desc: "رموز تشغيل وكاميرا للواجهات الإعلامية.", ratio: "1/1" },
+    { id: "ico-finance", title: "أيقونات مالية", titleEn: "Finance Icons", cat: "icon", format: "SVG", tags: ["أيقونة", "مالية", "ريال"], desc: "رمز ريال ومخطط صاعد للواجهات المالية.", ratio: "1/1" },
+    { id: "ico-social", title: "أيقونات تواصل", titleEn: "Social Network Icons", cat: "icon", format: "SVG", tags: ["أيقونة", "تواصل", "شبكة"], desc: "عقد شبكة اجتماعية مترابطة بضربات سدرة.", ratio: "10/9" },
     { id: "pos-event", title: "بوستر فعالية", titleEn: "Event Poster", cat: "poster", format: "PDF", tags: ["بوستر", "فعالية", "طباعة"], desc: "بوستر رأسي لفعالية تصميم بهوية سدرة.", ratio: "2/3" },
     { id: "pos-quote", title: "بوستر اقتباس", titleEn: "Quote Poster", cat: "poster", format: "PNG", tags: ["بوستر", "اقتباس", "تايبو"], desc: "تكوين تايبوغرافي هادئ للاقتباسات العربية.", ratio: "4/5" },
-    { id: "pos-launch", title: "بوستر إطلاق", titleEn: "Launch Poster", cat: "poster", format: "AI", tags: ["بوستر", "إطلاق", "منتج"], desc: "إعلان إطلاق منتج رقمي بلمسة فاخرة.", ratio: "3/4" },
+    { id: "pos-launch", title: "بوستر إطلاق", titleEn: "Launch Poster", cat: "poster", format: "AI", tags: ["بوستر", "إطلاق", "منتج رقمي"], desc: "إعلان إطلاق منتج رقمي بلمسة فاخرة.", ratio: "3/4" },
     { id: "pos-exhibit", title: "بوستر معرض", titleEn: "Exhibit Poster", cat: "poster", format: "PDF", tags: ["بوستر", "معرض", "تصميم"], desc: "ملصق معرض تصاميم إلكترونية بشبكة أعمال مصغّرة.", ratio: "5/7" },
+    { id: "pos-typo", title: "بوستر تايبوغرافي", titleEn: "Typography Poster", cat: "poster", format: "AI", tags: ["بوستر", "تايبو", "حروف"], desc: "ملصق حروف يبرز اسم سدرة بتكوين مطبعي.", ratio: "5/7" },
+    { id: "pos-minimal", title: "بوستر بسيط", titleEn: "Minimal Poster", cat: "poster", format: "PDF", tags: ["بوستر", "بسيط", "minimal"], desc: "تكوين minimal بدائرة وخط رأسي وهوية هادئة.", ratio: "2/3" },
+    { id: "pos-workshop", title: "بوستر ورشة", titleEn: "Workshop Poster", cat: "poster", format: "PNG", tags: ["بوستر", "ورشة", "تعليم"], desc: "إعلان ورشة تصميم إلكتروني بأقسام بصرية واضحة.", ratio: "5/7" },
     { id: "stk-pack", title: "ملصقات رقمية", titleEn: "Digital Stickers", cat: "sticker", format: "PNG", tags: ["ملصق", "ستيكر", "رقمي"], desc: "حزمة ملصقات شفافة للاستخدام في التطبيقات والقصص.", ratio: "1/1" },
     { id: "stk-react", title: "ملصقات تفاعل", titleEn: "Reaction Stickers", cat: "sticker", format: "SVG", tags: ["ملصق", "تفاعل", "إيموجي"], desc: "ردود فعل بصرية متناسقة مع لوحة سدرة.", ratio: "5/4" },
+    { id: "stk-badges", title: "شارات رقمية", titleEn: "Digital Badges", cat: "sticker", format: "SVG", tags: ["ملصق", "شارة", "badge"], desc: "شارة نجمة رقمية للاستخدام في الملفات والقصص.", ratio: "1/1" },
+    { id: "stk-frames", title: "إطارات ملصقات", titleEn: "Sticker Frames", cat: "sticker", format: "PNG", tags: ["ملصق", "إطار", "حدود"], desc: "إطار متقطع دائري لقصاصات القصص الرقمية.", ratio: "10/11" },
+    { id: "stk-emoji", title: "ملصقات تعبيرية", titleEn: "Emoji Stickers", cat: "sticker", format: "SVG", tags: ["ملصق", "تعبير", "وجوه"], desc: "ثلاثة وجوه تعبيرية بلوني sage وstroke.", ratio: "10/9" },
     { id: "br-kit", title: "نظام هوية سدرة", titleEn: "Sedra Brand Kit", cat: "brand", format: "PDF", tags: ["هوية", "براند", "دليل"], desc: "لوحة ألوان، مسافات شعار، وعينات تطبيق للهوية.", ratio: "4/5" },
     { id: "br-cards", title: "بطاقات أعمال", titleEn: "Business Cards", cat: "brand", format: "AI", tags: ["هوية", "بطاقة", "مطبوعات"], desc: "وجهان لبطاقة أعمال رقمية قابلة للطباعة.", ratio: "5/3" },
     { id: "br-social", title: "غلاف سوشيال", titleEn: "Social Cover", cat: "brand", format: "PNG", tags: ["هوية", "غلاف", "سوشيال"], desc: "غلاف ملف شخصي بشعار سدرة ونمط هادئ.", ratio: "16/9" },
+    { id: "br-letterhead", title: "ترويسة رقمية", titleEn: "Digital Letterhead", cat: "brand", format: "PDF", tags: ["هوية", "ترويسة", "مستند"], desc: "ترويسة مستند رقمي بشعار ومساحات نص.", ratio: "10/13" },
+    { id: "br-pattern", title: "نمط هوية", titleEn: "Brand Pattern", cat: "brand", format: "SVG", tags: ["هوية", "نمط", "pattern"], desc: "شبكة دوائر متكررة من ألوان سدرة للخلفيات.", ratio: "1/1" },
+    { id: "br-guidelines", title: "دليل ألوان", titleEn: "Color Guidelines", cat: "brand", format: "PDF", tags: ["هوية", "ألوان", "دليل"], desc: "عينات ألوان وخطوط عربية/لاتينية لدليل العلامة.", ratio: "4/5" },
   ];
 
   const SUGGESTIONS = [
