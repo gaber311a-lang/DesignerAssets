@@ -1,12 +1,12 @@
-/* Designer Assets — mobile web preview */
+/* Designer Assets — premium iOS-like mobile preview */
 (function () {
   "use strict";
 
   const TYPES = {
-    image: { label: "صور", icon: "🖼" },
-    accessory: { label: "ملحقات", icon: "🧩" },
-    sticker: { label: "ستيكرات", icon: "😊" },
-    idea: { label: "أفكار", icon: "💡" },
+    image: { label: "صور" },
+    accessory: { label: "ملحقات" },
+    sticker: { label: "ستيكرات" },
+    idea: { label: "أفكار" },
   };
 
   const CHIPS = [
@@ -18,38 +18,48 @@
   ];
 
   const SAMPLES = [
-    ["تدرج بنفسجي ناعم", "image", ["تدرج", "بنفسجي", "خلفية"], false, false, "PNG", "1:1", 0.72],
-    ["ملصق نجمة ذهبية", "sticker", ["ملصق", "نجمة", "ذهبي"], true, false, "PNG", "1:1", 0.12],
-    ["إطار إنستغرام", "accessory", ["إطار", "سوشيال", "إنستغرام"], false, false, "SVG", "9:16", 0.55],
-    ["فكرة بوست رمضان", "idea", ["رمضان", "بوست", "فكرة"], false, false, "PDF", "4:3", 0.08],
-    ["نمط هندسي أزرق", "image", ["نمط", "هندسي", "أزرق"], true, true, "JPG", "16:9", 0.58],
-    ["ستيكر قلب متحرك", "sticker", ["قلب", "ستيكر", "لطيف"], false, false, "PNG", "1:1", 0.95],
-    ["مجموعة أيقونات UI", "accessory", ["أيقونات", "UI", "واجهة"], true, false, "SVG", "1:1", 0.65],
-    ["لوحة ألوان سعودية", "idea", ["ألوان", "هوية", "سعودي"], false, false, "PDF", "16:9", 0.78],
-    ["خلفية رخامية بيضاء", "image", ["رخام", "خلفية", "فاخر"], false, false, "HEIC", "4:3", 0.02],
-    ["شريط زخرفي عربي", "accessory", ["زخرفة", "عربي", "شريط"], false, false, "SVG", "16:9", 0.82],
-    ["ستيكر قهوة", "sticker", ["قهوة", "لطيف", "ستيكر"], false, false, "PNG", "1:1", 0.08],
-    ["موك أب آيفون", "image", ["موكأب", "آيفون", "عرض"], true, false, "PNG", "9:16", 0.45],
-    ["فكرة كوفر يوتيوب", "idea", ["يوتيوب", "كوفر", "فكرة"], false, false, "JPG", "16:9", 0.35],
-    ["ملحق شارة خصم", "accessory", ["شارة", "خصم", "بيع"], false, false, "PNG", "1:1", 0.02],
-    ["تدرجات غروب", "image", ["غروب", "تدرج", "دافئ"], false, false, "JPG", "16:9", 0.05],
-    ["ستيكر تاج", "sticker", ["تاج", "ملكي", "ذهبي"], true, true, "PNG", "1:1", 0.15],
-    ["شبكة تخطيط بوست", "accessory", ["تخطيط", "شبكة", "بوست"], false, false, "PDF", "1:1", 0.50],
-    ["فكرة ستوري متجر", "idea", ["ستوري", "متجر", "تجارة"], false, false, "PNG", "9:16", 0.88],
-    ["نسيج قماش ناعم", "image", ["نسيج", "قماش", "ملمس"], false, false, "HEIC", "1:1", 0.20],
-    ["حزمة إيموجي عربي", "sticker", ["إيموجي", "عربي", "حزمة"], true, false, "PNG", "1:1", 0.90],
+    ["تدرج بنفسجي ناعم", "image", ["تدرج", "بنفسجي", "خلفية"], false, false, "PNG", "1:1"],
+    ["ملصق نجمة ذهبية", "sticker", ["ملصق", "نجمة", "ذهبي"], true, false, "PNG", "1:1"],
+    ["إطار إنستغرام", "accessory", ["إطار", "سوشيال", "إنستغرام"], false, false, "SVG", "9:16"],
+    ["فكرة بوست رمضان", "idea", ["رمضان", "بوست", "فكرة"], false, false, "PDF", "4:3"],
+    ["نمط هندسي أزرق", "image", ["نمط", "هندسي", "أزرق"], true, true, "JPG", "16:9"],
+    ["ستيكر قلب متحرك", "sticker", ["قلب", "ستيكر", "لطيف"], false, false, "PNG", "1:1"],
+    ["مجموعة أيقونات UI", "accessory", ["أيقونات", "UI", "واجهة"], true, false, "SVG", "1:1"],
+    ["لوحة ألوان سعودية", "idea", ["ألوان", "هوية", "سعودي"], false, false, "PDF", "16:9"],
+    ["خلفية رخامية بيضاء", "image", ["رخام", "خلفية", "فاخر"], false, false, "HEIC", "4:3"],
+    ["شريط زخرفي عربي", "accessory", ["زخرفة", "عربي", "شريط"], false, false, "SVG", "16:9"],
+    ["ستيكر قهوة", "sticker", ["قهوة", "لطيف", "ستيكر"], false, false, "PNG", "1:1"],
+    ["موك أب آيفون", "image", ["موكأب", "آيفون", "عرض"], true, false, "PNG", "9:16"],
+    ["فكرة كوفر يوتيوب", "idea", ["يوتيوب", "كوفر", "فكرة"], false, false, "JPG", "16:9"],
+    ["ملحق شارة خصم", "accessory", ["شارة", "خصم", "بيع"], false, false, "PNG", "1:1"],
+    ["تدرجات غروب", "image", ["غروب", "تدرج", "دافئ"], false, false, "JPG", "16:9"],
+    ["ستيكر تاج", "sticker", ["تاج", "ملكي", "ذهبي"], true, true, "PNG", "1:1"],
+    ["شبكة تخطيط بوست", "accessory", ["تخطيط", "شبكة", "بوست"], false, false, "PDF", "1:1"],
+    ["فكرة ستوري متجر", "idea", ["ستوري", "متجر", "تجارة"], false, false, "PNG", "9:16"],
+    ["نسيج قماش ناعم", "image", ["نسيج", "قماش", "ملمس"], false, false, "HEIC", "1:1"],
+    ["حزمة إيموجي عربي", "sticker", ["إيموجي", "عربي", "حزمة"], true, false, "PNG", "1:1"],
   ];
-
-  function hueToGradient(h) {
-    const a = `hsl(${Math.round(h * 360)} 55% 72%)`;
-    const b = `hsl(${Math.round(((h + 0.12) % 1) * 360)} 65% 42%)`;
-    return `linear-gradient(135deg, ${a}, ${b})`;
-  }
 
   function formatCount(n) {
     if (n >= 1000) return (n / 1000).toFixed(1) + "k";
     return String(n);
   }
+
+  const TYPE_ICON = {
+    image:
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 16l-5.5-5.5L7 19"/></svg>',
+    accessory:
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.2 4.5 5 .7-3.6 3.5.9 5L12 14.8 7.5 16.7l.9-5L4.8 8.2l5-.7L12 3z"/></svg>',
+    sticker:
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 10h.01M15.5 10h.01M8.5 15c1.2 1.2 2.8 1.8 3.5 1.8s2.3-.6 3.5-1.8"/></svg>',
+    idea:
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3 11c.4.5.7 1.1.8 1.7h4.4c.1-.6.4-1.2.8-1.7A6 6 0 0 0 12 3z"/></svg>',
+  };
+
+  const CROWN_SVG =
+    '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 17h18l-1.5-9-4.5 3.5L12 5l-3 6.5L4.5 8 3 17zm2 2h14v1.5H5V19z"/></svg>';
+  const LOCK_SVG =
+    '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17 9V7a5 5 0 0 0-10 0v2H5v12h14V9h-2zm-8 0V7a3 3 0 0 1 6 0v2H9z"/></svg>';
 
   const assets = SAMPLES.map((s, i) => ({
     id: i + 1,
@@ -60,13 +70,11 @@
     isLocked: s[4],
     format: s[5],
     aspect: s[6],
-    hue: s[7],
     downloads: 120 + i * 137,
     saves: 40 + i * 23,
     imageUrl: `https://picsum.photos/seed/da${i + 1}/400/400`,
   }));
 
-  // Wire similar by type
   assets.forEach((a) => {
     a.similar = assets
       .filter((o) => o.id !== a.id && o.type === a.type)
@@ -75,13 +83,13 @@
   });
 
   const state = {
-    tab: "library", // library | saved
+    tab: "library",
     chip: "all",
     query: "",
     saved: new Set([1, 2, 3, 4]),
     downloading: new Set(),
     detailId: null,
-    loadState: "loaded", // loading | loaded | empty
+    loadState: "loaded",
     toastTimer: null,
   };
 
@@ -113,17 +121,17 @@
     state.toastTimer = setTimeout(() => el.classList.remove("show"), 2200);
   }
 
-  function mediaHTML(asset, large) {
-    const icon = TYPES[asset.type].icon;
-    const size = large ? "media-icon" : "media-icon";
-    // Gradient always works offline; picsum enhances when online
+  function placeholderHTML(type) {
+    return `<div class="media-ph" aria-hidden="true">${TYPE_ICON[type] || TYPE_ICON.image}</div>`;
+  }
+
+  function mediaHTML(asset) {
     return `
-      <div class="media-grad" style="background:${hueToGradient(asset.hue)}">
-        <span class="${size}" aria-hidden="true">${icon}</span>
-      </div>
-      <img class="media-fill" src="${asset.imageUrl}" alt="" loading="lazy"
-        style="position:absolute;inset:0;opacity:0;transition:opacity .3s"
-        onload="this.style.opacity=1" onerror="this.remove()" />
+      ${placeholderHTML(asset.type)}
+      <img class="media-fill" src="${asset.imageUrl}" alt="" loading="lazy" decoding="async"
+        onload="this.style.opacity=1"
+        onerror="this.remove()"
+        style="opacity:0;transition:opacity .25s ease" />
     `;
   }
 
@@ -134,10 +142,10 @@
     return `
       <article class="asset-card" data-id="${asset.id}" role="button" tabindex="0" aria-label="${asset.title}">
         <div class="card-media">
-          ${mediaHTML(asset, false)}
+          ${mediaHTML(asset)}
           <div class="card-badges">
-            ${asset.isPremium ? '<span class="badge-circle badge-premium" title="مدفوع">👑</span>' : ""}
-            ${asset.isLocked ? '<span class="badge-circle badge-locked" title="مقفل">🔒</span>' : ""}
+            ${asset.isPremium ? `<span class="badge-circle badge-premium" title="مدفوع">${CROWN_SVG}</span>` : ""}
+            ${asset.isLocked ? `<span class="badge-circle badge-locked" title="مقفل">${LOCK_SVG}</span>` : ""}
           </div>
           ${
             downloading
@@ -153,8 +161,10 @@
           }
         </div>
         <div class="card-meta">
-          <span class="type-chip">${TYPES[asset.type].label}</span>
-          <div class="card-title">${asset.title}</div>
+          <div class="card-title-row">
+            <div class="card-title">${asset.title}</div>
+            <span class="type-chip">${TYPES[asset.type].label}</span>
+          </div>
           <div class="card-row">
             <span class="card-stats">${stats}</span>
             <button class="save-btn ${saved ? "saved" : ""}" data-save="${asset.id}" aria-label="${saved ? "إزالة من المحفوظات" : "حفظ"}" type="button">
@@ -180,9 +190,8 @@
       <div class="asset-card skeleton-card" aria-hidden="true">
         <div class="card-media"></div>
         <div class="card-meta">
-          <div class="skeleton-line short"></div>
           <div class="skeleton-line med"></div>
-          <div class="skeleton-line" style="width:55%"></div>
+          <div class="skeleton-line short"></div>
         </div>
       </div>`
       )
@@ -289,16 +298,14 @@
     const saved = state.saved.has(asset.id);
     const root = $("#screen-detail");
     $("#detail-title", root).textContent = asset.title;
-    const preview = $("#detail-preview", root);
-    preview.innerHTML = mediaHTML(asset, true);
-    preview.querySelector(".media-icon").style.fontSize = "64px";
+    $("#detail-preview", root).innerHTML = mediaHTML(asset);
 
     $("#detail-chips", root).innerHTML = `
       <span class="meta-pill brand">${TYPES[asset.type].label}</span>
       <span class="meta-pill">${asset.format}</span>
       <span class="meta-pill">${asset.aspect}</span>
-      ${asset.isPremium ? '<span class="meta-pill premium">👑 مدفوع</span>' : ""}
-      ${asset.isLocked ? '<span class="meta-pill">🔒 مقفل</span>' : ""}
+      ${asset.isPremium ? `<span class="meta-pill premium">${CROWN_SVG} مدفوع</span>` : ""}
+      ${asset.isLocked ? `<span class="meta-pill">${LOCK_SVG} مقفل</span>` : ""}
     `;
     $("#detail-stats", root).textContent =
       `${formatCount(asset.downloads)} تحميل · ${formatCount(asset.saves)} حفظ`;
@@ -329,8 +336,12 @@
         .map(
           (s) => `
         <button type="button" class="similar-item" data-similar="${s.id}">
-          <div class="thumb" style="background:${hueToGradient(s.hue)};display:grid;place-items:center">
-            <span style="font-size:28px;color:#fff">${TYPES[s.type].icon}</span>
+          <div class="thumb">
+            ${placeholderHTML(s.type)}
+            <img src="${s.imageUrl}" alt="" loading="lazy" decoding="async"
+              onload="this.style.opacity=1"
+              onerror="this.remove()"
+              style="opacity:0;transition:opacity .25s ease" />
           </div>
           <div class="caption">${s.title}</div>
         </button>`
@@ -351,7 +362,7 @@
     const el = $("#chips");
     el.innerHTML = CHIPS.map(
       (c) =>
-        `<button type="button" class="chip ${state.chip === c.id ? "selected" : ""}" data-chip="${c.id}">${c.label}</button>`
+        `<button type="button" class="chip ${state.chip === c.id ? "selected" : ""}" role="tab" aria-selected="${state.chip === c.id}" data-chip="${c.id}">${c.label}</button>`
     ).join("");
     $$("[data-chip]", el).forEach((btn) => {
       btn.addEventListener("click", () => {
@@ -376,7 +387,8 @@
 
   function updateClearBtn() {
     const clear = $("#search-clear");
-    clear.classList.toggle("visible", !!state.query);
+    if (state.query) clear.removeAttribute("hidden");
+    else clear.setAttribute("hidden", "");
   }
 
   function applyTheme(mode) {
@@ -409,13 +421,12 @@
 
     renderChips();
 
-    // Initial loading skeleton flash
     state.loadState = "loading";
     renderLibrary();
     setTimeout(() => {
       state.loadState = "loaded";
       renderAll();
-    }, 600);
+    }, 480);
 
     const search = $("#search-input");
     let debounce;
@@ -430,6 +441,7 @@
       state.query = "";
       updateClearBtn();
       renderLibrary();
+      search.focus();
     });
 
     $$(".tab-bar button").forEach((btn) => {
@@ -461,7 +473,7 @@
       setTimeout(() => {
         state.downloading.delete(id);
         showToast("تم التنزيل");
-        renderDetail();
+        if (state.detailId === id) renderDetail();
         renderAll();
       }, 1400);
     });
@@ -481,7 +493,6 @@
     updateThemeIcon();
     window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", updateThemeIcon);
 
-    // History back closes detail
     window.addEventListener("popstate", () => {
       if (state.detailId) closeDetail();
     });
