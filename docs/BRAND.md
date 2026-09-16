@@ -40,3 +40,7 @@ Built mobile-first for **iPhone Safari**. Live: https://gaber311a-lang.github.io
 - DesignerAssets violet UI
 - Abu Ezz / أبو عز red brand
 - Random mismatched stock photos — coherent SVG/CSS art matching each design title only
+
+## SHIP LOCK (2026)
+Live Pages must stay **electronic designs only**. Logo JPEG may contain older lockup text — CSS circle crop + site copy override; never surface honey/food messaging in HTML/JS/CSS/README.
+

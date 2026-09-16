@@ -16,3 +16,7 @@ Full lock: [BRAND.md](./BRAND.md).
 
 ## Catalog
 UI, mockups, templates, icons, posters, digital stickers, brand layouts — unique SVG art in the Sedra palette. Search covers title, English title, tags, type, format, and description (Arabic-normalized).
+
+## Status
+**SHIPPED** on GitHub Pages (`main` → `/docs`). Catalog: 24 electronic designs · 7 categories. No honey/food product UI.
+

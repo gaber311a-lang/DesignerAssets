@@ -466,3 +466,14 @@ body.detail-open {
   width: 100%;
 }
 [hidden] { display: none !important; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .pin, .btn { transition: none; }
+  .pin:active, .btn:active { transform: none; }
+}
+@supports (padding: max(0px)) {
+  .sticky-actions {
+    padding-bottom: max(0.85rem, env(safe-area-inset-bottom));
+  }
+}
