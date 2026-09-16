@@ -1,131 +1,227 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-  <meta name="theme-color" content="#5B4DFF" media="(prefers-color-scheme: light)" />
-  <meta name="theme-color" content="#0B0B12" media="(prefers-color-scheme: dark)" />
-  <meta name="description" content="فيد اكتشاف أصول المصممين — تصفّح بصري مثل Pinterest لصور وستيكرات وملحقات وأفكار" />
-  <title>أصول المصممين</title>
+  <meta name="theme-color" content="#003626" />
+  <meta name="description" content="سدرة — عسل سدر عضوي فاخر. SEDRA Organic Honey Products. ESTB 2025." />
+  <title>سدرة · SEDRA — Organic Honey Products</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="assets/logo.jpeg" type="image/jpeg" />
 </head>
 <body>
-  <div id="app">
-    <!-- Library -->
-    <section id="screen-library" class="screen active" aria-label="المكتبة">
-      <div class="scroll-area" id="library-scroll">
-        <header class="sticky-header">
-          <div class="nav-large">
-            <h1>المكتبة</h1>
-            <button type="button" class="theme-toggle" id="theme-toggle" aria-label="تبديل المظهر" title="المظهر"></button>
-          </div>
-          <p class="direction-line">فيد اكتشاف أصول تصميمية — مثل Pinterest لملفات المصممين</p>
-          <div class="search-wrap">
-            <div class="search-bar">
-              <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
-                <circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/>
+  <a class="skip-link" href="#main">تخطي إلى المحتوى</a>
+
+  <header class="site-header" id="top">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="سدرة SEDRA">
+        <img class="brand-mark" src="assets/logo.jpeg" width="48" height="48" alt="" />
+        <span class="brand-text">
+          <span class="brand-ar">سدرة</span>
+          <span class="brand-en">SEDRA</span>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="القائمة">
+        <span></span><span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="القائمة الرئيسية">
+        <a href="#products">منتجات</a>
+        <a href="#story">قصتنا</a>
+        <a href="#contact">تواصل</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <img class="hero-logo" src="assets/logo.jpeg" width="280" height="280" alt="سدرة SEDRA — Organic Honey Products ESTB 2025" />
+        <p class="eyebrow">
+          <span class="en">ESTB 2025</span>
+          <span class="dot" aria-hidden="true">·</span>
+          <span>عسل عضوي</span>
+        </p>
+        <h1 id="hero-title">عسل سدر عضوي<br /><span class="soft">من الطبيعة إلى مائدتك</span></h1>
+        <p class="hero-lead">
+          سدرة تختار أجود قطرات العسل الطبيعي — نقاء هادئ، طعم أصيل، وتعبئة تليق باللحظة.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#products">استكشف المنتجات</a>
+          <a class="btn btn-ghost" href="#contact">اطلب الآن</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products -->
+    <section class="section products" id="products" aria-labelledby="products-title">
+      <div class="section-inner">
+        <header class="section-head">
+          <p class="eyebrow"><span class="en">Collection</span></p>
+          <h2 id="products-title">منتجاتنا</h2>
+          <p class="section-lead">تشكيلة هادئة من عسل سدرة — كل منتج بصريّاً متناغم مع هوية الطبيعة والعضوي.</p>
+        </header>
+
+        <div class="product-grid">
+          <article class="product-card">
+            <div class="product-visual" data-motif="sidr" aria-hidden="true">
+              <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="60" cy="78" rx="28" ry="10" fill="#003626" opacity=".18"/>
+                <path d="M60 28c-14 18-22 32-22 44a22 22 0 0044 0c0-12-8-26-22-44z" fill="#003626"/>
+                <path d="M60 36c-9 12-14 22-14 32a14 14 0 0028 0c0-10-5-20-14-32z" fill="#CFEDC2" opacity=".35"/>
+                <circle cx="60" cy="22" r="4" fill="#C7E6BC"/>
               </svg>
-              <input id="search-input" type="search" enterkeyhint="search" autocomplete="off"
-                placeholder="ابحث عن صور، ستيكرات، ملحقات…" aria-label="بحث"
-                aria-autocomplete="list" aria-controls="search-suggest" aria-expanded="false" />
-              <button type="button" class="search-clear" id="search-clear" aria-label="مسح البحث" hidden>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M12 10.59L7.41 6 6 7.41 10.59 12 6 16.59 7.41 18 12 13.41 16.59 18 18 16.59 13.41 12 18 7.41 16.59 6 12 10.59z"/>
-                </svg>
-              </button>
             </div>
-            <div id="search-suggest" class="search-suggest" hidden role="listbox" aria-label="اقتراحات البحث"></div>
+            <h3>عسل سدر</h3>
+            <p>عسل سدر فاخر، كثافة مخملية ونكهة دافئة تذكّر بغابات السدر.</p>
+            <span class="product-tag en">Sidr Honey</span>
+          </article>
+
+          <article class="product-card">
+            <div class="product-visual" data-motif="flowers" aria-hidden="true">
+              <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="60" cy="58" r="10" fill="#003626"/>
+                <ellipse cx="60" cy="36" rx="9" ry="16" fill="#003626" opacity=".85"/>
+                <ellipse cx="60" cy="80" rx="9" ry="16" fill="#003626" opacity=".85"/>
+                <ellipse cx="38" cy="58" rx="16" ry="9" fill="#003626" opacity=".85"/>
+                <ellipse cx="82" cy="58" rx="16" ry="9" fill="#003626" opacity=".85"/>
+                <circle cx="60" cy="58" r="5" fill="#CFEDC2"/>
+              </svg>
+            </div>
+            <h3>عسل زهور</h3>
+            <p>مزيج زهور برّية — خفيف على الحواس، مناسب للصباح والهدايا اليومية.</p>
+            <span class="product-tag en">Wildflower</span>
+          </article>
+
+          <article class="product-card">
+            <div class="product-visual" data-motif="hive" aria-hidden="true">
+              <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M40 34h40l12 18-12 18H40L28 52l12-18z" stroke="#003626" stroke-width="3" fill="#CFEDC2" opacity=".55"/>
+                <path d="M40 52h40l12 18-12 18H40L28 70l12-18z" stroke="#003626" stroke-width="3" fill="none"/>
+                <path d="M46 40h28M46 58h28M46 76h28" stroke="#003626" stroke-width="2" opacity=".4"/>
+              </svg>
+            </div>
+            <h3>خلايا</h3>
+            <p>شمع وخلايا طبيعية للعناية والمطبخ — لمسة من خلية النحل إلى المنزل.</p>
+            <span class="product-tag en">Hive &amp; Comb</span>
+          </article>
+
+          <article class="product-card">
+            <div class="product-visual" data-motif="gifts" aria-hidden="true">
+              <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="32" y="48" width="56" height="42" rx="4" fill="#003626"/>
+                <path d="M32 62h56" stroke="#CFEDC2" stroke-width="3"/>
+                <path d="M60 48v42" stroke="#CFEDC2" stroke-width="3"/>
+                <path d="M48 48c0-10 6-16 12-16s12 6 12 16" stroke="#003626" stroke-width="3" fill="none"/>
+                <path d="M44 42h32v8H44z" fill="#C7E6BC"/>
+              </svg>
+            </div>
+            <h3>هدايا</h3>
+            <p>صناديق هدايا أنيقة — عسل سدرة بتعبئة تليق بالمناسبات الخاصة.</p>
+            <span class="product-tag en">Gift Sets</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story -->
+    <section class="section story" id="story" aria-labelledby="story-title">
+      <div class="section-inner story-grid">
+        <div class="story-copy">
+          <p class="eyebrow"><span class="en">Our Story</span></p>
+          <h2 id="story-title">قصتنا · لماذا سدرة</h2>
+          <p>
+            وُلدت سدرة من احترام بسيط للنحلة والأرض. نختار العسل العضوي بعناية،
+            ونحافظ على نقاوته دون إضافات — لأن الفخامة الحقيقية هي الصدق.
+          </p>
+          <ul class="why-list">
+            <li>
+              <strong>عضوي بطبيعته</strong>
+              <span>مصادر موثوقة، دون مواد حافظة أو نكهات مصنّعة.</span>
+            </li>
+            <li>
+              <strong>طعم أصيل</strong>
+              <span>نكهة سدر وزهور تعكس المواسم والمناطق.</span>
+            </li>
+            <li>
+              <strong>هدوء في التقديم</strong>
+              <span>تعبئة نظيفة، هوية هادئة، تجربة تليق بالمائدة.</span>
+            </li>
+          </ul>
+        </div>
+        <aside class="story-panel" aria-hidden="true">
+          <div class="story-panel-inner">
+            <p class="en story-panel-brand">SEDRA</p>
+            <p class="en story-panel-tag">Organic Honey Products</p>
+            <p class="en story-panel-est">ESTB 2025</p>
           </div>
-          <div class="chips" id="chips" role="tablist" aria-label="تصفية النوع"></div>
-          <div class="refine-chips" id="refine-chips" hidden role="toolbar" aria-label="تصفية ذكية"></div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Contact / Order -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="section-inner contact-inner">
+        <header class="section-head">
+          <p class="eyebrow"><span class="en">Order</span></p>
+          <h2 id="contact-title">تواصل · طلب</h2>
+          <p class="section-lead">اترك رسالتك وسنعود إليك — طلبات خاصة وهدايا مرحّب بها.</p>
         </header>
 
-        <div class="masonry" id="library-grid"></div>
-        <div id="library-empty" class="state-block" hidden>
-          <div class="state-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
-              <circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/>
-            </svg>
+        <form class="order-form" id="order-form" novalidate>
+          <div class="field">
+            <label for="name">الاسم</label>
+            <input id="name" name="name" type="text" autocomplete="name" required placeholder="اسمك" />
           </div>
-          <h3>لا نتائج في مكتبتك</h3>
-          <p class="t-footnote" id="empty-message">جرّب كلمات أخرى أو تصفّح اقتراحات من الكتالوج</p>
-          <div id="empty-rescue" class="empty-rescue"></div>
-        </div>
-        <p id="library-end" class="end-caption" hidden>وصلت إلى نهاية القائمة</p>
+          <div class="field">
+            <label for="phone">الجوال</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="05xxxxxxxx" dir="ltr" />
+          </div>
+          <div class="field field-full">
+            <label for="interest">المنتج / الطلب</label>
+            <select id="interest" name="interest">
+              <option value="sidr">عسل سدر</option>
+              <option value="flowers">عسل زهور</option>
+              <option value="hive">خلايا</option>
+              <option value="gifts">هدايا</option>
+              <option value="other">استفسار عام</option>
+            </select>
+          </div>
+          <div class="field field-full">
+            <label for="message">رسالتك</label>
+            <textarea id="message" name="message" rows="4" placeholder="كمية، مناسبة، أو تفاصيل التوصيل…"></textarea>
+          </div>
+          <div class="form-actions field-full">
+            <button class="btn btn-primary" type="submit">إرسال الطلب</button>
+            <p class="form-note" id="form-status" role="status" aria-live="polite"></p>
+          </div>
+        </form>
       </div>
     </section>
+  </main>
 
-    <!-- Saved -->
-    <section id="screen-saved" class="screen" aria-label="المحفوظات">
-      <div class="scroll-area">
-        <header class="sticky-header">
-          <div class="nav-large">
-            <h1>المحفوظات</h1>
-          </div>
-        </header>
-        <div class="masonry" id="saved-grid"></div>
-        <div id="saved-empty" class="state-block" hidden>
-          <div class="state-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M7 3.5h10a1.5 1.5 0 0 1 1.5 1.5v15.2l-6.5-3.6-6.5 3.6V5A1.5 1.5 0 0 1 7 3.5z"/>
-            </svg>
-          </div>
-          <h3>لا توجد عناصر محفوظة</h3>
-          <p class="t-footnote">احفظ أصولاً من المكتبة لتظهر هنا</p>
-        </div>
-      </div>
-    </section>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <img class="footer-logo" src="assets/logo.jpeg" width="72" height="72" alt="" />
+      <p class="footer-brand">
+        <span class="ar">سدرة</span>
+        <span class="en">SEDRA</span>
+      </p>
+      <p class="footer-tag en">Organic Honey Products</p>
+      <p class="footer-est en">ESTB 2025</p>
+      <nav class="footer-nav" aria-label="تذييل">
+        <a href="#products">منتجات</a>
+        <a href="#story">قصتنا</a>
+        <a href="#contact">تواصل</a>
+      </nav>
+      <p class="footer-copy">© 2025 سدرة · SEDRA. جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
 
-    <!-- Detail -->
-    <section id="screen-detail" class="screen" aria-label="تفاصيل الأصل">
-      <header class="detail-nav">
-        <button type="button" class="back-btn" id="back-btn" aria-label="رجوع">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
-        </button>
-        <h2 id="detail-title"></h2>
-      </header>
-      <div class="scroll-area" id="detail-scroll">
-        <div class="detail-body">
-          <div class="detail-preview" id="detail-preview"></div>
-          <div class="detail-meta-chips" id="detail-chips"></div>
-          <p class="detail-stats" id="detail-stats"></p>
-          <div class="section-label">الوسوم</div>
-          <div class="tags" id="detail-tags"></div>
-          <div id="similar-section">
-            <div class="section-label">مشابه</div>
-            <div class="similar-row" id="detail-similar"></div>
-          </div>
-        </div>
-      </div>
-      <footer class="sticky-footer">
-        <button type="button" class="btn-primary" id="detail-download">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12m0 0l-4-4m4 4l4-4M5 20h14"/></svg>
-          تنزيل
-        </button>
-        <button type="button" class="btn-secondary" id="detail-save" aria-label="حفظ"></button>
-      </footer>
-    </section>
-
-    <nav class="tab-bar" aria-label="التنقل الرئيسي">
-      <button type="button" data-tab="library" class="active">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/>
-          <rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/>
-        </svg>
-        المكتبة
-      </button>
-      <button type="button" data-tab="saved">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M7 3.5h10a1.5 1.5 0 0 1 1.5 1.5v15.2l-6.5-3.6-6.5 3.6V5A1.5 1.5 0 0 1 7 3.5z"/>
-        </svg>
-        المحفوظات
-      </button>
-    </nav>
-
-    <div id="toast" class="toast" role="status" aria-live="polite"></div>
-  </div>
-  <script src="app.js"></script>
+  <script src="app.js" defer></script>
 </body>
 </html>
