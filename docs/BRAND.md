@@ -4,10 +4,13 @@
 - **Arabic:** سدرة
 - **English:** SEDRA
 - **Tagline:** تصاميم إلكترونية · Electronic Designs
-- **Established:** ESTB 2025
+- **Established:** ESTB 2025 (small mark only)
 
 ## What this is
-A **gallery for electronic designs only** (تصاميم إلكترونية): UI kits, app mockups, posters, social templates, icons, digital stickers, brand layouts, and similar design assets.
+A **gallery that only displays electronic designs** (تصاميم إلكترونية):
+UI kits, app mockups, posters, social templates, icons, digital stickers, brand layouts, and similar design assets.
+
+Pinterest-like discovery UI in Sedra brand — search, filter chips, masonry pins, detail + حفظ/تنزيل, optional Saved tab.
 
 ## Colors (exact — locked from official logo)
 | Role | Hex | Usage |
@@ -28,7 +31,8 @@ A **gallery for electronic designs only** (تصاميم إلكترونية): UI 
 - Layout: Arabic-first RTL · mobile-first
 
 ## Do not use
-- Honey / organic / food product copy (عسل، منتجات عضوية، نحل، برطمانات، هدايا عسل، إلخ)
-- «Organic Honey Products» or any food-store messaging
+- Honey / organic / food product copy (عسل، منتجات عضوية، نحل، برطمانات، هدايا عسل، منتجاتنا as honey cards، إلخ)
+- «Organic Honey Products» or any food-store / bee / jar messaging
+- Order forms for physical products
 - DesignerAssets violet UI
-- Random mismatched stock photos — prefer coherent SVG/CSS art matching each design title
+- Random mismatched stock photos — coherent SVG/CSS art matching each design title only
