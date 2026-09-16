@@ -4,7 +4,6 @@
   --sage: #CFEDC2;
   --stroke: #C7E6BC;
   --cream: #F5F7F2;
-  --mint-soft: #C7E6BC; /* stroke alias for soft accents */
   --white: #ffffff;
   --font-ar: "SF Arabic", "Noto Naskh Arabic", "Segoe UI", Tahoma, "Apple Color Emoji", sans-serif;
   --font-en: "Cormorant Garamond", Georgia, "Times New Roman", serif;
@@ -27,7 +26,6 @@ html {
 
 body {
   margin: 0;
-  padding-bottom: env(safe-area-inset-bottom);
   font-family: var(--font-ar);
   font-size: 1.0625rem;
   line-height: 1.75;
@@ -81,7 +79,7 @@ a {
 .header-inner {
   max-width: var(--max);
   margin: 0 auto;
-  padding: max(0.75rem, env(safe-area-inset-top)) var(--space) 0.75rem;
+  padding: 0.75rem var(--space);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -756,6 +754,11 @@ html[dir="rtl"] .field select {
   }
 }
 
+/* Soft mint utility (locked optional) */
+:root {
+  --mint-soft: #C2E3BA;
+}
+
 /* Trust */
 .trust {
   background: var(--cream);
@@ -819,7 +822,7 @@ html[dir="rtl"] .field select {
 
 /* WhatsApp button */
 .btn-wa {
-  background: color-mix(in srgb, var(--stroke) 18%, transparent);
+  background: color-mix(in srgb, var(--mint-soft) 22%, transparent);
   color: var(--sage);
   border: 1px solid color-mix(in srgb, var(--stroke) 55%, transparent);
   font-weight: 600;

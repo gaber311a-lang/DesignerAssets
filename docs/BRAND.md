@@ -6,27 +6,25 @@
 - **Tagline:** Organic Honey Products
 - **Established:** ESTB 2025
 
-## Colors (exact — sampled from official logo)
-| Role | Hex | Use |
-|------|-----|-----|
-| Forest green (primary dark) | `#003626` | Backgrounds, nav, footer, text on light |
-| Sage / mint (accent) | `#CFEDC2` | Logo tint, text on dark, accents / CTAs |
-| Stroke variant | `#C7E6BC` | Borders, subtle strokes |
-| Soft cream / off-white | `#F5F7F2` | Light sections |
-
-- Text on light: `#003626`
-- Text on dark: `#CFEDC2` (white sparingly)
+## Colors (exact — locked from official logo)
+| Role | Hex | Usage |
+|------|-----|--------|
+| Forest green | `#003626` | bg / primary dark / text on light |
+| Sage / mint | `#CFEDC2` | logo / text accent / CTAs on dark |
+| Stroke variant | `#C7E6BC` | borders, soft accents |
+| Soft cream | `#F5F7F2` | light sections |
+| White | `#FFFFFF` | sparingly on dark |
 
 ## Logo
-- File: `assets/logo.jpeg`
-- Use the official lockup as-is — do not recreate Arabic calligraphy.
+- Source: `/workspace/sedra-logo.jpeg`
+- Site path: `assets/logo.jpeg`
+- Use as-is in header / hero / footer — never recreate calligraphy.
 
 ## Typography
-- English brand bits (SEDRA, tagline): elegant serif (`Cormorant Garamond`)
-- Arabic body / UI: system Arabic stack (`"SF Arabic"`, `"Noto Naskh Arabic"`, `"Segoe UI"`, Tahoma, sans-serif)
-- Tone: quiet luxury, nature, organic — generous whitespace
-- Arabic-first RTL
+- English brand bits: Cormorant Garamond (serif)
+- Arabic: system stack (`"SF Arabic"`, `"Segoe UI"`, Tahoma, sans-serif)
+- Tone: quiet luxury · nature · organic · Arabic-first RTL · mobile-first
 
-## Not allowed
-- Pinterest / DesignerAssets violet UI
-- Random mismatched stock imagery
+## Do not use
+- DesignerAssets violet UI
+- Pinterest / unrelated stock aesthetics

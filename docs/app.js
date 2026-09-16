@@ -3,12 +3,14 @@
   const nav = document.querySelector("#site-nav");
   const form = document.querySelector("#order-form");
   const status = document.querySelector("#form-status");
-  const wa = document.querySelector("#whatsapp-link");
+  const waLink = document.querySelector("#whatsapp-link");
+  const WA_BASE = "https://wa.me/966500000000";
 
   if (toggle && nav) {
     const setOpen = (open) => {
       toggle.setAttribute("aria-expanded", String(open));
       nav.classList.toggle("is-open", open);
+      toggle.setAttribute("aria-label", open ? "إغلاق القائمة" : "القائمة");
     };
 
     toggle.addEventListener("click", () => {
@@ -24,42 +26,54 @@
     });
   }
 
-  const buildWaHref = () => {
-    if (!form || !wa) return;
-    const name = (form.name?.value || "").trim();
-    const phone = (form.phone?.value || "").trim();
-    const interest = form.interest?.value || "";
-    const message = (form.message?.value || "").trim();
+  function buildWaUrl(name, phone, product, message) {
     const lines = [
-      "طلب من موقع سدرة / SEDRA",
-      name && `الاسم: ${name}`,
-      phone && `الجوال: ${phone}`,
-      interest && `المنتج: ${interest}`,
-      message && `الرسالة: ${message}`,
+      "مرحباً، أرغب بالطلب من سدرة:",
+      name ? `الاسم: ${name}` : null,
+      phone ? `الجوال: ${phone}` : null,
+      product ? `المنتج: ${product}` : null,
+      message ? `التفاصيل: ${message}` : null,
     ].filter(Boolean);
-    const text = encodeURIComponent(lines.join("\n"));
-    wa.href = `https://wa.me/?text=${text}`;
-  };
+    return `${WA_BASE}?text=${encodeURIComponent(lines.join("\n"))}`;
+  }
 
-  if (form) {
-    form.addEventListener("input", buildWaHref);
-    buildWaHref();
+  function syncWhatsApp() {
+    if (!waLink || !form) return;
+    waLink.href = buildWaUrl(
+      form.name.value.trim(),
+      form.phone.value.trim(),
+      form.interest.value,
+      form.message.value.trim()
+    );
   }
 
   if (form && status) {
+    ["input", "change"].forEach((evt) => {
+      form.addEventListener(evt, syncWhatsApp);
+    });
+    syncWhatsApp();
+
     form.addEventListener("submit", (e) => {
       e.preventDefault();
       const name = form.name.value.trim();
       const phone = form.phone.value.trim();
+      const product = form.interest.value;
+      const message = form.message.value.trim();
+
       if (!name || !phone) {
         status.textContent = "يرجى إدخال الاسم والجوال.";
         status.classList.remove("is-success");
         return;
       }
-      status.textContent = "شكراً لك — استلمنا طلبك وسنتواصل قريباً.";
+
+      if (waLink) {
+        waLink.href = buildWaUrl(name, phone, product, message);
+      }
+
+      status.textContent = "شكراً لك — يمكنك الإرسال عبر واتساب أو سنعود إليك قريباً.";
       status.classList.add("is-success");
       form.reset();
-      buildWaHref();
+      syncWhatsApp();
     });
   }
 })();
