@@ -6,8 +6,8 @@
   <meta name="theme-color" content="#003626" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <meta name="description" content="سدرة — عسل سدر عضوي فاخر. SEDRA Organic Honey Products. ESTB 2025." />
-  <title>سدرة · SEDRA — Organic Honey Products</title>
+  <meta name="description" content="سدرة — معرض تصاميم إلكترونية. SEDRA Electronic Designs. ESTB 2025." />
+  <title>سدرة · SEDRA — تصاميم إلكترونية</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
@@ -20,236 +20,174 @@
   <header class="site-header" id="top">
     <div class="header-inner">
       <a class="brand" href="#top" aria-label="سدرة SEDRA">
-        <img class="brand-mark" src="assets/logo.jpeg" width="48" height="48" alt="" />
+        <img class="brand-mark" src="assets/logo.jpeg" width="44" height="44" alt="" />
         <span class="brand-text">
           <span class="brand-ar">سدرة</span>
           <span class="brand-en">SEDRA</span>
         </span>
       </a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="القائمة">
-        <span></span><span></span>
-      </button>
       <nav class="site-nav" id="site-nav" aria-label="القائمة الرئيسية">
-        <a href="#products">منتجات</a>
-        <a href="#story">قصتنا</a>
-        <a href="#trust">الثقة</a>
-        <a href="#contact">تواصل</a>
+        <button type="button" class="nav-tab is-active" data-view="discover" aria-current="page">اكتشف</button>
+        <button type="button" class="nav-tab" data-view="saved">المحفوظات <span class="saved-count" id="saved-count" hidden>0</span></button>
       </nav>
     </div>
   </header>
 
   <main id="main">
     <!-- Hero -->
-    <section class="hero" aria-labelledby="hero-title">
+    <section class="hero" id="hero" aria-labelledby="hero-title">
       <div class="hero-glow" aria-hidden="true"></div>
       <div class="hero-inner">
-        <img class="hero-logo" src="assets/logo.jpeg" width="280" height="280" alt="سدرة SEDRA — Organic Honey Products ESTB 2025" />
+        <img class="hero-logo" src="assets/logo.jpeg" width="200" height="200" alt="سدرة SEDRA — تصاميم إلكترونية ESTB 2025" />
         <p class="eyebrow">
           <span class="en">ESTB 2025</span>
           <span class="dot" aria-hidden="true">·</span>
-          <span>عسل عضوي</span>
+          <span>تصاميم إلكترونية</span>
         </p>
-        <h1 id="hero-title">عسل سدر عضوي<br /><span class="soft">من الطبيعة إلى مائدتك</span></h1>
+        <h1 id="hero-title">معرض التصاميم<br /><span class="soft">Electronic Designs</span></h1>
         <p class="hero-lead">
-          سدرة تختار أجود قطرات العسل الطبيعي — نقاء هادئ، طعم أصيل، وتعبئة تليق باللحظة.
+          سدرة تعرض تصاميم إلكترونية جاهزة للاستكشاف — واجهات، موكأب، قوالب، أيقونات، وبوسترات.
         </p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#products">استكشف المنتجات</a>
-          <a class="btn btn-ghost" href="#contact">اطلب الآن</a>
-        </div>
       </div>
     </section>
 
-    <!-- Products -->
-    <section class="section products" id="products" aria-labelledby="products-title">
+    <!-- Search + filters -->
+    <section class="discover" id="discover" aria-labelledby="discover-title">
       <div class="section-inner">
         <header class="section-head">
-          <p class="eyebrow"><span class="en">Collection</span></p>
-          <h2 id="products-title">منتجاتنا</h2>
-          <p class="section-lead">تشكيلة هادئة من عسل سدرة — كل منتج بصريّاً متناغم مع هوية الطبيعة والعضوي.</p>
+          <p class="eyebrow"><span class="en">Discover</span></p>
+          <h2 id="discover-title">اكتشف التصاميم</h2>
         </header>
 
-        <div class="product-grid">
-          <article class="product-card">
-            <div class="product-visual" data-motif="sidr" aria-hidden="true">
-              <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <ellipse cx="60" cy="78" rx="28" ry="10" fill="#003626" opacity=".18"/>
-                <path d="M60 28c-14 18-22 32-22 44a22 22 0 0044 0c0-12-8-26-22-44z" fill="#003626"/>
-                <path d="M60 36c-9 12-14 22-14 32a14 14 0 0028 0c0-10-5-20-14-32z" fill="#CFEDC2" opacity=".35"/>
-                <circle cx="60" cy="22" r="4" fill="#C7E6BC"/>
-              </svg>
-            </div>
-            <h3>عسل سدر</h3>
-            <p>عسل سدر فاخر، كثافة مخملية ونكهة دافئة تذكّر بغابات السدر.</p>
-            <span class="product-tag en">Sidr Honey</span>
-          </article>
+        <form class="search-panel" id="search-form" role="search" autocomplete="off">
+          <label class="search-label" for="search-input">بحث جاد</label>
+          <div class="search-row">
+            <input
+              type="search"
+              id="search-input"
+              name="q"
+              placeholder="عنوان، وسم، نوع، أو صيغة…"
+              enterkeyhint="search"
+              aria-describedby="search-hint"
+            />
+            <button type="submit" class="btn btn-primary search-submit">بحث</button>
+          </div>
+          <p class="search-hint" id="search-hint">جرّب: واجهة · موكأب · أيقونة · SVG · Figma</p>
 
-          <article class="product-card">
-            <div class="product-visual" data-motif="flowers" aria-hidden="true">
-              <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="60" cy="58" r="10" fill="#003626"/>
-                <ellipse cx="60" cy="36" rx="9" ry="16" fill="#003626" opacity=".85"/>
-                <ellipse cx="60" cy="80" rx="9" ry="16" fill="#003626" opacity=".85"/>
-                <ellipse cx="38" cy="58" rx="16" ry="9" fill="#003626" opacity=".85"/>
-                <ellipse cx="82" cy="58" rx="16" ry="9" fill="#003626" opacity=".85"/>
-                <circle cx="60" cy="58" r="5" fill="#CFEDC2"/>
-              </svg>
-            </div>
-            <h3>عسل زهور</h3>
-            <p>مزيج زهور برّية — خفيف على الحواس، مناسب للصباح والهدايا اليومية.</p>
-            <span class="product-tag en">Wildflower</span>
-          </article>
+          <div class="refine-row" id="refine-row" hidden>
+            <span class="refine-label">تصفية دقيقة:</span>
+            <label class="refine-field">
+              <span>النوع</span>
+              <select id="filter-type" name="type">
+                <option value="">الكل</option>
+                <option value="ui">واجهة</option>
+                <option value="mockup">موكأب</option>
+                <option value="template">قالب</option>
+                <option value="icon">أيقونة</option>
+                <option value="poster">بوستر</option>
+                <option value="sticker">ملصق رقمي</option>
+                <option value="brand">هوية بصرية</option>
+              </select>
+            </label>
+            <label class="refine-field">
+              <span>الصيغة</span>
+              <select id="filter-format" name="format">
+                <option value="">الكل</option>
+                <option value="SVG">SVG</option>
+                <option value="PNG">PNG</option>
+                <option value="Figma">Figma</option>
+                <option value="PDF">PDF</option>
+                <option value="AI">AI</option>
+              </select>
+            </label>
+            <button type="button" class="btn btn-ghost btn-sm" id="clear-filters">مسح</button>
+          </div>
 
-          <article class="product-card">
-            <div class="product-visual" data-motif="hive" aria-hidden="true">
-              <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M40 34h40l12 18-12 18H40L28 52l12-18z" stroke="#003626" stroke-width="3" fill="#CFEDC2" opacity=".55"/>
-                <path d="M40 52h40l12 18-12 18H40L28 70l12-18z" stroke="#003626" stroke-width="3" fill="none"/>
-                <path d="M46 40h28M46 58h28M46 76h28" stroke="#003626" stroke-width="2" opacity=".4"/>
-              </svg>
-            </div>
-            <h3>خلايا</h3>
-            <p>شمع وخلايا طبيعية للعناية والمطبخ — لمسة من خلية النحل إلى المنزل.</p>
-            <span class="product-tag en">Hive &amp; Comb</span>
-          </article>
-
-          <article class="product-card">
-            <div class="product-visual" data-motif="gifts" aria-hidden="true">
-              <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="32" y="48" width="56" height="42" rx="4" fill="#003626"/>
-                <path d="M32 62h56" stroke="#CFEDC2" stroke-width="3"/>
-                <path d="M60 48v42" stroke="#CFEDC2" stroke-width="3"/>
-                <path d="M48 48c0-10 6-16 12-16s12 6 12 16" stroke="#003626" stroke-width="3" fill="none"/>
-                <path d="M44 42h32v8H44z" fill="#C7E6BC"/>
-              </svg>
-            </div>
-            <h3>هدايا</h3>
-            <p>صناديق هدايا أنيقة — عسل سدرة بتعبئة تليق بالمناسبات الخاصة.</p>
-            <span class="product-tag en">Gift Sets</span>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Story -->
-    <section class="section story" id="story" aria-labelledby="story-title">
-      <div class="section-inner story-grid">
-        <div class="story-copy">
-          <p class="eyebrow"><span class="en">Our Story</span></p>
-          <h2 id="story-title">قصتنا · لماذا سدرة</h2>
-          <p>
-            وُلدت سدرة من احترام بسيط للنحلة والأرض. نختار العسل العضوي بعناية،
-            ونحافظ على نقاوته دون إضافات — لأن الفخامة الحقيقية هي الصدق.
-          </p>
-          <ul class="why-list">
-            <li>
-              <strong>عضوي بطبيعته</strong>
-              <span>مصادر موثوقة، دون مواد حافظة أو نكهات مصنّعة.</span>
-            </li>
-            <li>
-              <strong>طعم أصيل</strong>
-              <span>نكهة سدر وزهور تعكس المواسم والمناطق.</span>
-            </li>
-            <li>
-              <strong>هدوء في التقديم</strong>
-              <span>تعبئة نظيفة، هوية هادئة، تجربة تليق بالمائدة.</span>
-            </li>
-          </ul>
-        </div>
-        <aside class="story-panel" aria-hidden="true">
-          <div class="story-panel-inner">
-            <p class="en story-panel-brand">SEDRA</p>
-            <p class="en story-panel-tag">Organic Honey Products</p>
-            <p class="en story-panel-est">ESTB 2025</p>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <!-- Trust -->
-    <section class="section trust" id="trust" aria-labelledby="trust-title">
-      <div class="section-inner">
-        <header class="section-head">
-          <p class="eyebrow"><span class="en">Promise</span></p>
-          <h2 id="trust-title">وعد سدرة</h2>
-        </header>
-        <div class="trust-grid">
-          <div class="trust-item">
-            <span class="trust-num en">01</span>
-            <h3>نقاء عضوي</h3>
-            <p>عسل طبيعي دون إضافات — نختار المصادر بعناية.</p>
-          </div>
-          <div class="trust-item">
-            <span class="trust-num en">02</span>
-            <h3>تعبئة أنيقة</h3>
-            <p>تقديم هادئ يليق بالمائدة والهدايا الخاصة.</p>
-          </div>
-          <div class="trust-item">
-            <span class="trust-num en">03</span>
-            <h3>طلب مباشر</h3>
-            <p>تواصل سريع عبر النموذج أو واتساب.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact / Order -->
-    <section class="section contact" id="contact" aria-labelledby="contact-title">
-      <div class="section-inner contact-inner">
-        <header class="section-head">
-          <p class="eyebrow"><span class="en">Order</span></p>
-          <h2 id="contact-title">تواصل · طلب</h2>
-          <p class="section-lead">اترك رسالتك وسنعود إليك — طلبات خاصة وهدايا مرحّب بها.</p>
-        </header>
-
-        <form class="order-form" id="order-form" novalidate>
-          <div class="field">
-            <label for="name">الاسم</label>
-            <input id="name" name="name" type="text" autocomplete="name" required placeholder="اسمك" />
-          </div>
-          <div class="field">
-            <label for="phone">الجوال</label>
-            <input id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="05xxxxxxxx" dir="ltr" />
-          </div>
-          <div class="field field-full">
-            <label for="interest">المنتج / الطلب</label>
-            <select id="interest" name="interest">
-              <option value="عسل سدر">عسل سدر</option>
-              <option value="عسل زهور">عسل زهور</option>
-              <option value="خلايا">خلايا</option>
-              <option value="هدايا">هدايا</option>
-              <option value="استفسار عام">استفسار عام</option>
-            </select>
-          </div>
-          <div class="field field-full">
-            <label for="message">رسالتك</label>
-            <textarea id="message" name="message" rows="4" placeholder="كمية، مناسبة، أو تفاصيل التوصيل…"></textarea>
-          </div>
-          <div class="form-actions field-full">
-            <button class="btn btn-primary" type="submit">إرسال الطلب</button>
-            <a class="btn btn-wa" id="whatsapp-link" href="https://wa.me/966500000000" target="_blank" rel="noopener noreferrer">واتساب</a>
-            <p class="form-note" id="form-status" role="status" aria-live="polite"></p>
-          </div>
+          <div class="suggestions" id="suggestions" role="listbox" aria-label="اقتراحات البحث" hidden></div>
         </form>
+
+        <div class="filter-chips" role="toolbar" aria-label="تصنيفات">
+          <button type="button" class="chip is-active" data-cat="all">الكل</button>
+          <button type="button" class="chip" data-cat="ui">واجهات</button>
+          <button type="button" class="chip" data-cat="mockup">موكأب</button>
+          <button type="button" class="chip" data-cat="template">قوالب</button>
+          <button type="button" class="chip" data-cat="icon">أيقونات</button>
+          <button type="button" class="chip" data-cat="poster">بوسترات</button>
+          <button type="button" class="chip" data-cat="sticker">ملصقات</button>
+          <button type="button" class="chip" data-cat="brand">هويات</button>
+        </div>
+
+        <p class="results-meta" id="results-meta" aria-live="polite"></p>
+
+        <!-- Discover grid -->
+        <div class="masonry" id="pin-grid" role="list"></div>
+
+        <!-- Zero results -->
+        <div class="empty-state" id="empty-state" hidden>
+          <div class="empty-art" aria-hidden="true">
+            <svg viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="20" y="18" width="80" height="50" rx="8" stroke="#C7E6BC" stroke-width="2"/>
+              <circle cx="48" cy="40" r="8" stroke="#CFEDC2" stroke-width="2"/>
+              <path d="M62 52l14-12 14 16" stroke="#CFEDC2" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>لا نتائج لهذا البحث</h3>
+          <p>جرّب كلمة أوسع، أو امسح التصفيات، أو اختر تصنيفاً من الشريط أعلاه.</p>
+          <div class="empty-actions">
+            <button type="button" class="btn btn-primary" id="rescue-clear">عرض الكل</button>
+            <button type="button" class="btn btn-ghost" id="rescue-suggest" data-q="واجهة">واجهات</button>
+            <button type="button" class="btn btn-ghost" id="rescue-icons" data-q="أيقونة">أيقونات</button>
+          </div>
+        </div>
+
+        <!-- Saved view -->
+        <div class="saved-panel" id="saved-panel" hidden>
+          <header class="section-head compact">
+            <h2>المحفوظات</h2>
+            <p class="section-lead">التصاميم التي حفظتها على هذا الجهاز.</p>
+          </header>
+          <div class="masonry" id="saved-grid" role="list"></div>
+          <div class="empty-state" id="saved-empty" hidden>
+            <h3>لا محفوظات بعد</h3>
+            <p>اضغط «حفظ» على أي تصميم لإضافته هنا.</p>
+            <button type="button" class="btn btn-primary" data-view-switch="discover">العودة للاكتشاف</button>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
+  <!-- Detail modal -->
+  <div class="detail-overlay" id="detail-overlay" hidden>
+    <div class="detail-sheet" role="dialog" aria-modal="true" aria-labelledby="detail-title" id="detail-sheet">
+      <button type="button" class="detail-close" id="detail-close" aria-label="إغلاق">×</button>
+      <div class="detail-preview" id="detail-preview"></div>
+      <div class="detail-body">
+        <p class="detail-cat" id="detail-cat"></p>
+        <h2 id="detail-title"></h2>
+        <p class="detail-desc" id="detail-desc"></p>
+        <dl class="detail-meta" id="detail-meta"></dl>
+        <div class="detail-tags" id="detail-tags"></div>
+      </div>
+      <div class="detail-actions sticky-actions">
+        <button type="button" class="btn btn-ghost" id="detail-save">حفظ</button>
+        <button type="button" class="btn btn-primary" id="detail-download">تنزيل</button>
+      </div>
+    </div>
+  </div>
+
   <footer class="site-footer">
     <div class="footer-inner">
-      <img class="footer-logo" src="assets/logo.jpeg" width="72" height="72" alt="" />
-      <p class="footer-brand">
-        <span class="ar">سدرة</span>
-        <span class="en">SEDRA</span>
-      </p>
-      <p class="footer-tag en">Organic Honey Products</p>
+      <a class="brand brand-footer" href="#top">
+        <img class="brand-mark" src="assets/logo.jpeg" width="40" height="40" alt="" />
+        <span class="brand-text">
+          <span class="brand-ar">سدرة</span>
+          <span class="brand-en">SEDRA</span>
+        </span>
+      </a>
+      <p class="footer-tag">تصاميم إلكترونية · Electronic Designs</p>
       <p class="footer-est en">ESTB 2025</p>
-      <nav class="footer-nav" aria-label="تذييل">
-        <a href="#products">منتجات</a>
-        <a href="#story">قصتنا</a>
-        <a href="#contact">تواصل</a>
-      </nav>
-      <p class="footer-copy">© 2025 سدرة · SEDRA. جميع الحقوق محفوظة.</p>
+      <p class="footer-note">معرض بصري للتصاميم الإلكترونية — ليس متجراً للمنتجات الغذائية.</p>
     </div>
   </footer>
 

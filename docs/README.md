@@ -1,7 +1,7 @@
-# SEDRA / سدرة
+# SEDRA / سدرة — Electronic Designs Gallery
 
-Organic Honey Products · ESTB 2025
+GitHub Pages site for **تصاميم إلكترونية** (electronic designs).
 
-Quiet-luxury brand site — Arabic RTL primary.
+Live: https://gaber311a-lang.github.io/DesignerAssets/
 
-**Live:** https://gaber311a-lang.github.io/DesignerAssets/
+Brand lock: see [BRAND.md](./BRAND.md).

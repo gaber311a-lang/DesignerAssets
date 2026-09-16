@@ -3,28 +3,32 @@
 ## Name
 - **Arabic:** سدرة
 - **English:** SEDRA
-- **Tagline:** Organic Honey Products
+- **Tagline:** تصاميم إلكترونية · Electronic Designs
 - **Established:** ESTB 2025
+
+## What this is
+A **gallery for electronic designs only** (تصاميم إلكترونية): UI kits, app mockups, posters, social templates, icons, digital stickers, brand layouts, and similar design assets.
 
 ## Colors (exact — locked from official logo)
 | Role | Hex | Usage |
 |------|-----|--------|
 | Forest green | `#003626` | bg / primary dark / text on light |
-| Sage / mint | `#CFEDC2` | logo / text accent / CTAs on dark |
+| Sage / mint | `#CFEDC2` | logo accent / CTAs on dark |
 | Stroke variant | `#C7E6BC` | borders, soft accents |
 | Soft cream | `#F5F7F2` | light sections |
 | White | `#FFFFFF` | sparingly on dark |
 
 ## Logo
-- Source: `/workspace/sedra-logo.jpeg`
 - Site path: `assets/logo.jpeg`
 - Use as-is in header / hero / footer — never recreate calligraphy.
 
 ## Typography
 - English brand bits: Cormorant Garamond (serif)
 - Arabic: system stack (`"SF Arabic"`, `"Segoe UI"`, Tahoma, sans-serif)
-- Tone: quiet luxury · nature · organic · Arabic-first RTL · mobile-first
+- Layout: Arabic-first RTL · mobile-first
 
 ## Do not use
+- Honey / organic / food product copy (عسل، منتجات عضوية، نحل، برطمانات، هدايا عسل، إلخ)
+- «Organic Honey Products» or any food-store messaging
 - DesignerAssets violet UI
-- Pinterest / unrelated stock aesthetics
+- Random mismatched stock photos — prefer coherent SVG/CSS art matching each design title
