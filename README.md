@@ -1,3 +1,15 @@
+# SEDRA / سدرة — تصاميم إلكترونية
+
+**Electronic Designs gallery** (not honey, not food). Live on GitHub Pages:
+
+**https://gaber311a-lang.github.io/DesignerAssets/**
+
+Brand: سدرة / SEDRA · tagline **تصاميم إلكترونية · Electronic Designs** · Forest `#003626` · Sage `#CFEDC2` · Stroke `#C7E6BC` · Cream `#F5F7F2`. Official logo only: `docs/assets/logo.jpeg`.
+
+Pages source: [`docs/`](./docs/) on `main`. Brand lock: [`docs/BRAND.md`](./docs/BRAND.md).
+
+---
+
 # Designer Assets / أصول المصمم
 
 SwiftUI iOS scaffold (iOS 17+) for the **Designer Assets** platform — Arabic UI, RTL-ready, Dynamic Type + Dark Mode, design tokens from `DESIGN_BRIEF.md`.

@@ -4,13 +4,15 @@
 - **Arabic:** سدرة
 - **English:** SEDRA
 - **Tagline:** تصاميم إلكترونية · Electronic Designs
-- **Established:** ESTB 2025 (small mark only)
+- **Established:** ESTB 2025 (small mark only — never a product line)
 
 ## What this is
 A **gallery that only displays electronic designs** (تصاميم إلكترونية):
 UI kits, app mockups, posters, social templates, icons, digital stickers, brand layouts, and similar design assets.
 
-Pinterest-like discovery UI in Sedra brand — search, filter chips, masonry pins, detail + حفظ/تنزيل, optional Saved tab.
+Pinterest-like discovery UI in Sedra brand — search (title / tags / type / format), filter chips, masonry pins, detail + حفظ/تنزيل, Saved tab.
+
+Live: https://gaber311a-lang.github.io/DesignerAssets/
 
 ## Colors (exact — locked from official logo)
 | Role | Hex | Usage |
@@ -23,16 +25,18 @@ Pinterest-like discovery UI in Sedra brand — search, filter chips, masonry pin
 
 ## Logo
 - Site path: `assets/logo.jpeg`
-- Use as-is in header / hero / footer — never recreate calligraphy.
+- Use **as-is** in header / hero / footer — never recreate calligraphy.
+- Adjacent site copy is always **تصاميم إلكترونية / Electronic Designs**, never the lockup’s older product line.
 
 ## Typography
 - English brand bits: Cormorant Garamond (serif)
 - Arabic: system stack (`"SF Arabic"`, `"Segoe UI"`, Tahoma, sans-serif)
-- Layout: Arabic-first RTL · mobile-first
+- Layout: Arabic-first RTL · mobile-first (iPhone Safari)
 
 ## Do not use
 - Honey / organic / food product copy (عسل، منتجات عضوية، نحل، برطمانات، هدايا عسل، منتجاتنا as honey cards، إلخ)
 - «Organic Honey Products» or any food-store / bee / jar messaging
 - Order forms for physical products
 - DesignerAssets violet UI
+- Abu Ezz / أبو عز red brand
 - Random mismatched stock photos — coherent SVG/CSS art matching each design title only
