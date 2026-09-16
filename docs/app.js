@@ -1,29 +1,36 @@
-/* Designer Assets — coherent catalog + type-matched generated media */
+/* Designer Assets — Pinterest-like masonry discovery feed */
 (function () {
   "use strict";
 
   const TYPES = {
     image: { label: "صور", order: 0 },
-    sticker: { label: "ستيكرات", order: 1 },
-    accessory: { label: "ملحقات", order: 2 },
+    accessory: { label: "ملحقات", order: 1 },
+    sticker: { label: "ستيكرات", order: 2 },
     idea: { label: "أفكار", order: 3 },
   };
 
+  /* Spec order: الكل، صور، ملحقات، ستيكرات، أفكار */
   const CHIPS = [
     { id: "all", label: "الكل" },
     { id: "image", label: "صور" },
-    { id: "sticker", label: "ستيكرات" },
     { id: "accessory", label: "ملحقات" },
+    { id: "sticker", label: "ستيكرات" },
     { id: "idea", label: "أفكار" },
   ];
 
-  const SECTION_ORDER = ["image", "sticker", "accessory", "idea"];
+  const ASPECT_SIZE = {
+    "1:1": [400, 400],
+    "4:3": [400, 300],
+    "3:4": [300, 400],
+    "16:9": [400, 225],
+    "9:16": [270, 480],
+    "2:3": [300, 450],
+    "3:2": [420, 280],
+  };
 
-  /* Intentional catalog IA:
-     خلفيات (صور) → ستيكرات → إطارات/ملحقات → أفكار محتوى
-     Premium/locked used sparingly. */
+  /* Coherent catalog — every visual matches Arabic title + type */
   const SAMPLES = [
-    // —— صور / خلفيات (5)
+    // —— صور
     {
       title: "خلفية بنفسجية ناعمة",
       type: "image",
@@ -31,7 +38,7 @@
       isPremium: false,
       isLocked: false,
       format: "PNG",
-      aspect: "1:1",
+      aspect: "3:4",
       palette: ["#6B5CFF", "#B8A9FF", "#EDE9FF"],
       motif: "soft-gradient",
     },
@@ -75,58 +82,23 @@
       isPremium: false,
       isLocked: false,
       format: "PNG",
-      aspect: "1:1",
+      aspect: "2:3",
       palette: ["#D4C4B0", "#E8DCC8", "#BFA890"],
       motif: "fabric",
     },
-
-    // —— ستيكرات (4)
     {
-      title: "ستيكر نجمة ذهبية",
-      type: "sticker",
-      tags: ["ستيكر", "نجمة", "ذهبي"],
+      title: "سماء ليلية بنفسجية",
+      type: "image",
+      tags: ["خلفية", "ليل", "نجوم"],
       isPremium: false,
       isLocked: false,
-      format: "PNG",
-      aspect: "1:1",
-      palette: ["#F5C542", "#FFE9A0", "#C9921A"],
-      motif: "star",
-    },
-    {
-      title: "ستيكر قلب وردي",
-      type: "sticker",
-      tags: ["ستيكر", "قلب", "وردي"],
-      isPremium: false,
-      isLocked: false,
-      format: "PNG",
-      aspect: "1:1",
-      palette: ["#FF5A7A", "#FFB3C1", "#E8385A"],
-      motif: "heart",
-    },
-    {
-      title: "ستيكر قهوة",
-      type: "sticker",
-      tags: ["ستيكر", "قهوة", "لطيف"],
-      isPremium: false,
-      isLocked: false,
-      format: "PNG",
-      aspect: "1:1",
-      palette: ["#8B5E3C", "#D4A574", "#F5E6D3"],
-      motif: "coffee",
-    },
-    {
-      title: "ستيكر تاج ملكي",
-      type: "sticker",
-      tags: ["ستيكر", "تاج", "ملكي"],
-      isPremium: true,
-      isLocked: true,
-      format: "PNG",
-      aspect: "1:1",
-      palette: ["#E8C547", "#FFF1A8", "#9A7420"],
-      motif: "crown",
+      format: "JPG",
+      aspect: "9:16",
+      palette: ["#1A1440", "#5B4DFF", "#A59EFF"],
+      motif: "night",
     },
 
-    // —— ملحقات / إطارات (5)
+    // —— ملحقات
     {
       title: "إطار إنستغرام",
       type: "accessory",
@@ -178,12 +150,69 @@
       isPremium: false,
       isLocked: false,
       format: "PDF",
-      aspect: "1:1",
+      aspect: "3:4",
       palette: ["#3D3D50", "#A0A0B2", "#EEEDFF"],
       motif: "grid",
     },
 
-    // —— أفكار محتوى (4)
+    // —— ستيكرات
+    {
+      title: "ستيكر نجمة ذهبية",
+      type: "sticker",
+      tags: ["ستيكر", "نجمة", "ذهبي"],
+      isPremium: false,
+      isLocked: false,
+      format: "PNG",
+      aspect: "1:1",
+      palette: ["#F5C542", "#FFE9A0", "#C9921A"],
+      motif: "star",
+    },
+    {
+      title: "ستيكر قلب وردي",
+      type: "sticker",
+      tags: ["ستيكر", "قلب", "وردي"],
+      isPremium: false,
+      isLocked: false,
+      format: "PNG",
+      aspect: "1:1",
+      palette: ["#FF5A7A", "#FFB3C1", "#E8385A"],
+      motif: "heart",
+    },
+    {
+      title: "ستيكر قهوة",
+      type: "sticker",
+      tags: ["ستيكر", "قهوة", "لطيف"],
+      isPremium: false,
+      isLocked: false,
+      format: "PNG",
+      aspect: "3:4",
+      palette: ["#8B5E3C", "#D4A574", "#F5E6D3"],
+      motif: "coffee",
+    },
+    {
+      title: "ستيكر تاج ملكي",
+      type: "sticker",
+      tags: ["ستيكر", "تاج", "ملكي"],
+      isPremium: true,
+      isLocked: true,
+      format: "PNG",
+      aspect: "1:1",
+      palette: ["#E8C547", "#FFF1A8", "#9A7420"],
+      motif: "crown",
+    },
+    {
+      title: "ستيكر ابتسامة",
+      type: "sticker",
+      tags: ["ستيكر", "ابتسامة", "لطيف"],
+      isPremium: false,
+      isLocked: false,
+      format: "PNG",
+      aspect: "1:1",
+      palette: ["#FFD54A", "#FFF3C0", "#E6A800"],
+      motif: "smile",
+    },
+
+    // —— أفكار
     {
       title: "فكرة بوست رمضان",
       type: "idea",
@@ -202,7 +231,7 @@
       isPremium: false,
       isLocked: false,
       format: "PDF",
-      aspect: "16:9",
+      aspect: "3:2",
       palette: ["#006C35", "#FFFFFF", "#C8102E"],
       motif: "saudi-palette",
     },
@@ -228,6 +257,17 @@
       palette: ["#5B4DFF", "#FF6B9D", "#FFF5F8"],
       motif: "story",
     },
+    {
+      title: "مودبورد هوية بنفسجية",
+      type: "idea",
+      tags: ["فكرة", "هوية", "مودبورد"],
+      isPremium: true,
+      isLocked: false,
+      format: "PDF",
+      aspect: "3:4",
+      palette: ["#5B4DFF", "#EEEDFF", "#12121A"],
+      motif: "moodboard",
+    },
   ];
 
   function formatCount(n) {
@@ -249,9 +289,33 @@
     return title.slice(0, max - 1) + "…";
   }
 
-  /* ——— Type-specific SVG generators (title always on media, RTL) ——— */
+  function dims(a) {
+    return ASPECT_SIZE[a.aspect] || [400, 400];
+  }
+
+  function toDataUri(svg) {
+    return `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+  }
+
+  function titleBar(w, h, titleEscaped, titleColor, lightOverlay) {
+    const barH = Math.max(48, Math.round(h * 0.18));
+    const y = h - Math.round(barH * 0.35);
+    const fade = lightOverlay
+      ? `<defs><linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+           <stop offset="0%" stop-color="#000" stop-opacity="0"/>
+           <stop offset="100%" stop-color="#000" stop-opacity="0.5"/>
+         </linearGradient></defs>
+         <rect y="${h - barH}" width="${w}" height="${barH}" fill="url(#fade)"/>`
+      : "";
+    return `${fade}
+      <text x="${w / 2}" y="${y}" text-anchor="middle"
+        font-family="system-ui,-apple-system,'SF Arabic',sans-serif"
+        font-size="${Math.max(14, Math.round(w * 0.05))}" font-weight="700"
+        fill="${titleColor}" direction="rtl">${titleEscaped}</text>`;
+  }
 
   function svgImage(a) {
+    const [w, h] = dims(a);
     const [c1, c2, c3] = a.palette;
     const t = escapeXml(shortTitle(a.title, 16));
     let body = "";
@@ -268,9 +332,9 @@
             <stop offset="100%" stop-color="#fff" stop-opacity="0"/>
           </radialGradient>
         </defs>
-        <rect width="400" height="400" fill="url(#g)"/>
-        <circle cx="320" cy="80" r="120" fill="url(#blob)"/>
-        <circle cx="60" cy="340" r="90" fill="${c3}" opacity="0.45"/>`;
+        <rect width="${w}" height="${h}" fill="url(#g)"/>
+        <circle cx="${w * 0.8}" cy="${h * 0.2}" r="${w * 0.3}" fill="url(#blob)"/>
+        <circle cx="${w * 0.15}" cy="${h * 0.85}" r="${w * 0.22}" fill="${c3}" opacity="0.45"/>`;
     } else if (a.motif === "sunset") {
       body = `
         <defs>
@@ -281,28 +345,41 @@
             <stop offset="100%" stop-color="${c3}"/>
           </linearGradient>
         </defs>
-        <rect width="400" height="400" fill="url(#g)"/>
-        <circle cx="200" cy="210" r="54" fill="#FFE08A"/>
-        <ellipse cx="200" cy="320" rx="180" ry="28" fill="${c1}" opacity="0.25"/>`;
+        <rect width="${w}" height="${h}" fill="url(#g)"/>
+        <circle cx="${w / 2}" cy="${h * 0.52}" r="${Math.min(w, h) * 0.14}" fill="#FFE08A"/>
+        <ellipse cx="${w / 2}" cy="${h * 0.8}" rx="${w * 0.45}" ry="${h * 0.07}" fill="${c1}" opacity="0.25"/>`;
     } else if (a.motif === "marble") {
       body = `
-        <rect width="400" height="400" fill="${c1}"/>
-        <path d="M0 80 Q100 40 180 100 T360 60 L400 90 Q280 140 200 110 T0 160 Z" fill="${c2}" opacity="0.7"/>
-        <path d="M0 220 Q120 180 220 240 T400 200 L400 240 Q280 280 180 250 T0 280 Z" fill="${c3}" opacity="0.35"/>
-        <path d="M40 0 Q80 120 60 400" stroke="${c3}" stroke-width="1.5" fill="none" opacity="0.4"/>
-        <path d="M280 0 Q300 160 260 400" stroke="${c2}" stroke-width="1.2" fill="none" opacity="0.5"/>`;
+        <rect width="${w}" height="${h}" fill="${c1}"/>
+        <path d="M0 ${h * 0.2} Q${w * 0.25} ${h * 0.1} ${w * 0.45} ${h * 0.25} T${w * 0.9} ${h * 0.15} L${w} ${h * 0.22} Q${w * 0.7} ${h * 0.35} ${w * 0.5} ${h * 0.28} T0 ${h * 0.4} Z" fill="${c2}" opacity="0.7"/>
+        <path d="M0 ${h * 0.55} Q${w * 0.3} ${h * 0.45} ${w * 0.55} ${h * 0.6} T${w} ${h * 0.5} L${w} ${h * 0.6} Q${w * 0.7} ${h * 0.7} ${w * 0.45} ${h * 0.62} T0 ${h * 0.7} Z" fill="${c3}" opacity="0.35"/>
+        <path d="M${w * 0.1} 0 Q${w * 0.2} ${h * 0.3} ${w * 0.15} ${h}" stroke="${c3}" stroke-width="1.5" fill="none" opacity="0.4"/>
+        <path d="M${w * 0.7} 0 Q${w * 0.75} ${h * 0.4} ${w * 0.65} ${h}" stroke="${c2}" stroke-width="1.2" fill="none" opacity="0.5"/>`;
     } else if (a.motif === "geo") {
       body = `
-        <rect width="400" height="400" fill="${c1}"/>
-        <g opacity="0.9">
-          <polygon points="0,0 200,0 0,200" fill="${c2}"/>
-          <polygon points="400,0 400,200 200,0" fill="${c3}" opacity="0.55"/>
-          <polygon points="0,400 0,220 180,400" fill="${c3}" opacity="0.4"/>
-          <polygon points="220,400 400,400 400,220" fill="${c2}" opacity="0.7"/>
-          <rect x="140" y="140" width="120" height="120" fill="none" stroke="${c3}" stroke-width="3" opacity="0.8"/>
-        </g>`;
+        <rect width="${w}" height="${h}" fill="${c1}"/>
+        <polygon points="0,0 ${w / 2},0 0,${h / 2}" fill="${c2}"/>
+        <polygon points="${w},0 ${w},${h / 2} ${w / 2},0" fill="${c3}" opacity="0.55"/>
+        <polygon points="0,${h} 0,${h * 0.55} ${w * 0.45},${h}" fill="${c3}" opacity="0.4"/>
+        <polygon points="${w * 0.55},${h} ${w},${h} ${w},${h * 0.55}" fill="${c2}" opacity="0.7"/>
+        <rect x="${w * 0.35}" y="${h * 0.35}" width="${w * 0.3}" height="${h * 0.3}" fill="none" stroke="${c3}" stroke-width="3" opacity="0.8"/>`;
+    } else if (a.motif === "night") {
+      body = `
+        <defs>
+          <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="${c1}"/>
+            <stop offset="70%" stop-color="${c2}"/>
+            <stop offset="100%" stop-color="${c3}"/>
+          </linearGradient>
+        </defs>
+        <rect width="${w}" height="${h}" fill="url(#g)"/>
+        <circle cx="${w * 0.2}" cy="${h * 0.15}" r="2" fill="#fff" opacity="0.9"/>
+        <circle cx="${w * 0.7}" cy="${h * 0.1}" r="1.5" fill="#fff" opacity="0.8"/>
+        <circle cx="${w * 0.5}" cy="${h * 0.22}" r="1.2" fill="#fff" opacity="0.7"/>
+        <circle cx="${w * 0.85}" cy="${h * 0.3}" r="2" fill="#fff" opacity="0.85"/>
+        <circle cx="${w * 0.3}" cy="${h * 0.35}" r="1" fill="#fff" opacity="0.6"/>
+        <circle cx="${w * 0.75}" cy="${h * 0.18}" r="3" fill="${c3}" opacity="0.5"/>`;
     } else {
-      /* fabric */
       body = `
         <defs>
           <pattern id="weave" width="16" height="16" patternUnits="userSpaceOnUse">
@@ -310,36 +387,45 @@
             <path d="M0 0h16M0 8h16M0 0v16M8 0v16" stroke="${c2}" stroke-width="0.8" opacity="0.6"/>
           </pattern>
         </defs>
-        <rect width="400" height="400" fill="url(#weave)"/>
-        <rect width="400" height="400" fill="${c3}" opacity="0.12"/>`;
+        <rect width="${w}" height="${h}" fill="url(#weave)"/>
+        <rect width="${w}" height="${h}" fill="${c3}" opacity="0.12"/>`;
     }
-    return wrapCardSvg(body, t, "#FFFFFF", true);
+    return toDataUri(
+      `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}">${body}${titleBar(w, h, t, "#FFFFFF", true)}</svg>`
+    );
   }
 
   function svgSticker(a) {
+    const [w, h] = dims(a);
     const [c1, c2, c3] = a.palette;
     const t = escapeXml(shortTitle(a.title, 14));
+    const cx = w / 2;
+    const cy = h * 0.42;
+    const r = Math.min(w, h) * 0.28;
     let icon = "";
     if (a.motif === "star") {
-      icon = `<polygon points="200,95 218,155 282,155 230,192 248,252 200,218 152,252 170,192 118,155 182,155" fill="${c1}" stroke="${c3}" stroke-width="4"/>
-        <circle cx="200" cy="185" r="10" fill="${c2}"/>`;
+      const s = r * 0.9;
+      icon = `<polygon points="${cx},${cy - s} ${cx + s * 0.22},${cy - s * 0.25} ${cx + s},${cy - s * 0.25} ${cx + s * 0.35},${cy + s * 0.15} ${cx + s * 0.55},${cy + s} ${cx},${cy + s * 0.45} ${cx - s * 0.55},${cy + s} ${cx - s * 0.35},${cy + s * 0.15} ${cx - s},${cy - s * 0.25} ${cx - s * 0.22},${cy - s * 0.25}" fill="${c1}" stroke="${c3}" stroke-width="3"/>`;
     } else if (a.motif === "heart") {
-      icon = `<path d="M200 268 C200 268 110 210 110 155 C110 125 132 108 158 108 C176 108 192 118 200 132 C208 118 224 108 242 108 C268 108 290 125 290 155 C290 210 200 268 200 268 Z" fill="${c1}" stroke="${c3}" stroke-width="4"/>
-        <ellipse cx="165" cy="148" rx="14" ry="10" fill="${c2}" opacity="0.55"/>`;
+      icon = `<path d="M${cx} ${cy + r * 0.7} C${cx} ${cy + r * 0.7} ${cx - r} ${cy + r * 0.1} ${cx - r} ${cy - r * 0.35} C${cx - r} ${cy - r * 0.7} ${cx - r * 0.55} ${cy - r * 0.9} ${cx - r * 0.25} ${cy - r * 0.9} C${cx - r * 0.05} ${cy - r * 0.9} ${cx + r * 0.05} ${cy - r * 0.75} ${cx} ${cy - r * 0.55} C${cx - r * 0.05} ${cy - r * 0.75} ${cx + r * 0.05} ${cy - r * 0.9} ${cx + r * 0.25} ${cy - r * 0.9} C${cx + r * 0.55} ${cy - r * 0.9} ${cx + r} ${cy - r * 0.7} ${cx + r} ${cy - r * 0.35} C${cx + r} ${cy + r * 0.1} ${cx} ${cy + r * 0.7} ${cx} ${cy + r * 0.7} Z" fill="${c1}" stroke="${c3}" stroke-width="3"/>`;
     } else if (a.motif === "coffee") {
       icon = `
-        <rect x="145" y="145" width="110" height="100" rx="12" fill="${c1}" stroke="${c3}" stroke-width="4"/>
-        <path d="M255 165 h22 a22 22 0 0 1 0 44 h-22" fill="none" stroke="${c3}" stroke-width="6"/>
-        <ellipse cx="200" cy="145" rx="50" ry="12" fill="${c2}"/>
-        <path d="M175 120 q10 -18 0 -28 M200 118 q10 -20 0 -32 M225 120 q10 -18 0 -28" fill="none" stroke="${c3}" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
-        <rect x="160" y="250" width="80" height="10" rx="4" fill="${c3}"/>`;
+        <rect x="${cx - r * 0.45}" y="${cy - r * 0.35}" width="${r * 0.9}" height="${r * 0.85}" rx="10" fill="${c1}" stroke="${c3}" stroke-width="3"/>
+        <path d="M${cx + r * 0.45} ${cy - r * 0.15} h${r * 0.2} a${r * 0.2} ${r * 0.2} 0 0 1 0 ${r * 0.4} h-${r * 0.2}" fill="none" stroke="${c3}" stroke-width="5"/>
+        <ellipse cx="${cx}" cy="${cy - r * 0.35}" rx="${r * 0.4}" ry="${r * 0.1}" fill="${c2}"/>
+        <path d="M${cx - r * 0.2} ${cy - r * 0.55} q${r * 0.08} -${r * 0.2} 0 -${r * 0.3} M${cx} ${cy - r * 0.58} q${r * 0.08} -${r * 0.22} 0 -${r * 0.35} M${cx + r * 0.2} ${cy - r * 0.55} q${r * 0.08} -${r * 0.2} 0 -${r * 0.3}" fill="none" stroke="${c3}" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>`;
+    } else if (a.motif === "smile") {
+      icon = `
+        <circle cx="${cx}" cy="${cy}" r="${r}" fill="${c1}" stroke="${c3}" stroke-width="3"/>
+        <circle cx="${cx - r * 0.35}" cy="${cy - r * 0.15}" r="${r * 0.1}" fill="${c3}"/>
+        <circle cx="${cx + r * 0.35}" cy="${cy - r * 0.15}" r="${r * 0.1}" fill="${c3}"/>
+        <path d="M${cx - r * 0.4} ${cy + r * 0.2} Q${cx} ${cy + r * 0.55} ${cx + r * 0.4} ${cy + r * 0.2}" fill="none" stroke="${c3}" stroke-width="4" stroke-linecap="round"/>`;
     } else {
-      /* crown */
-      icon = `<path d="M120 230 L130 140 L170 190 L200 120 L230 190 L270 140 L280 230 Z" fill="${c1}" stroke="${c3}" stroke-width="4" stroke-linejoin="round"/>
-        <rect x="120" y="230" width="160" height="22" rx="4" fill="${c3}"/>
-        <circle cx="130" cy="138" r="8" fill="${c2}"/>
-        <circle cx="200" cy="118" r="9" fill="${c2}"/>
-        <circle cx="270" cy="138" r="8" fill="${c2}"/>`;
+      icon = `<path d="M${cx - r} ${cy + r * 0.4} L${cx - r * 0.85} ${cy - r * 0.5} L${cx - r * 0.3} ${cy} L${cx} ${cy - r * 0.85} L${cx + r * 0.3} ${cy} L${cx + r * 0.85} ${cy - r * 0.5} L${cx + r} ${cy + r * 0.4} Z" fill="${c1}" stroke="${c3}" stroke-width="3" stroke-linejoin="round"/>
+        <rect x="${cx - r}" y="${cy + r * 0.4}" width="${r * 2}" height="${r * 0.2}" rx="3" fill="${c3}"/>
+        <circle cx="${cx - r * 0.85}" cy="${cy - r * 0.52}" r="6" fill="${c2}"/>
+        <circle cx="${cx}" cy="${cy - r * 0.88}" r="7" fill="${c2}"/>
+        <circle cx="${cx + r * 0.85}" cy="${cy - r * 0.52}" r="6" fill="${c2}"/>`;
     }
     const body = `
       <defs>
@@ -347,144 +433,145 @@
           <circle cx="2" cy="2" r="1.4" fill="#C8C8D4" opacity="0.55"/>
         </pattern>
       </defs>
-      <rect width="400" height="400" fill="#F7F7FA"/>
-      <rect width="400" height="400" fill="url(#dots)"/>
-      <circle cx="200" cy="185" r="118" fill="#FFFFFF" stroke="#E2E2EA" stroke-width="2"/>
+      <rect width="${w}" height="${h}" fill="#F7F7FA"/>
+      <rect width="${w}" height="${h}" fill="url(#dots)"/>
+      <circle cx="${cx}" cy="${cy}" r="${r * 1.15}" fill="#FFFFFF" stroke="#E2E2EA" stroke-width="2"/>
       ${icon}`;
-    return wrapCardSvg(body, t, "#12121A", false);
+    return toDataUri(
+      `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}">${body}${titleBar(w, h, t, "#12121A", false)}</svg>`
+    );
   }
 
   function svgAccessory(a) {
+    const [w, h] = dims(a);
     const [c1, c2, c3] = a.palette;
     const t = escapeXml(shortTitle(a.title, 14));
     let mid = "";
     if (a.motif === "frame") {
+      const fw = w * 0.62;
+      const fh = h * 0.62;
+      const fx = (w - fw) / 2;
+      const fy = h * 0.12;
       mid = `
-        <rect x="70" y="55" width="260" height="250" rx="18" fill="none" stroke="${c1}" stroke-width="10"/>
-        <rect x="90" y="75" width="220" height="210" rx="10" fill="${c2}"/>
-        <circle cx="200" cy="160" r="36" fill="none" stroke="${c1}" stroke-width="6" opacity="0.5"/>
-        <rect x="130" y="230" width="140" height="10" rx="5" fill="${c1}" opacity="0.35"/>`;
+        <rect x="${fx}" y="${fy}" width="${fw}" height="${fh}" rx="16" fill="none" stroke="${c1}" stroke-width="8"/>
+        <rect x="${fx + 14}" y="${fy + 14}" width="${fw - 28}" height="${fh - 28}" rx="8" fill="${c2}"/>
+        <circle cx="${w / 2}" cy="${fy + fh * 0.4}" r="${Math.min(fw, fh) * 0.12}" fill="none" stroke="${c1}" stroke-width="5" opacity="0.5"/>
+        <rect x="${w / 2 - fw * 0.25}" y="${fy + fh * 0.72}" width="${fw * 0.5}" height="8" rx="4" fill="${c1}" opacity="0.35"/>`;
     } else if (a.motif === "badge") {
       mid = `
-        <circle cx="200" cy="175" r="95" fill="${c1}"/>
-        <circle cx="200" cy="175" r="78" fill="none" stroke="${c2}" stroke-width="4" stroke-dasharray="8 6"/>
-        <text x="200" y="168" text-anchor="middle" font-family="system-ui,sans-serif" font-size="42" font-weight="800" fill="#fff">٪٥٠</text>
-        <text x="200" y="202" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" font-weight="600" fill="#fff" opacity="0.9">خصم</text>`;
+        <circle cx="${w / 2}" cy="${h * 0.42}" r="${Math.min(w, h) * 0.28}" fill="${c1}"/>
+        <circle cx="${w / 2}" cy="${h * 0.42}" r="${Math.min(w, h) * 0.22}" fill="none" stroke="${c2}" stroke-width="3" stroke-dasharray="7 5"/>
+        <text x="${w / 2}" y="${h * 0.41}" text-anchor="middle" font-family="system-ui,sans-serif" font-size="${Math.min(w, h) * 0.14}" font-weight="800" fill="#fff">٪٥٠</text>
+        <text x="${w / 2}" y="${h * 0.5}" text-anchor="middle" font-family="system-ui,sans-serif" font-size="${Math.min(w, h) * 0.05}" font-weight="600" fill="#fff" opacity="0.9">خصم</text>`;
     } else if (a.motif === "icons") {
+      const s = Math.min(w, h) * 0.18;
+      const gap = s * 0.25;
+      const ox = (w - (s * 3 + gap * 2)) / 2;
+      const oy = h * 0.22;
       mid = `
-        <g fill="none" stroke="${c1}" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="80" y="90" width="70" height="70" rx="14" fill="${c2}"/>
-          <path d="M100 125 h30 M115 110 v30" stroke="${c1}"/>
-          <rect x="165" y="90" width="70" height="70" rx="14" fill="${c2}"/>
-          <circle cx="200" cy="125" r="16" stroke="${c1}"/>
-          <rect x="250" y="90" width="70" height="70" rx="14" fill="${c2}"/>
-          <path d="M270 140 l15 -25 15 25" stroke="${c1}"/>
-          <rect x="122" y="175" width="70" height="70" rx="14" fill="${c2}"/>
-          <path d="M142 210 h30" stroke="${c1}"/>
-          <rect x="208" y="175" width="70" height="70" rx="14" fill="${c2}"/>
-          <path d="M228 195 l30 30 M258 195 l-30 30" stroke="${c1}"/>
+        <g fill="none" stroke="${c1}" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="${ox}" y="${oy}" width="${s}" height="${s}" rx="10" fill="${c2}"/>
+          <path d="M${ox + s * 0.28} ${oy + s * 0.5} h${s * 0.44} M${ox + s * 0.5} ${oy + s * 0.28} v${s * 0.44}" stroke="${c1}"/>
+          <rect x="${ox + s + gap}" y="${oy}" width="${s}" height="${s}" rx="10" fill="${c2}"/>
+          <circle cx="${ox + s + gap + s / 2}" cy="${oy + s / 2}" r="${s * 0.22}" stroke="${c1}"/>
+          <rect x="${ox + (s + gap) * 2}" y="${oy}" width="${s}" height="${s}" rx="10" fill="${c2}"/>
+          <path d="M${ox + (s + gap) * 2 + s * 0.28} ${oy + s * 0.65} l${s * 0.22} -${s * 0.35} l${s * 0.22} ${s * 0.35}" stroke="${c1}"/>
+          <rect x="${ox + s * 0.5}" y="${oy + s + gap}" width="${s}" height="${s}" rx="10" fill="${c2}"/>
+          <path d="M${ox + s * 0.5 + s * 0.28} ${oy + s + gap + s * 0.5} h${s * 0.44}" stroke="${c1}"/>
+          <rect x="${ox + s * 0.5 + s + gap}" y="${oy + s + gap}" width="${s}" height="${s}" rx="10" fill="${c2}"/>
+          <path d="M${ox + s * 0.5 + s + gap + s * 0.28} ${oy + s + gap + s * 0.28} l${s * 0.44} ${s * 0.44} M${ox + s * 0.5 + s + gap + s * 0.72} ${oy + s + gap + s * 0.28} l-${s * 0.44} ${s * 0.44}" stroke="${c1}"/>
         </g>`;
     } else if (a.motif === "ornament") {
       mid = `
-        <rect x="40" y="150" width="320" height="60" rx="8" fill="${c1}"/>
-        <path d="M70 180 Q100 150 130 180 T190 180 T250 180 T310 180 T340 180" fill="none" stroke="${c2}" stroke-width="4"/>
-        <circle cx="200" cy="180" r="14" fill="${c2}"/>
-        <circle cx="130" cy="180" r="7" fill="${c2}" opacity="0.8"/>
-        <circle cx="270" cy="180" r="7" fill="${c2}" opacity="0.8"/>`;
+        <rect x="${w * 0.08}" y="${h * 0.38}" width="${w * 0.84}" height="${h * 0.22}" rx="8" fill="${c1}"/>
+        <path d="M${w * 0.15} ${h * 0.49} Q${w * 0.25} ${h * 0.38} ${w * 0.35} ${h * 0.49} T${w * 0.55} ${h * 0.49} T${w * 0.75} ${h * 0.49} T${w * 0.88} ${h * 0.49}" fill="none" stroke="${c2}" stroke-width="3"/>
+        <circle cx="${w / 2}" cy="${h * 0.49}" r="10" fill="${c2}"/>
+        <circle cx="${w * 0.35}" cy="${h * 0.49}" r="5" fill="${c2}" opacity="0.8"/>
+        <circle cx="${w * 0.65}" cy="${h * 0.49}" r="5" fill="${c2}" opacity="0.8"/>`;
     } else {
-      /* grid */
+      const gw = w * 0.7;
+      const gh = h * 0.55;
+      const gx = (w - gw) / 2;
+      const gy = h * 0.15;
       mid = `
-        <rect x="70" y="70" width="260" height="220" rx="8" fill="#fff" stroke="${c1}" stroke-width="3"/>
-        <path d="M70 143 h260 M70 216 h260 M157 70 v220 M244 70 v220" stroke="${c2}" stroke-width="1.5" opacity="0.7"/>
-        <rect x="80" y="80" width="67" height="53" fill="${c3}" opacity="0.5"/>
-        <rect x="167" y="153" width="67" height="53" fill="${c1}" opacity="0.2"/>`;
+        <rect x="${gx}" y="${gy}" width="${gw}" height="${gh}" rx="8" fill="#fff" stroke="${c1}" stroke-width="2.5"/>
+        <path d="M${gx} ${gy + gh / 3} h${gw} M${gx} ${gy + (gh * 2) / 3} h${gw} M${gx + gw / 3} ${gy} v${gh} M${gx + (gw * 2) / 3} ${gy} v${gh}" stroke="${c2}" stroke-width="1.2" opacity="0.7"/>
+        <rect x="${gx + 8}" y="${gy + 8}" width="${gw / 3 - 12}" height="${gh / 3 - 12}" fill="${c3}" opacity="0.5"/>
+        <rect x="${gx + gw / 3 + 6}" y="${gy + gh / 3 + 6}" width="${gw / 3 - 12}" height="${gh / 3 - 12}" fill="${c1}" opacity="0.2"/>`;
     }
+    const pad = Math.min(w, h) * 0.05;
     const body = `
-      <rect width="400" height="400" fill="#EEEDFF"/>
-      <rect x="24" y="24" width="352" height="352" rx="20" fill="#FFFFFF" stroke="#E2E2EA" stroke-width="1.5"/>
+      <rect width="${w}" height="${h}" fill="#EEEDFF"/>
+      <rect x="${pad}" y="${pad}" width="${w - pad * 2}" height="${h - pad * 2}" rx="16" fill="#FFFFFF" stroke="#E2E2EA" stroke-width="1.5"/>
       ${mid}`;
-    return wrapCardSvg(body, t, "#12121A", false);
+    return toDataUri(
+      `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}">${body}${titleBar(w, h, t, "#12121A", false)}</svg>`
+    );
   }
 
   function svgIdea(a) {
+    const [w, h] = dims(a);
     const [c1, c2, c3] = a.palette;
     const t = escapeXml(shortTitle(a.title, 16));
     let board = "";
     if (a.motif === "ramadan") {
       board = `
-        <rect width="400" height="400" fill="${c1}"/>
-        <path d="M260 90 a70 70 0 1 0 0 140 a55 55 0 1 1 0 -140" fill="${c2}"/>
-        <circle cx="300" cy="100" r="3" fill="${c3}"/>
-        <circle cx="320" cy="140" r="2" fill="${c3}"/>
-        <circle cx="280" cy="160" r="2.5" fill="${c3}"/>
-        <rect x="48" y="250" width="304" height="100" rx="12" fill="${c3}" opacity="0.92"/>
-        <text x="200" y="292" text-anchor="middle" font-family="system-ui,sans-serif" font-size="22" font-weight="700" fill="${c1}" direction="rtl">${t}</text>
-        <text x="200" y="322" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="${c1}" opacity="0.7" direction="rtl">مودبورد · فكرة محتوى</text>`;
-      return `data:image/svg+xml;charset=utf-8,${encodeURIComponent(
-        `<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">${board}</svg>`
-      )}`;
-    }
-    if (a.motif === "saudi-palette") {
+        <rect width="${w}" height="${h}" fill="${c1}"/>
+        <path d="M${w * 0.65} ${h * 0.18} a${w * 0.16} ${w * 0.16} 0 1 0 0 ${w * 0.32} a${w * 0.12} ${w * 0.12} 0 1 1 0 -${w * 0.32}" fill="${c2}"/>
+        <circle cx="${w * 0.78}" cy="${h * 0.2}" r="2.5" fill="${c3}"/>
+        <circle cx="${w * 0.85}" cy="${h * 0.3}" r="2" fill="${c3}"/>
+        <circle cx="${w * 0.72}" cy="${h * 0.35}" r="2" fill="${c3}"/>
+        <rect x="${w * 0.1}" y="${h * 0.62}" width="${w * 0.8}" height="${h * 0.22}" rx="12" fill="${c3}" opacity="0.92"/>
+        <text x="${w / 2}" y="${h * 0.72}" text-anchor="middle" font-family="system-ui,sans-serif" font-size="${Math.max(14, w * 0.05)}" font-weight="700" fill="${c1}" direction="rtl">${t}</text>
+        <text x="${w / 2}" y="${h * 0.78}" text-anchor="middle" font-family="system-ui,sans-serif" font-size="${Math.max(11, w * 0.032)}" fill="${c1}" opacity="0.7" direction="rtl">مودبورد · فكرة محتوى</text>`;
+    } else if (a.motif === "saudi-palette") {
       board = `
-        <rect width="400" height="400" fill="#F4F4F8"/>
-        <rect x="40" y="50" width="320" height="200" rx="16" fill="#fff" stroke="#E2E2EA"/>
-        <rect x="60" y="70" width="80" height="160" rx="8" fill="${c1}"/>
-        <rect x="160" y="70" width="80" height="160" rx="8" fill="${c2}" stroke="#E2E2EA"/>
-        <rect x="260" y="70" width="80" height="160" rx="8" fill="${c3}"/>
-        <text x="200" y="300" text-anchor="middle" font-family="system-ui,sans-serif" font-size="20" font-weight="700" fill="#12121A" direction="rtl">${t}</text>
-        <text x="200" y="330" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#5C5C6E" direction="rtl">لوحة ألوان · هوية</text>`;
-      return `data:image/svg+xml;charset=utf-8,${encodeURIComponent(
-        `<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">${board}</svg>`
-      )}`;
-    }
-    if (a.motif === "yt-cover") {
+        <rect width="${w}" height="${h}" fill="#F4F4F8"/>
+        <rect x="${w * 0.08}" y="${h * 0.1}" width="${w * 0.84}" height="${h * 0.55}" rx="14" fill="#fff" stroke="#E2E2EA"/>
+        <rect x="${w * 0.12}" y="${h * 0.16}" width="${w * 0.22}" height="${h * 0.42}" rx="8" fill="${c1}"/>
+        <rect x="${w * 0.39}" y="${h * 0.16}" width="${w * 0.22}" height="${h * 0.42}" rx="8" fill="${c2}" stroke="#E2E2EA"/>
+        <rect x="${w * 0.66}" y="${h * 0.16}" width="${w * 0.22}" height="${h * 0.42}" rx="8" fill="${c3}"/>
+        <text x="${w / 2}" y="${h * 0.8}" text-anchor="middle" font-family="system-ui,sans-serif" font-size="${Math.max(14, w * 0.048)}" font-weight="700" fill="#12121A" direction="rtl">${t}</text>
+        <text x="${w / 2}" y="${h * 0.88}" text-anchor="middle" font-family="system-ui,sans-serif" font-size="${Math.max(11, w * 0.03)}" fill="#5C5C6E" direction="rtl">لوحة ألوان · هوية</text>`;
+    } else if (a.motif === "yt-cover") {
       board = `
-        <rect width="400" height="400" fill="${c2}"/>
-        <rect x="30" y="100" width="340" height="160" rx="8" fill="#111"/>
-        <rect x="30" y="100" width="8" height="160" fill="${c1}"/>
-        <circle cx="200" cy="180" r="28" fill="${c1}"/>
-        <polygon points="192,168 216,180 192,192" fill="#fff"/>
-        <text x="200" y="310" text-anchor="middle" font-family="system-ui,sans-serif" font-size="20" font-weight="700" fill="#fff" direction="rtl">${t}</text>
-        <text x="200" y="338" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#A0A0B2" direction="rtl">غلاف فيديو · ١٦:٩</text>`;
-      return `data:image/svg+xml;charset=utf-8,${encodeURIComponent(
-        `<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">${board}</svg>`
-      )}`;
+        <rect width="${w}" height="${h}" fill="${c2}"/>
+        <rect x="${w * 0.06}" y="${h * 0.22}" width="${w * 0.88}" height="${h * 0.42}" rx="8" fill="#111"/>
+        <rect x="${w * 0.06}" y="${h * 0.22}" width="6" height="${h * 0.42}" fill="${c1}"/>
+        <circle cx="${w / 2}" cy="${h * 0.43}" r="${Math.min(w, h) * 0.08}" fill="${c1}"/>
+        <polygon points="${w / 2 - 6},${h * 0.43 - 8} ${w / 2 + 10},${h * 0.43} ${w / 2 - 6},${h * 0.43 + 8}" fill="#fff"/>
+        <text x="${w / 2}" y="${h * 0.8}" text-anchor="middle" font-family="system-ui,sans-serif" font-size="${Math.max(14, w * 0.045)}" font-weight="700" fill="#fff" direction="rtl">${t}</text>
+        <text x="${w / 2}" y="${h * 0.9}" text-anchor="middle" font-family="system-ui,sans-serif" font-size="${Math.max(11, w * 0.028)}" fill="#A0A0B2" direction="rtl">غلاف فيديو · ١٦:٩</text>`;
+    } else if (a.motif === "moodboard") {
+      board = `
+        <rect width="${w}" height="${h}" fill="${c2}"/>
+        <rect x="${w * 0.08}" y="${h * 0.08}" width="${w * 0.5}" height="${h * 0.35}" rx="10" fill="${c1}"/>
+        <rect x="${w * 0.62}" y="${h * 0.08}" width="${w * 0.3}" height="${h * 0.2}" rx="8" fill="${c3}" opacity="0.85"/>
+        <rect x="${w * 0.62}" y="${h * 0.32}" width="${w * 0.3}" height="${h * 0.11}" rx="6" fill="#fff"/>
+        <rect x="${w * 0.08}" y="${h * 0.48}" width="${w * 0.38}" height="${h * 0.22}" rx="8" fill="#fff"/>
+        <rect x="${w * 0.5}" y="${h * 0.48}" width="${w * 0.42}" height="${h * 0.22}" rx="8" fill="${c1}" opacity="0.35"/>
+        <text x="${w / 2}" y="${h * 0.85}" text-anchor="middle" font-family="system-ui,sans-serif" font-size="${Math.max(13, w * 0.05)}" font-weight="700" fill="${c3}" direction="rtl">${t}</text>
+        <text x="${w / 2}" y="${h * 0.92}" text-anchor="middle" font-family="system-ui,sans-serif" font-size="${Math.max(11, w * 0.032)}" fill="${c1}" direction="rtl">مودبورد · هوية</text>`;
+    } else {
+      /* story */
+      board = `
+        <defs>
+          <linearGradient id="sg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="${c1}"/>
+            <stop offset="100%" stop-color="${c2}"/>
+          </linearGradient>
+        </defs>
+        <rect width="${w}" height="${h}" fill="${c3}"/>
+        <rect x="${w * 0.22}" y="${h * 0.08}" width="${w * 0.56}" height="${h * 0.62}" rx="18" fill="url(#sg)"/>
+        <rect x="${w * 0.26}" y="${h * 0.11}" width="${w * 0.48}" height="${h * 0.55}" rx="12" fill="#fff" opacity="0.95"/>
+        <rect x="${w * 0.32}" y="${h * 0.18}" width="${w * 0.36}" height="${h * 0.14}" rx="8" fill="${c1}" opacity="0.2"/>
+        <rect x="${w * 0.32}" y="${h * 0.38}" width="${w * 0.28}" height="8" rx="4" fill="${c1}" opacity="0.35"/>
+        <rect x="${w * 0.32}" y="${h * 0.43}" width="${w * 0.2}" height="6" rx="3" fill="${c2}" opacity="0.3"/>
+        <text x="${w / 2}" y="${h * 0.85}" text-anchor="middle" font-family="system-ui,sans-serif" font-size="${Math.max(13, w * 0.055)}" font-weight="700" fill="#12121A" direction="rtl">${t}</text>`;
     }
-    /* story */
-    board = `
-      <defs>
-        <linearGradient id="sg" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stop-color="${c1}"/>
-          <stop offset="100%" stop-color="${c2}"/>
-        </linearGradient>
-      </defs>
-      <rect width="400" height="400" fill="${c3}"/>
-      <rect x="110" y="40" width="180" height="280" rx="20" fill="url(#sg)"/>
-      <rect x="122" y="55" width="156" height="250" rx="12" fill="#fff" opacity="0.95"/>
-      <rect x="140" y="80" width="120" height="70" rx="8" fill="${c1}" opacity="0.2"/>
-      <rect x="140" y="165" width="90" height="10" rx="4" fill="${c1}" opacity="0.35"/>
-      <rect x="140" y="185" width="70" height="8" rx="4" fill="${c2}" opacity="0.3"/>
-      <text x="200" y="355" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" font-weight="700" fill="#12121A" direction="rtl">${t}</text>`;
-    return `data:image/svg+xml;charset=utf-8,${encodeURIComponent(
-      `<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">${board}</svg>`
-    )}`;
-  }
-
-  function wrapCardSvg(body, titleEscaped, titleColor, lightOverlay) {
-    const bar = lightOverlay
-      ? `<rect y="320" width="400" height="80" fill="url(#fade)"/>
-         <defs><linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
-           <stop offset="0%" stop-color="#000" stop-opacity="0"/>
-           <stop offset="100%" stop-color="#000" stop-opacity="0.45"/>
-         </linearGradient></defs>`
-      : "";
-    const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
-      ${body}
-      ${bar}
-      <text x="200" y="362" text-anchor="middle" font-family="system-ui,-apple-system,'SF Arabic',sans-serif"
-        font-size="20" font-weight="700" fill="${titleColor}" direction="rtl">${titleEscaped}</text>
-    </svg>`;
-    return `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+    return toDataUri(
+      `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}">${board}</svg>`
+    );
   }
 
   function buildMediaUrl(asset) {
@@ -540,7 +627,7 @@
     tab: "library",
     chip: "all",
     query: "",
-    saved: new Set([1, 6, 10, 15]),
+    saved: new Set([1, 7, 12, 18]),
     downloading: new Set(),
     detailId: null,
     loadState: "loaded",
@@ -585,18 +672,27 @@
     `;
   }
 
-  function cardHTML(asset) {
+  function bookmarkSVG(filled) {
+    if (filled) {
+      return `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v17l-6-3.5L6 21V4z"/></svg>`;
+    }
+    return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 3.5h10a1.5 1.5 0 0 1 1.5 1.5v15.2l-6.5-3.6-6.5 3.6V5A1.5 1.5 0 0 1 7 3.5z"/></svg>`;
+  }
+
+  function pinHTML(asset) {
     const saved = state.saved.has(asset.id);
     const downloading = state.downloading.has(asset.id);
-    const stats = `${formatCount(asset.downloads)} تحميل · ${formatCount(asset.saves)} حفظ`;
     return `
-      <article class="asset-card" data-id="${asset.id}" role="button" tabindex="0" aria-label="${asset.title}">
-        <div class="card-media">
+      <article class="pin" data-id="${asset.id}" role="button" tabindex="0" aria-label="${asset.title}">
+        <div class="pin-media" data-aspect="${asset.aspect}">
           ${mediaHTML(asset)}
-          <div class="card-badges">
+          <div class="pin-badges">
             ${asset.isPremium ? `<span class="badge-circle badge-premium" title="مدفوع">${CROWN_SVG}</span>` : ""}
             ${asset.isLocked ? `<span class="badge-circle badge-locked" title="مقفل">${LOCK_SVG}</span>` : ""}
           </div>
+          <button class="save-overlay ${saved ? "saved" : ""}" data-save="${asset.id}" aria-label="${saved ? "إزالة من المحفوظات" : "حفظ"}" type="button">
+            ${bookmarkSVG(saved)}
+          </button>
           ${
             downloading
               ? `<div class="download-ring" aria-label="جارٍ التنزيل">
@@ -610,36 +706,21 @@
               : ""
           }
         </div>
-        <div class="card-meta">
-          <div class="card-title-row">
-            <div class="card-title">${asset.title}</div>
-            <span class="type-chip">${TYPES[asset.type].label}</span>
-          </div>
-          <div class="card-row">
-            <span class="card-stats">${stats}</span>
-            <button class="save-btn ${saved ? "saved" : ""}" data-save="${asset.id}" aria-label="${saved ? "إزالة من المحفوظات" : "حفظ"}" type="button">
-              ${bookmarkSVG(saved)}
-            </button>
-          </div>
+        <div class="pin-meta">
+          <div class="pin-title">${asset.title}</div>
+          <span class="pin-type">${TYPES[asset.type].label}</span>
         </div>
       </article>
     `;
-  }
-
-  function bookmarkSVG(filled) {
-    if (filled) {
-      return `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v17l-6-3.5L6 21V4z"/></svg>`;
-    }
-    return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 3.5h10a1.5 1.5 0 0 1 1.5 1.5v15.2l-6.5-3.6-6.5 3.6V5A1.5 1.5 0 0 1 7 3.5z"/></svg>`;
   }
 
   function skeletonHTML() {
     return Array.from({ length: 6 })
       .map(
         () => `
-      <div class="asset-card skeleton-card" aria-hidden="true">
-        <div class="card-media"></div>
-        <div class="card-meta">
+      <div class="pin skeleton-pin" aria-hidden="true">
+        <div class="pin-media"></div>
+        <div class="pin-meta">
           <div class="skeleton-line med"></div>
           <div class="skeleton-line short"></div>
         </div>
@@ -648,20 +729,13 @@
       .join("");
   }
 
-  function sectionHeaderHTML(type) {
-    return `<div class="section-header" role="heading" aria-level="2">
-      <span class="section-header-icon">${TYPE_ICON[type]}</span>
-      <span>${TYPES[type].label}</span>
-    </div>`;
-  }
-
   function renderLibrary() {
     const grid = $("#library-grid");
     const end = $("#library-end");
     const empty = $("#library-empty");
 
     if (state.loadState === "loading") {
-      grid.className = "grid";
+      grid.className = "masonry skeleton-mode";
       grid.innerHTML = skeletonHTML();
       end.hidden = true;
       empty.hidden = true;
@@ -670,30 +744,15 @@
 
     const list = filtered();
     if (!list.length) {
-      grid.className = "grid";
+      grid.className = "masonry";
       grid.innerHTML = "";
       empty.hidden = false;
       end.hidden = true;
       return;
     }
     empty.hidden = true;
-
-    const showSections = state.chip === "all" && !state.query.trim();
-    if (showSections) {
-      grid.className = "library-sections";
-      let html = "";
-      SECTION_ORDER.forEach((type) => {
-        const group = list.filter((a) => a.type === type);
-        if (!group.length) return;
-        html += sectionHeaderHTML(type);
-        html += `<div class="grid section-grid">${group.map(cardHTML).join("")}</div>`;
-      });
-      grid.innerHTML = html;
-    } else {
-      grid.className = "grid";
-      grid.innerHTML = list.map(cardHTML).join("");
-    }
-
+    grid.className = "masonry";
+    grid.innerHTML = list.map(pinHTML).join("");
     end.hidden = false;
     bindCardEvents(grid);
   }
@@ -708,13 +767,13 @@
       return;
     }
     empty.hidden = true;
-    grid.className = "grid";
-    grid.innerHTML = list.map(cardHTML).join("");
+    grid.className = "masonry";
+    grid.innerHTML = list.map(pinHTML).join("");
     bindCardEvents(grid);
   }
 
   function bindCardEvents(root) {
-    $$(".asset-card", root).forEach((card) => {
+    $$(".pin", root).forEach((card) => {
       card.addEventListener("click", (e) => {
         if (e.target.closest("[data-save]")) return;
         openDetail(Number(card.dataset.id));
@@ -774,7 +833,9 @@
     const saved = state.saved.has(asset.id);
     const root = $("#screen-detail");
     $("#detail-title", root).textContent = asset.title;
-    $("#detail-preview", root).innerHTML = mediaHTML(asset);
+    const preview = $("#detail-preview", root);
+    preview.setAttribute("data-aspect", asset.aspect);
+    preview.innerHTML = mediaHTML(asset);
 
     $("#detail-chips", root).innerHTML = `
       <span class="meta-pill brand">${TYPES[asset.type].label}</span>
@@ -968,10 +1029,6 @@
 
     updateThemeIcon();
     window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", updateThemeIcon);
-
-    window.addEventListener("popstate", () => {
-      if (state.detailId) closeDetail();
-    });
   }
 
   document.addEventListener("DOMContentLoaded", init);

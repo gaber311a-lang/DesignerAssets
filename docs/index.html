@@ -7,7 +7,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="default" />
   <meta name="theme-color" content="#5B4DFF" media="(prefers-color-scheme: light)" />
   <meta name="theme-color" content="#0B0B12" media="(prefers-color-scheme: dark)" />
-  <meta name="description" content="معاينة ويب لتطبيق أصول المصممين — مكتبة صور وستيكرات وملحقات" />
+  <meta name="description" content="فيد اكتشاف أصول المصممين — تصفّح بصري مثل Pinterest لصور وستيكرات وملحقات وأفكار" />
   <title>أصول المصممين</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -21,6 +21,7 @@
             <h1>المكتبة</h1>
             <button type="button" class="theme-toggle" id="theme-toggle" aria-label="تبديل المظهر" title="المظهر"></button>
           </div>
+          <p class="direction-line">فيد اكتشاف أصول تصميمية — مثل Pinterest لملفات المصممين</p>
           <div class="search-wrap">
             <div class="search-bar">
               <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
@@ -38,7 +39,7 @@
           <div class="chips" id="chips" role="tablist" aria-label="تصفية النوع"></div>
         </header>
 
-        <div class="grid" id="library-grid"></div>
+        <div class="masonry" id="library-grid"></div>
         <div id="library-empty" class="state-block" hidden>
           <div class="state-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
@@ -60,7 +61,7 @@
             <h1>المحفوظات</h1>
           </div>
         </header>
-        <div class="grid" id="saved-grid"></div>
+        <div class="masonry" id="saved-grid"></div>
         <div id="saved-empty" class="state-block" hidden>
           <div class="state-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
