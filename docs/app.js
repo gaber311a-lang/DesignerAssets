@@ -308,6 +308,8 @@
     clearFilters: document.getElementById("clear-filters"),
     savedCount: document.getElementById("saved-count"),
     hero: document.getElementById("hero"),
+    discoverTools: document.getElementById("discover-tools"),
+    toast: document.getElementById("toast"),
     overlay: document.getElementById("detail-overlay"),
     detailPreview: document.getElementById("detail-preview"),
     detailTitle: document.getElementById("detail-title"),
@@ -391,11 +393,23 @@
     </button>`;
   }
 
+
+  let toastTimer = null;
+  function showToast(msg) {
+    if (!els.toast) return;
+    els.toast.textContent = msg;
+    els.toast.hidden = false;
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => { els.toast.hidden = true; }, 2200);
+  }
+
   function renderDiscover() {
     const list = filtered();
-    els.pinGrid.hidden = state.view !== "discover";
+    const onDiscover = state.view === "discover";
+    els.pinGrid.hidden = !onDiscover;
     els.savedPanel.hidden = state.view !== "saved";
-    els.hero.hidden = state.view !== "discover";
+    els.hero.hidden = !onDiscover;
+    if (els.discoverTools) els.discoverTools.hidden = !onDiscover;
 
     if (state.view === "saved") {
       renderSaved();
@@ -629,14 +643,18 @@
 
   els.detailSave.addEventListener("click", () => {
     if (!state.activeId) return;
-    toggleSave(state.activeId);
+    const nowSaved = toggleSave(state.activeId);
     syncSaveBtn();
+    showToast(nowSaved ? "تم الحفظ" : "أُزيل من المحفوظات");
     if (state.view === "saved") renderSaved();
   });
 
   els.detailDownload.addEventListener("click", () => {
     const d = DESIGNS.find((x) => x.id === state.activeId);
-    if (d) downloadDesign(d);
+    if (d) {
+      downloadDesign(d);
+      showToast("تم تنزيل SVG");
+    }
   });
 
   updateSavedBadge();
