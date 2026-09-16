@@ -3,7 +3,7 @@ import SwiftUI
 struct SearchBar: View {
     @Binding var text: String
     var filterBadgeCount: Int = 0
-    var placeholder: String = "ابحث في الأصول…"
+    var placeholder: String = "ابحث عن صور، ستيكرات، ملحقات…"
     var onFilterTap: () -> Void = {}
     var onDebouncedChange: (String) -> Void = { _ in }
 

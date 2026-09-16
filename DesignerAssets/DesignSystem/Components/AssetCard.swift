@@ -36,51 +36,55 @@ struct AssetCard: View {
     }
 
     var body: some View {
-        VStack(alignment: .leading, spacing: DASpacing.xs) {
-            ZStack(alignment: .topLeading) {
+        VStack(alignment: .leading, spacing: 0) {
+            // Media edge-to-edge, radius lg (16), no inner padding
+            ZStack(alignment: .topTrailing) {
                 media
                     .aspectRatio(1, contentMode: .fit)
-                    .clipShape(RoundedRectangle(cornerRadius: DARadius.md, style: .continuous))
-                    .overlay(
-                        RoundedRectangle(cornerRadius: DARadius.md, style: .continuous)
-                            .stroke(DAColor.borderSubtle, lineWidth: 1)
-                    )
 
                 HStack(spacing: DASpacing.xxs) {
-                    typeChip
-                    Spacer(minLength: 0)
                     if asset.isPremium { premiumBadge }
                     if asset.isLocked { lockedBadge }
                 }
                 .padding(DASpacing.xs)
 
-                if isDownloading { downloadingOverlay }
+                if isDownloading { downloadingRing }
             }
+            .clipShape(RoundedRectangle(cornerRadius: DARadius.lg, style: .continuous))
 
-            Text(asset.title)
-                .daText(.callout)
-                .foregroundStyle(DAColor.textPrimary)
-                .lineLimit(1)
+            // Meta under image: type chip + title + stats + save
+            VStack(alignment: .leading, spacing: DASpacing.xxs) {
+                typeChip
 
-            Text(asset.statsFootnote)
-                .daText(.caption)
-                .foregroundStyle(DAColor.textTertiary)
+                Text(asset.title)
+                    .daText(.headline)
+                    .foregroundStyle(DAColor.textPrimary)
+                    .lineLimit(1)
 
-            HStack(spacing: DASpacing.xs) {
-                actionButton(
-                    systemName: isSaved ? "bookmark.fill" : "bookmark",
-                    tint: isSaved ? DAColor.brandPrimary : DAColor.iconMuted,
-                    action: onSave
-                )
-                actionButton(
-                    systemName: "arrow.down.circle",
-                    tint: DAColor.iconMuted,
-                    action: onDownload
-                )
-                Spacer(minLength: 0)
+                HStack(spacing: DASpacing.xs) {
+                    Text(asset.statsFootnote)
+                        .daText(.footnote)
+                        .foregroundStyle(DAColor.textTertiary)
+                        .lineLimit(1)
+
+                    Spacer(minLength: 0)
+
+                    // Only ONE 44×44 save action on card
+                    Button(action: onSave) {
+                        Image(systemName: isSaved ? "bookmark.fill" : "bookmark")
+                            .font(.system(size: 18, weight: .medium))
+                            .foregroundStyle(isSaved ? DAColor.brandPrimary : DAColor.iconMuted)
+                            .frame(width: DASpacing.minTouch, height: DASpacing.minTouch)
+                            .contentShape(Rectangle())
+                    }
+                    .buttonStyle(.plain)
+                    .accessibilityLabel(isSaved ? "إزالة من المحفوظات" : "حفظ")
+                }
             }
+            .padding(.horizontal, DASpacing.sm)
+            .padding(.top, DASpacing.xs)
+            .padding(.bottom, DASpacing.xs)
         }
-        .padding(DASpacing.xs)
         .background(DAColor.bgElevated)
         .clipShape(RoundedRectangle(cornerRadius: DARadius.lg, style: .continuous))
         .overlay(
@@ -94,6 +98,9 @@ struct AssetCard: View {
             }
             Button { onShare() } label: {
                 Label("مشاركة", systemImage: "square.and.arrow.up")
+            }
+            Button { onDownload() } label: {
+                Label("تنزيل", systemImage: "arrow.down.circle")
             }
             Button(role: .destructive) { onReport() } label: {
                 Label("إبلاغ", systemImage: "flag")
@@ -148,21 +155,15 @@ struct AssetCard: View {
             .clipShape(Circle())
     }
 
-    private var downloadingOverlay: some View {
-        RoundedRectangle(cornerRadius: DARadius.md, style: .continuous)
-            .fill(Color.black.opacity(0.35))
-            .overlay { ProgressView().tint(.white) }
-    }
-
-    private func actionButton(systemName: String, tint: Color, action: @escaping () -> Void) -> some View {
-        Button(action: action) {
-            Image(systemName: systemName)
-                .font(.system(size: 18, weight: .medium))
-                .foregroundStyle(tint)
-                .frame(width: DASpacing.minTouch, height: DASpacing.minTouch)
-                .contentShape(Rectangle())
-        }
-        .buttonStyle(.plain)
+    /// Thin progress ring on preview (no heavy black dim + spinner)
+    private var downloadingRing: some View {
+        ProgressView()
+            .progressViewStyle(.circular)
+            .controlSize(.regular)
+            .tint(DAColor.brandPrimary)
+            .padding(6)
+            .background(.ultraThinMaterial, in: Circle())
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
 

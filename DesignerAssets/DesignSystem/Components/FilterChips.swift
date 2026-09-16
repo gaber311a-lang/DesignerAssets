@@ -42,10 +42,10 @@ struct FilterChips: View {
             }
         } label: {
             Text(chip.rawValue)
-                .daText(.callout)
+                .daText(.caption) // 12 Medium
                 .foregroundStyle(selected ? DAColor.brandPrimary : DAColor.textSecondary)
-                .padding(.horizontal, DASpacing.md)
-                .frame(height: 36)
+                .padding(.horizontal, DASpacing.sm) // 12
+                .frame(height: 32)
                 .background(selected ? DAColor.brandSoft : DAColor.bgMuted)
                 .clipShape(Capsule())
                 .overlay(
