@@ -1,0 +1,16 @@
+"app.name" = "أصول المصمم";
+"tab.library" = "المكتبة";
+"tab.saved" = "المحفوظات";
+"search.placeholder" = "ابحث في الأصول…";
+"filters.title" = "فلاتر";
+"filters.apply" = "تطبيق";
+"filters.clear" = "مسح";
+"empty.library" = "لا توجد أصول مطابقة";
+"empty.saved" = "لا توجد عناصر محفوظة";
+"error.title" = "حدث خطأ";
+"error.retry" = "إعادة المحاولة";
+"end.of.list" = "وصلت إلى النهاية";
+"action.save" = "حفظ";
+"action.download" = "تحميل";
+"action.share" = "مشاركة";
+"action.report" = "إبلاغ";

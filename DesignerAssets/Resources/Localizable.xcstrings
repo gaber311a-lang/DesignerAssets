@@ -1,0 +1,42 @@
+{
+  "sourceLanguage" : "ar",
+  "strings" : {
+    "المكتبة" : {
+      "localizations" : {
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "المكتبة" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Library" } }
+      }
+    },
+    "المحفوظات" : {
+      "localizations" : {
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "المحفوظات" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Saved" } }
+      }
+    },
+    "ابحث في الأصول…" : {
+      "localizations" : {
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "ابحث في الأصول…" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Search assets…" } }
+      }
+    },
+    "فلاتر" : {
+      "localizations" : {
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "فلاتر" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Filters" } }
+      }
+    },
+    "تطبيق" : {
+      "localizations" : {
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "تطبيق" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Apply" } }
+      }
+    },
+    "مسح" : {
+      "localizations" : {
+        "ar" : { "stringUnit" : { "state" : "translated", "value" : "مسح" } },
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "Clear" } }
+      }
+    }
+  },
+  "version" : "1.0"
+}

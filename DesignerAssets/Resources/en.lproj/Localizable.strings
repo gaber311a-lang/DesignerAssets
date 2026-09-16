@@ -1,0 +1,16 @@
+"app.name" = "Designer Assets";
+"tab.library" = "Library";
+"tab.saved" = "Saved";
+"search.placeholder" = "Search assets…";
+"filters.title" = "Filters";
+"filters.apply" = "Apply";
+"filters.clear" = "Clear";
+"empty.library" = "No matching assets";
+"empty.saved" = "No saved items";
+"error.title" = "Something went wrong";
+"error.retry" = "Try again";
+"end.of.list" = "You've reached the end";
+"action.save" = "Save";
+"action.download" = "Download";
+"action.share" = "Share";
+"action.report" = "Report";
