@@ -12,7 +12,7 @@ UI kits, app mockups, posters, social templates, icons, digital stickers, brand 
 
 Pinterest-like discovery UI in Sedra brand — search (title / tags / type / format), filter chips, masonry pins, detail + حفظ/تنزيل, Saved tab.
 
-Live: https://gaber311a-lang.github.io/DesignerAssets/
+Built mobile-first for **iPhone Safari**. Live: https://gaber311a-lang.github.io/DesignerAssets/
 
 ## Colors (exact — locked from official logo)
 | Role | Hex | Usage |
@@ -24,9 +24,9 @@ Live: https://gaber311a-lang.github.io/DesignerAssets/
 | White | `#FFFFFF` | sparingly on dark |
 
 ## Logo
-- Site path: `assets/logo.jpeg`
-- Use **as-is** in header / hero / footer — never recreate calligraphy.
-- Adjacent site copy is always **تصاميم إلكترونية / Electronic Designs**, never the lockup’s older product line.
+- Site path: `assets/logo.jpeg` — the **only** mark. Never fake calligraphy.
+- Header / hero / footer use that JPEG, CSS-cropped as a circle (`object-position: center 40%`) so the lockup’s older product line is not the on-screen message.
+- Adjacent site copy is always **تصاميم إلكترونية / Electronic Designs**.
 
 ## Typography
 - English brand bits: Cormorant Garamond (serif)

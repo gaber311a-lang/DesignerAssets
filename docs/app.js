@@ -344,6 +344,34 @@
       .replace(/"/g, "&quot;");
   }
 
+  function norm(str) {
+    return String(str)
+      .toLowerCase()
+      .replace(/[\u064B-\u065F\u0670\u0640]/g, "")
+      .replace(/[إأآٱ]/g, "ا")
+      .replace(/ى/g, "ي")
+      .replace(/ة/g, "ه")
+      .replace(/ؤ/g, "و")
+      .replace(/ئ/g, "ي")
+      .trim();
+  }
+
+  function arNum(n) {
+    return String(n).replace(/[0-9]/g, (d) => "٠١٢٣٤٥٦٧٨٩"[d]);
+  }
+
+  let lockScrollY = 0;
+  function lockScroll() {
+    lockScrollY = window.scrollY || window.pageYOffset;
+    document.body.style.top = "-" + lockScrollY + "px";
+    document.body.classList.add("detail-open");
+  }
+  function unlockScroll() {
+    document.body.classList.remove("detail-open");
+    document.body.style.top = "";
+    window.scrollTo(0, lockScrollY);
+  }
+
   function loadSaved() {
     try {
       const raw = localStorage.getItem(STORAGE_KEY);
@@ -374,7 +402,7 @@
 
   function updateSavedBadge() {
     const n = loadSaved().length;
-    els.savedCount.textContent = String(n);
+    els.savedCount.textContent = arNum(n);
     els.savedCount.hidden = n === 0;
   }
 
@@ -392,10 +420,8 @@
     if (state.type && d.cat !== state.type) return false;
     if (state.format && d.format.toLowerCase() !== state.format.toLowerCase()) return false;
     if (!state.query) return true;
-    const q = state.query.trim().toLowerCase();
-    const hay = [d.title, d.titleEn, d.desc, d.cat, CAT_LABEL[d.cat], CAT_EN[d.cat], d.format, d.id, ...(d.tags || [])]
-      .join(" ")
-      .toLowerCase();
+    const q = norm(state.query);
+    const hay = norm([d.title, d.titleEn, d.desc, d.cat, CAT_LABEL[d.cat], CAT_EN[d.cat], d.format, d.id, ...(d.tags || [])].join(" "));
     if (hay.includes(q)) return true;
     return q.split(/\s+/).filter(Boolean).every((w) => hay.includes(w));
   }
@@ -438,7 +464,7 @@
       return;
     }
     els.emptyState.hidden = true;
-    els.resultsMeta.textContent = `${list.length} تصميم إلكتروني`;
+    els.resultsMeta.textContent = `${arNum(list.length)} تصميم إلكتروني`;
     els.pinGrid.innerHTML = list.map(pinHTML).join("");
   }
 
@@ -455,7 +481,7 @@
       return;
     }
     els.savedEmpty.hidden = true;
-    els.resultsMeta.textContent = `${list.length} محفوظ`;
+    els.resultsMeta.textContent = `${arNum(list.length)} محفوظ`;
     els.savedGrid.innerHTML = list.map(pinHTML).join("");
   }
 
@@ -474,13 +500,13 @@
     els.detailTags.innerHTML = (d.tags || []).map((t) => `<span class="tag">${esc(t)}</span>`).join("");
     syncSaveBtn();
     els.overlay.hidden = false;
-    document.body.classList.add("detail-open");
+    lockScroll();
     els.detailClose.focus();
   }
 
   function closeDetail() {
     els.overlay.hidden = true;
-    document.body.classList.remove("detail-open");
+    unlockScroll();
     state.activeId = null;
   }
 
@@ -524,14 +550,14 @@
   }
 
   function showSuggestions(q) {
-    const needle = (q || "").trim().toLowerCase();
+    const needle = norm(q || "");
     const items = SUGGESTIONS.filter(
-      (s) => !needle || s.q.toLowerCase().includes(needle) || s.label.includes(needle) || s.meta.toLowerCase().includes(needle)
+      (s) => !needle || norm(s.q).includes(needle) || norm(s.label).includes(needle) || norm(s.meta).includes(needle)
     ).slice(0, 6);
 
     const designHits = needle
       ? DESIGNS.filter((d) => {
-          const hay = (d.title + " " + d.titleEn + " " + d.desc + " " + d.tags.join(" ") + " " + d.format).toLowerCase();
+          const hay = norm(d.title + " " + d.titleEn + " " + d.desc + " " + d.tags.join(" ") + " " + d.format);
           return hay.includes(needle);
         }).slice(0, 4)
       : [];
