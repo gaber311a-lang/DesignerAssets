@@ -10,12 +10,12 @@
 | Role | Hex | Use |
 |------|-----|-----|
 | Forest green (primary dark) | `#003626` | Backgrounds, nav, footer, text on light |
-| Sage / mint (accent) | `#CFEDC2` | Logo tint, text on dark, accents |
+| Sage / mint (accent) | `#CFEDC2` | Logo tint, text on dark, accents / CTAs |
 | Stroke variant | `#C7E6BC` | Borders, subtle strokes |
 | Soft cream / off-white | `#F5F7F2` | Light sections |
 
-Text on light: `#003626`  
-Text on dark: `#CFEDC2` (white sparingly)
+- Text on light: `#003626`
+- Text on dark: `#CFEDC2` (white sparingly)
 
 ## Logo
 - File: `assets/logo.jpeg`
@@ -25,6 +25,7 @@ Text on dark: `#CFEDC2` (white sparingly)
 - English brand bits (SEDRA, tagline): elegant serif (`Cormorant Garamond`)
 - Arabic body / UI: system Arabic stack (`"SF Arabic"`, `"Noto Naskh Arabic"`, `"Segoe UI"`, Tahoma, sans-serif)
 - Tone: quiet luxury, nature, organic — generous whitespace
+- Arabic-first RTL
 
 ## Not allowed
 - Pinterest / DesignerAssets violet UI

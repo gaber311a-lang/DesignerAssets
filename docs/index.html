@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#003626" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="description" content="سدرة — عسل سدر عضوي فاخر. SEDRA Organic Honey Products. ESTB 2025." />
   <title>سدرة · SEDRA — Organic Honey Products</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -30,6 +32,7 @@
       <nav class="site-nav" id="site-nav" aria-label="القائمة الرئيسية">
         <a href="#products">منتجات</a>
         <a href="#story">قصتنا</a>
+        <a href="#trust">الثقة</a>
         <a href="#contact">تواصل</a>
       </nav>
     </div>
@@ -163,6 +166,33 @@
       </div>
     </section>
 
+    <!-- Trust -->
+    <section class="section trust" id="trust" aria-labelledby="trust-title">
+      <div class="section-inner">
+        <header class="section-head">
+          <p class="eyebrow"><span class="en">Promise</span></p>
+          <h2 id="trust-title">وعد سدرة</h2>
+        </header>
+        <div class="trust-grid">
+          <div class="trust-item">
+            <span class="trust-num en">01</span>
+            <h3>نقاء عضوي</h3>
+            <p>عسل طبيعي دون إضافات — نختار المصادر بعناية.</p>
+          </div>
+          <div class="trust-item">
+            <span class="trust-num en">02</span>
+            <h3>تعبئة أنيقة</h3>
+            <p>تقديم هادئ يليق بالمائدة والهدايا الخاصة.</p>
+          </div>
+          <div class="trust-item">
+            <span class="trust-num en">03</span>
+            <h3>طلب مباشر</h3>
+            <p>تواصل سريع عبر النموذج أو واتساب.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Contact / Order -->
     <section class="section contact" id="contact" aria-labelledby="contact-title">
       <div class="section-inner contact-inner">
@@ -184,11 +214,11 @@
           <div class="field field-full">
             <label for="interest">المنتج / الطلب</label>
             <select id="interest" name="interest">
-              <option value="sidr">عسل سدر</option>
-              <option value="flowers">عسل زهور</option>
-              <option value="hive">خلايا</option>
-              <option value="gifts">هدايا</option>
-              <option value="other">استفسار عام</option>
+              <option value="عسل سدر">عسل سدر</option>
+              <option value="عسل زهور">عسل زهور</option>
+              <option value="خلايا">خلايا</option>
+              <option value="هدايا">هدايا</option>
+              <option value="استفسار عام">استفسار عام</option>
             </select>
           </div>
           <div class="field field-full">
@@ -197,6 +227,7 @@
           </div>
           <div class="form-actions field-full">
             <button class="btn btn-primary" type="submit">إرسال الطلب</button>
+            <a class="btn btn-wa" id="whatsapp-link" href="https://wa.me/?text=" target="_blank" rel="noopener noreferrer">واتساب</a>
             <p class="form-note" id="form-status" role="status" aria-live="polite"></p>
           </div>
         </form>

@@ -3,6 +3,7 @@
   const nav = document.querySelector("#site-nav");
   const form = document.querySelector("#order-form");
   const status = document.querySelector("#form-status");
+  const wa = document.querySelector("#whatsapp-link");
 
   if (toggle && nav) {
     const setOpen = (open) => {
@@ -23,6 +24,28 @@
     });
   }
 
+  const buildWaHref = () => {
+    if (!form || !wa) return;
+    const name = (form.name?.value || "").trim();
+    const phone = (form.phone?.value || "").trim();
+    const interest = form.interest?.value || "";
+    const message = (form.message?.value || "").trim();
+    const lines = [
+      "طلب من موقع سدرة / SEDRA",
+      name && `الاسم: ${name}`,
+      phone && `الجوال: ${phone}`,
+      interest && `المنتج: ${interest}`,
+      message && `الرسالة: ${message}`,
+    ].filter(Boolean);
+    const text = encodeURIComponent(lines.join("\n"));
+    wa.href = `https://wa.me/?text=${text}`;
+  };
+
+  if (form) {
+    form.addEventListener("input", buildWaHref);
+    buildWaHref();
+  }
+
   if (form && status) {
     form.addEventListener("submit", (e) => {
       e.preventDefault();
@@ -36,6 +59,7 @@
       status.textContent = "شكراً لك — استلمنا طلبك وسنتواصل قريباً.";
       status.classList.add("is-success");
       form.reset();
+      buildWaHref();
     });
   }
 })();

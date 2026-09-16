@@ -4,6 +4,7 @@
   --sage: #CFEDC2;
   --stroke: #C7E6BC;
   --cream: #F5F7F2;
+  --mint-soft: #C7E6BC; /* stroke alias for soft accents */
   --white: #ffffff;
   --font-ar: "SF Arabic", "Noto Naskh Arabic", "Segoe UI", Tahoma, "Apple Color Emoji", sans-serif;
   --font-en: "Cormorant Garamond", Georgia, "Times New Roman", serif;
@@ -26,6 +27,7 @@ html {
 
 body {
   margin: 0;
+  padding-bottom: env(safe-area-inset-bottom);
   font-family: var(--font-ar);
   font-size: 1.0625rem;
   line-height: 1.75;
@@ -79,7 +81,7 @@ a {
 .header-inner {
   max-width: var(--max);
   margin: 0 auto;
-  padding: 0.75rem var(--space);
+  padding: max(0.75rem, env(safe-area-inset-top)) var(--space) 0.75rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -752,4 +754,79 @@ html[dir="rtl"] .field select {
   *::after {
     transition: none !important;
   }
+}
+
+/* Trust */
+.trust {
+  background: var(--cream);
+  color: var(--forest);
+  padding-top: calc(var(--space) * 1.25);
+}
+
+.trust .section-head {
+  margin-bottom: 2rem;
+}
+
+.trust .section-head h2 {
+  color: var(--forest);
+}
+
+.trust .eyebrow {
+  color: color-mix(in srgb, var(--forest) 55%, transparent);
+}
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.15rem;
+}
+
+@media (min-width: 640px) {
+  .trust-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.35rem;
+  }
+}
+
+.trust-item {
+  background: var(--white);
+  border: 1px solid color-mix(in srgb, var(--stroke) 55%, transparent);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.35rem;
+}
+
+.trust-num {
+  display: block;
+  margin-bottom: 0.65rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--forest) 45%, transparent);
+}
+
+.trust-item h3 {
+  margin: 0 0 0.45rem;
+  font-size: 1.1rem;
+  color: var(--forest);
+}
+
+.trust-item p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: color-mix(in srgb, var(--forest) 70%, transparent);
+  line-height: 1.65;
+}
+
+/* WhatsApp button */
+.btn-wa {
+  background: color-mix(in srgb, var(--stroke) 18%, transparent);
+  color: var(--sage);
+  border: 1px solid color-mix(in srgb, var(--stroke) 55%, transparent);
+  font-weight: 600;
+}
+
+.btn-wa:hover,
+.btn-wa:focus-visible {
+  background: color-mix(in srgb, var(--sage) 14%, transparent);
+  border-color: var(--sage);
 }
