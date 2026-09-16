@@ -30,7 +30,7 @@
 
   /* Coherent catalog — every visual matches Arabic title + type */
   const SAMPLES = [
-    // —— صور
+    // —— صور (12)
     {
       title: "خلفية بنفسجية ناعمة",
       type: "image",
@@ -97,8 +97,74 @@
       palette: ["#1A1440", "#5B4DFF", "#A59EFF"],
       motif: "night",
     },
+    {
+      title: "خلفية محيط فيروزي",
+      type: "image",
+      tags: ["خلفية", "محيط", "فيروزي"],
+      isPremium: false,
+      isLocked: false,
+      format: "PNG",
+      aspect: "16:9",
+      palette: ["#0B6E7A", "#2EC4B6", "#B8F2E6"],
+      motif: "ocean",
+    },
+    {
+      title: "تدرج وردي ناعم",
+      type: "image",
+      tags: ["خلفية", "تدرج", "وردي"],
+      isPremium: false,
+      isLocked: false,
+      format: "PNG",
+      aspect: "3:4",
+      palette: ["#FF6B9D", "#FFB3C9", "#FFF0F5"],
+      motif: "soft-gradient",
+    },
+    {
+      title: "خلفية ذهبية فاخرة",
+      type: "image",
+      tags: ["خلفية", "ذهبي", "فاخر"],
+      isPremium: true,
+      isLocked: false,
+      format: "JPG",
+      aspect: "4:3",
+      palette: ["#C9A227", "#F0D78C", "#8A6D1A"],
+      motif: "gold",
+    },
+    {
+      title: "نمط نقاط منقط",
+      type: "image",
+      tags: ["خلفية", "نقاط", "منقط"],
+      isPremium: false,
+      isLocked: false,
+      format: "PNG",
+      aspect: "1:1",
+      palette: ["#EEEDFF", "#5B4DFF", "#C8C8D4"],
+      motif: "dots",
+    },
+    {
+      title: "خلفية غابة خضراء",
+      type: "image",
+      tags: ["خلفية", "غابة", "أخضر"],
+      isPremium: false,
+      isLocked: false,
+      format: "JPG",
+      aspect: "2:3",
+      palette: ["#1B4332", "#2D6A4F", "#95D5B2"],
+      motif: "forest",
+    },
+    {
+      title: "تدرج سماوي فاتح",
+      type: "image",
+      tags: ["خلفية", "سماوي", "فاتح"],
+      isPremium: false,
+      isLocked: false,
+      format: "PNG",
+      aspect: "3:2",
+      palette: ["#4CC9F0", "#90E0EF", "#E0F7FA"],
+      motif: "soft-gradient",
+    },
 
-    // —— ملحقات
+    // —— ملحقات (12)
     {
       title: "إطار إنستغرام",
       type: "accessory",
@@ -154,8 +220,85 @@
       palette: ["#3D3D50", "#A0A0B2", "#EEEDFF"],
       motif: "grid",
     },
+    {
+      title: "إطار قصص دائري",
+      type: "accessory",
+      tags: ["إطار", "قصص", "ستوري"],
+      isPremium: false,
+      isLocked: false,
+      format: "SVG",
+      aspect: "1:1",
+      palette: ["#FF6B9D", "#FFF0F5", "#5B4DFF"],
+      motif: "frame",
+    },
+    {
+      title: "شارة جديد",
+      type: "accessory",
+      tags: ["شارة", "جديد", "ترويج"],
+      isPremium: false,
+      isLocked: false,
+      format: "PNG",
+      aspect: "1:1",
+      palette: ["#5B4DFF", "#A59EFF", "#FFFFFF"],
+      motif: "badge",
+    },
+    {
+      title: "حزمة أسهم توجيه",
+      type: "accessory",
+      tags: ["أسهم", "أيقونات", "توجيه"],
+      isPremium: false,
+      isLocked: false,
+      format: "SVG",
+      aspect: "1:1",
+      palette: ["#2F6BFF", "#6B9BFF", "#EEF3FF"],
+      motif: "icons",
+    },
+    {
+      title: "إطار شهادة أنيق",
+      type: "accessory",
+      tags: ["إطار", "شهادة", "رسمي"],
+      isPremium: true,
+      isLocked: false,
+      format: "PDF",
+      aspect: "4:3",
+      palette: ["#C9A227", "#FFF8E7", "#5C4A12"],
+      motif: "frame",
+    },
+    {
+      title: "شبكة ستوري عمودية",
+      type: "accessory",
+      tags: ["شبكة", "ستوري", "تخطيط"],
+      isPremium: false,
+      isLocked: false,
+      format: "PDF",
+      aspect: "9:16",
+      palette: ["#5B4DFF", "#C8C8D4", "#EEEDFF"],
+      motif: "grid",
+    },
+    {
+      title: "زخرفة هندسية إسلامية",
+      type: "accessory",
+      tags: ["زخرفة", "إسلامي", "هندسي"],
+      isPremium: true,
+      isLocked: false,
+      format: "SVG",
+      aspect: "1:1",
+      palette: ["#006C35", "#32E0C4", "#0D3B24"],
+      motif: "ornament",
+    },
+    {
+      title: "أيقونات سوشيال ميديا",
+      type: "accessory",
+      tags: ["أيقونات", "سوشيال", "ميديا"],
+      isPremium: false,
+      isLocked: false,
+      format: "SVG",
+      aspect: "3:2",
+      palette: ["#E1306C", "#405DE6", "#EEEDFF"],
+      motif: "icons",
+    },
 
-    // —— ستيكرات
+    // —— ستيكرات (12)
     {
       title: "ستيكر نجمة ذهبية",
       type: "sticker",
@@ -211,8 +354,85 @@
       palette: ["#FFD54A", "#FFF3C0", "#E6A800"],
       motif: "smile",
     },
+    {
+      title: "ستيكر نار متحمسة",
+      type: "sticker",
+      tags: ["ستيكر", "نار", "حماسي"],
+      isPremium: false,
+      isLocked: false,
+      format: "PNG",
+      aspect: "1:1",
+      palette: ["#FF6B35", "#FFB347", "#E23B4A"],
+      motif: "fire",
+    },
+    {
+      title: "ستيكر برق سريع",
+      type: "sticker",
+      tags: ["ستيكر", "برق", "سريع"],
+      isPremium: false,
+      isLocked: false,
+      format: "PNG",
+      aspect: "1:1",
+      palette: ["#F5C542", "#FFE9A0", "#5B4DFF"],
+      motif: "bolt",
+    },
+    {
+      title: "ستيكر وردة حمراء",
+      type: "sticker",
+      tags: ["ستيكر", "وردة", "زهرة"],
+      isPremium: false,
+      isLocked: false,
+      format: "PNG",
+      aspect: "1:1",
+      palette: ["#E23B4A", "#FF8A95", "#1F9D63"],
+      motif: "flower",
+    },
+    {
+      title: "ستيكر قمر هلال",
+      type: "sticker",
+      tags: ["ستيكر", "قمر", "رمضان"],
+      isPremium: false,
+      isLocked: false,
+      format: "PNG",
+      aspect: "1:1",
+      palette: ["#C9A227", "#FFF1A8", "#1A2744"],
+      motif: "moon",
+    },
+    {
+      title: "ستيكر إعجاب",
+      type: "sticker",
+      tags: ["ستيكر", "إعجاب", "سوشيال"],
+      isPremium: false,
+      isLocked: false,
+      format: "PNG",
+      aspect: "1:1",
+      palette: ["#2F6BFF", "#6B9BFF", "#1E4D8C"],
+      motif: "heart",
+    },
+    {
+      title: "ستيكر نجمة لامعة",
+      type: "sticker",
+      tags: ["ستيكر", "نجمة", "لامع"],
+      isPremium: true,
+      isLocked: false,
+      format: "PNG",
+      aspect: "1:1",
+      palette: ["#A59EFF", "#EEEDFF", "#5B4DFF"],
+      motif: "star",
+    },
+    {
+      title: "ستيكر فنجان شاي",
+      type: "sticker",
+      tags: ["ستيكر", "شاي", "لطيف"],
+      isPremium: false,
+      isLocked: false,
+      format: "PNG",
+      aspect: "3:4",
+      palette: ["#2D6A4F", "#95D5B2", "#D8F3DC"],
+      motif: "coffee",
+    },
 
-    // —— أفكار
+    // —— أفكار (12)
     {
       title: "فكرة بوست رمضان",
       type: "idea",
@@ -267,6 +487,83 @@
       aspect: "3:4",
       palette: ["#5B4DFF", "#EEEDFF", "#12121A"],
       motif: "moodboard",
+    },
+    {
+      title: "فكرة عرض منتجات",
+      type: "idea",
+      tags: ["فكرة", "منتجات", "عرض"],
+      isPremium: false,
+      isLocked: false,
+      format: "PNG",
+      aspect: "4:3",
+      palette: ["#FF6B9D", "#5B4DFF", "#FFF8FB"],
+      motif: "story",
+    },
+    {
+      title: "فكرة ريلز قصير",
+      type: "idea",
+      tags: ["فكرة", "ريلز", "قصير"],
+      isPremium: false,
+      isLocked: false,
+      format: "PNG",
+      aspect: "9:16",
+      palette: ["#FF6B35", "#5B4DFF", "#FFF5F0"],
+      motif: "story",
+    },
+    {
+      title: "مودبورد عيد وطني",
+      type: "idea",
+      tags: ["فكرة", "وطني", "مودبورد"],
+      isPremium: false,
+      isLocked: false,
+      format: "PDF",
+      aspect: "3:4",
+      palette: ["#006C35", "#FFFFFF", "#C8102E"],
+      motif: "moodboard",
+    },
+    {
+      title: "فكرة كوفر بودكاست",
+      type: "idea",
+      tags: ["فكرة", "بودكاست", "كوفر"],
+      isPremium: true,
+      isLocked: false,
+      format: "JPG",
+      aspect: "1:1",
+      palette: ["#5B4DFF", "#12121A", "#A59EFF"],
+      motif: "yt-cover",
+    },
+    {
+      title: "لوحة ألوان رمضانية",
+      type: "idea",
+      tags: ["فكرة", "ألوان", "رمضان"],
+      isPremium: false,
+      isLocked: false,
+      format: "PDF",
+      aspect: "3:2",
+      palette: ["#1A2744", "#C9A227", "#F5E6C8"],
+      motif: "saudi-palette",
+    },
+    {
+      title: "فكرة بوست إطلاق",
+      type: "idea",
+      tags: ["فكرة", "إطلاق", "بوست"],
+      isPremium: false,
+      isLocked: false,
+      format: "PDF",
+      aspect: "1:1",
+      palette: ["#2F6BFF", "#EEEDFF", "#12121A"],
+      motif: "moodboard",
+    },
+    {
+      title: "فكرة كاروسيل إنستا",
+      type: "idea",
+      tags: ["فكرة", "كاروسيل", "إنستغرام"],
+      isPremium: true,
+      isLocked: false,
+      format: "PDF",
+      aspect: "1:1",
+      palette: ["#E1306C", "#EEEDFF", "#405DE6"],
+      motif: "story",
     },
   ];
 
@@ -379,6 +676,56 @@
         <circle cx="${w * 0.85}" cy="${h * 0.3}" r="2" fill="#fff" opacity="0.85"/>
         <circle cx="${w * 0.3}" cy="${h * 0.35}" r="1" fill="#fff" opacity="0.6"/>
         <circle cx="${w * 0.75}" cy="${h * 0.18}" r="3" fill="${c3}" opacity="0.5"/>`;
+    } else if (a.motif === "ocean") {
+      body = `
+        <defs>
+          <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="${c3}"/>
+            <stop offset="45%" stop-color="${c2}"/>
+            <stop offset="100%" stop-color="${c1}"/>
+          </linearGradient>
+        </defs>
+        <rect width="${w}" height="${h}" fill="url(#g)"/>
+        <path d="M0 ${h * 0.55} Q${w * 0.2} ${h * 0.48} ${w * 0.4} ${h * 0.55} T${w * 0.8} ${h * 0.55} T${w} ${h * 0.52} V${h} H0 Z" fill="${c1}" opacity="0.35"/>
+        <path d="M0 ${h * 0.65} Q${w * 0.25} ${h * 0.58} ${w * 0.5} ${h * 0.65} T${w} ${h * 0.62} V${h} H0 Z" fill="${c1}" opacity="0.45"/>
+        <circle cx="${w * 0.78}" cy="${h * 0.22}" r="${Math.min(w, h) * 0.08}" fill="#FFE08A" opacity="0.85"/>`;
+    } else if (a.motif === "gold") {
+      body = `
+        <defs>
+          <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="${c3}"/>
+            <stop offset="40%" stop-color="${c1}"/>
+            <stop offset="70%" stop-color="${c2}"/>
+            <stop offset="100%" stop-color="${c1}"/>
+          </linearGradient>
+        </defs>
+        <rect width="${w}" height="${h}" fill="url(#g)"/>
+        <rect x="${w * 0.12}" y="${h * 0.18}" width="${w * 0.76}" height="${h * 0.5}" rx="14" fill="none" stroke="${c2}" stroke-width="2" opacity="0.55"/>
+        <circle cx="${w / 2}" cy="${h * 0.42}" r="${Math.min(w, h) * 0.1}" fill="${c2}" opacity="0.5"/>`;
+    } else if (a.motif === "dots") {
+      body = `
+        <defs>
+          <pattern id="dotpat" width="22" height="22" patternUnits="userSpaceOnUse">
+            <circle cx="4" cy="4" r="3" fill="${c2}" opacity="0.55"/>
+          </pattern>
+        </defs>
+        <rect width="${w}" height="${h}" fill="${c1}"/>
+        <rect width="${w}" height="${h}" fill="url(#dotpat)"/>
+        <circle cx="${w * 0.7}" cy="${h * 0.3}" r="${w * 0.18}" fill="${c2}" opacity="0.2"/>`;
+    } else if (a.motif === "forest") {
+      body = `
+        <defs>
+          <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#87CEEB"/>
+            <stop offset="40%" stop-color="${c3}"/>
+            <stop offset="100%" stop-color="${c1}"/>
+          </linearGradient>
+        </defs>
+        <rect width="${w}" height="${h}" fill="url(#g)"/>
+        <polygon points="${w * 0.15},${h * 0.85} ${w * 0.28},${h * 0.4} ${w * 0.41},${h * 0.85}" fill="${c1}"/>
+        <polygon points="${w * 0.35},${h * 0.85} ${w * 0.52},${h * 0.28} ${w * 0.69},${h * 0.85}" fill="${c2}"/>
+        <polygon points="${w * 0.58},${h * 0.85} ${w * 0.75},${h * 0.45} ${w * 0.92},${h * 0.85}" fill="${c1}" opacity="0.85"/>
+        <rect y="${h * 0.82}" width="${w}" height="${h * 0.18}" fill="${c1}" opacity="0.7"/>`;
     } else {
       body = `
         <defs>
@@ -420,6 +767,24 @@
         <circle cx="${cx - r * 0.35}" cy="${cy - r * 0.15}" r="${r * 0.1}" fill="${c3}"/>
         <circle cx="${cx + r * 0.35}" cy="${cy - r * 0.15}" r="${r * 0.1}" fill="${c3}"/>
         <path d="M${cx - r * 0.4} ${cy + r * 0.2} Q${cx} ${cy + r * 0.55} ${cx + r * 0.4} ${cy + r * 0.2}" fill="none" stroke="${c3}" stroke-width="4" stroke-linecap="round"/>`;
+    } else if (a.motif === "fire") {
+      icon = `<path d="M${cx} ${cy + r * 0.85} C${cx - r * 0.85} ${cy + r * 0.85} ${cx - r * 0.9} ${cy - r * 0.1} ${cx - r * 0.15} ${cy - r * 0.95} C${cx - r * 0.05} ${cy - r * 0.35} ${cx + r * 0.35} ${cy - r * 0.15} ${cx + r * 0.15} ${cy + r * 0.15} C${cx + r * 0.75} ${cy - r * 0.05} ${cx + r * 0.85} ${cy + r * 0.85} ${cx} ${cy + r * 0.85} Z" fill="${c1}" stroke="${c3}" stroke-width="2.5"/>
+        <path d="M${cx} ${cy + r * 0.55} C${cx - r * 0.35} ${cy + r * 0.55} ${cx - r * 0.3} ${cy + r * 0.05} ${cx} ${cy - r * 0.25} C${cx + r * 0.12} ${cy + r * 0.05} ${cx + r * 0.35} ${cy + r * 0.55} ${cx} ${cy + r * 0.55} Z" fill="${c2}"/>`;
+    } else if (a.motif === "bolt") {
+      icon = `<polygon points="${cx + r * 0.15},${cy - r} ${cx - r * 0.55},${cy + r * 0.05} ${cx - r * 0.05},${cy + r * 0.05} ${cx - r * 0.25},${cy + r} ${cx + r * 0.55},${cy - r * 0.05} ${cx + r * 0.05},${cy - r * 0.05}" fill="${c1}" stroke="${c3}" stroke-width="2.5" stroke-linejoin="round"/>`;
+    } else if (a.motif === "flower") {
+      icon = `
+        <circle cx="${cx}" cy="${cy - r * 0.45}" r="${r * 0.32}" fill="${c1}"/>
+        <circle cx="${cx + r * 0.4}" cy="${cy - r * 0.1}" r="${r * 0.32}" fill="${c1}"/>
+        <circle cx="${cx + r * 0.25}" cy="${cy + r * 0.35}" r="${r * 0.32}" fill="${c1}"/>
+        <circle cx="${cx - r * 0.25}" cy="${cy + r * 0.35}" r="${r * 0.32}" fill="${c1}"/>
+        <circle cx="${cx - r * 0.4}" cy="${cy - r * 0.1}" r="${r * 0.32}" fill="${c1}"/>
+        <circle cx="${cx}" cy="${cy}" r="${r * 0.22}" fill="${c2}" stroke="${c3}" stroke-width="2"/>
+        <path d="M${cx} ${cy + r * 0.35} v${r * 0.55}" stroke="${c3}" stroke-width="4" stroke-linecap="round"/>`;
+    } else if (a.motif === "moon") {
+      icon = `<path d="M${cx + r * 0.15} ${cy - r * 0.75} a${r} ${r} 0 1 0 0 ${r * 1.5} a${r * 0.72} ${r * 0.72} 0 1 1 0 -${r * 1.5}" fill="${c1}" stroke="${c3}" stroke-width="2.5"/>
+        <circle cx="${cx + r * 0.45}" cy="${cy - r * 0.35}" r="3" fill="${c2}"/>
+        <circle cx="${cx + r * 0.55}" cy="${cy + r * 0.1}" r="2" fill="${c2}"/>`;
     } else {
       icon = `<path d="M${cx - r} ${cy + r * 0.4} L${cx - r * 0.85} ${cy - r * 0.5} L${cx - r * 0.3} ${cy} L${cx} ${cy - r * 0.85} L${cx + r * 0.3} ${cy} L${cx + r * 0.85} ${cy - r * 0.5} L${cx + r} ${cy + r * 0.4} Z" fill="${c1}" stroke="${c3}" stroke-width="3" stroke-linejoin="round"/>
         <rect x="${cx - r}" y="${cy + r * 0.4}" width="${r * 2}" height="${r * 0.2}" rx="3" fill="${c3}"/>
@@ -627,31 +992,103 @@
     tab: "library",
     chip: "all",
     query: "",
-    saved: new Set([1, 7, 12, 18]),
+    refine: { premium: null }, // null | "free" | "premium"
+    suggestOpen: false,
+    saved: new Set([1, 7, 12, 18, 25, 36]),
     downloading: new Set(),
     detailId: null,
     loadState: "loaded",
     toastTimer: null,
+    searchDebounce: null,
   };
+
+  const POPULAR_QUERIES = [
+    "خلفية",
+    "ستيكر",
+    "رمضان",
+    "إطار",
+    "مجاني",
+    "مدفوع",
+    "بنفسجي",
+    "مودبورد",
+    "إنستغرام",
+    "تدرج",
+  ];
 
   const $ = (sel, root) => (root || document).querySelector(sel);
   const $$ = (sel, root) => Array.from((root || document).querySelectorAll(sel));
 
-  function filtered() {
+  function normalizeAr(s) {
+    return String(s || "")
+      .toLowerCase()
+      .trim()
+      .replace(/[أإآٱ]/g, "ا")
+      .replace(/ة/g, "ه")
+      .replace(/ى/g, "ي")
+      .replace(/ؤ/g, "و")
+      .replace(/ئ/g, "ي")
+      .replace(/[\u064B-\u0652]/g, "")
+      .replace(/\s+/g, " ");
+  }
+
+  function assetSearchBlob(a) {
+    const parts = [
+      a.title,
+      TYPES[a.type].label,
+      a.format,
+      a.aspect,
+      a.isPremium ? "مدفوع" : "مجاني",
+      a.isPremium ? "premium" : "free",
+      a.isLocked ? "مقفل" : "مفتوح",
+      ...a.tags,
+    ];
+    return normalizeAr(parts.join(" "));
+  }
+
+  function matchesQuery(a, q) {
+    if (!q) return true;
+    const nq = normalizeAr(q);
+    if (!nq) return true;
+    const blob = assetSearchBlob(a);
+    if (blob.includes(nq)) return true;
+    // partial token match (Arabic + Latin)
+    const tokens = nq.split(" ").filter(Boolean);
+    return tokens.every((tok) => blob.includes(tok));
+  }
+
+  function baseFiltered() {
     let list = assets.slice();
     if (state.chip !== "all") list = list.filter((a) => a.type === state.chip);
-    const q = state.query.trim();
-    if (q) {
-      const lower = q.toLowerCase();
-      list = list.filter(
-        (a) =>
-          a.title.includes(q) ||
-          a.tags.some((t) => t.includes(q)) ||
-          TYPES[a.type].label.includes(q) ||
-          a.title.toLowerCase().includes(lower)
-      );
-    }
+    if (state.query.trim()) list = list.filter((a) => matchesQuery(a, state.query));
     return list;
+  }
+
+  function filtered() {
+    let list = baseFiltered();
+    if (state.refine.premium === "free") list = list.filter((a) => !a.isPremium);
+    if (state.refine.premium === "premium") list = list.filter((a) => a.isPremium);
+    return list;
+  }
+
+  function syncUrlQuery() {
+    try {
+      const url = new URL(window.location.href);
+      const q = state.query.trim();
+      if (q) url.searchParams.set("q", q);
+      else url.searchParams.delete("q");
+      history.replaceState(null, "", url.pathname + url.search + url.hash);
+    } catch (_) {
+      /* ignore */
+    }
+  }
+
+  function readUrlQuery() {
+    try {
+      const url = new URL(window.location.href);
+      return url.searchParams.get("q") || "";
+    } catch (_) {
+      return "";
+    }
   }
 
   function showToast(msg) {
@@ -729,6 +1166,333 @@
       .join("");
   }
 
+  function collectQuerySuggestions(q) {
+    const nq = normalizeAr(q);
+    const pool = new Set();
+    POPULAR_QUERIES.forEach((p) => pool.add(p));
+    assets.forEach((a) => {
+      pool.add(a.title);
+      a.tags.forEach((t) => pool.add(t));
+      pool.add(TYPES[a.type].label);
+      pool.add(a.format);
+    });
+    pool.add("مجاني");
+    pool.add("مدفوع");
+    const all = Array.from(pool);
+    if (!nq) return POPULAR_QUERIES.slice(0, 6);
+    return all
+      .filter((s) => {
+        const ns = normalizeAr(s);
+        return ns.includes(nq) || nq.includes(ns);
+      })
+      .sort((a, b) => {
+        const na = normalizeAr(a);
+        const nb = normalizeAr(b);
+        const sa = na.startsWith(nq) ? 0 : 1;
+        const sb = nb.startsWith(nq) ? 0 : 1;
+        if (sa !== sb) return sa - sb;
+        return a.length - b.length;
+      })
+      .slice(0, 6);
+  }
+
+  function matchingTypeChips(q) {
+    const nq = normalizeAr(q);
+    return CHIPS.filter((c) => c.id !== "all").filter((c) => {
+      if (!nq) return true;
+      return normalizeAr(c.label).includes(nq) || nq.includes(normalizeAr(c.label));
+    });
+  }
+
+  function renderSuggestions() {
+    const box = $("#search-suggest");
+    const input = $("#search-input");
+    if (!box || !input) return;
+
+    const q = input.value.trim();
+    const focused = document.activeElement === input;
+    if (!focused || (!q && !state.suggestOpen)) {
+      hideSuggestions();
+      return;
+    }
+
+    const queries = collectQuerySuggestions(q);
+    const typeChips = matchingTypeChips(q).slice(0, 4);
+    const assetHits = assets.filter((a) => matchesQuery(a, q || " ")).slice(0, 5);
+    // when empty query show popular + recent-ish catalog thumbs
+    const thumbs = q
+      ? assets.filter((a) => matchesQuery(a, q)).slice(0, 5)
+      : assets.slice(0, 5);
+
+    const searchIcon =
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>';
+
+    let html = "";
+    if (queries.length) {
+      html += `<div class="search-suggest-section">اقتراحات</div>`;
+      html += `<div class="search-suggest-queries">`;
+      html += queries
+        .map(
+          (s) =>
+            `<button type="button" class="search-suggest-q" data-suggest-q="${escapeXml(s)}" role="option">${searchIcon}<span>${escapeXml(s)}</span></button>`
+        )
+        .join("");
+      html += `</div>`;
+    }
+
+    if (typeChips.length && q) {
+      html += `<div class="search-suggest-section">تصنيفات</div>`;
+      html += `<div class="search-suggest-types">`;
+      html += typeChips
+        .map(
+          (c) =>
+            `<button type="button" class="search-suggest-type" data-suggest-type="${c.id}" role="option">${TYPE_ICON[c.id] || ""}<span>${c.label}</span></button>`
+        )
+        .join("");
+      html += `</div>`;
+    } else if (!q) {
+      html += `<div class="search-suggest-section">تصنيفات</div>`;
+      html += `<div class="search-suggest-types">`;
+      html += CHIPS.filter((c) => c.id !== "all")
+        .map(
+          (c) =>
+            `<button type="button" class="search-suggest-type" data-suggest-type="${c.id}" role="option">${TYPE_ICON[c.id] || ""}<span>${c.label}</span></button>`
+        )
+        .join("");
+      html += `</div>`;
+    }
+
+    if (thumbs.length) {
+      html += `<div class="search-suggest-section">${q ? "أصول مطابقة" : "من مكتبتك"}</div>`;
+      html += `<div class="search-suggest-assets">`;
+      html += thumbs
+        .map((a) => {
+          const price = a.isPremium ? "مدفوع" : "مجاني";
+          return `<button type="button" class="search-suggest-asset" data-suggest-id="${a.id}" role="option">
+            <div class="search-suggest-thumb">
+              <img src="${a.imageUrl}" alt="" loading="lazy" decoding="async" />
+            </div>
+            <div class="search-suggest-meta">
+              <div class="search-suggest-title">${escapeXml(a.title)}</div>
+              <div class="search-suggest-sub">
+                <span>${TYPES[a.type].label}</span>
+                <span class="dot">·</span>
+                <span>${a.format}</span>
+                <span class="dot">·</span>
+                <span>${price}</span>
+              </div>
+            </div>
+          </button>`;
+        })
+        .join("");
+      html += `</div>`;
+    }
+
+    if (!html) {
+      hideSuggestions();
+      return;
+    }
+
+    box.innerHTML = html;
+    box.hidden = false;
+    state.suggestOpen = true;
+    input.setAttribute("aria-expanded", "true");
+
+    $$("[data-suggest-q]", box).forEach((btn) => {
+      btn.addEventListener("mousedown", (e) => e.preventDefault());
+      btn.addEventListener("click", () => applySearch(btn.dataset.suggestQ, { hide: true }));
+    });
+    $$("[data-suggest-type]", box).forEach((btn) => {
+      btn.addEventListener("mousedown", (e) => e.preventDefault());
+      btn.addEventListener("click", () => {
+        state.chip = btn.dataset.suggestType;
+        state.refine.premium = null;
+        hideSuggestions();
+        renderChips();
+        renderRefineChips();
+        renderLibrary();
+      });
+    });
+    $$("[data-suggest-id]", box).forEach((btn) => {
+      btn.addEventListener("mousedown", (e) => e.preventDefault());
+      btn.addEventListener("click", () => {
+        hideSuggestions();
+        openDetail(Number(btn.dataset.suggestId));
+      });
+    });
+  }
+
+  function hideSuggestions() {
+    const box = $("#search-suggest");
+    const input = $("#search-input");
+    if (box) {
+      box.hidden = true;
+      box.innerHTML = "";
+    }
+    state.suggestOpen = false;
+    if (input) input.setAttribute("aria-expanded", "false");
+  }
+
+  function applySearch(q, opts) {
+    opts = opts || {};
+    state.query = q;
+    state.refine.premium = null;
+    const input = $("#search-input");
+    if (input) input.value = q;
+    updateClearBtn();
+    syncUrlQuery();
+    if (opts.hide) hideSuggestions();
+    renderRefineChips();
+    renderLibrary();
+  }
+
+  function buildRefineOptions(list) {
+    const opts = [];
+    const typesIn = new Set(list.map((a) => a.type));
+    const hasFree = list.some((a) => !a.isPremium);
+    const hasPremium = list.some((a) => a.isPremium);
+    const formats = Array.from(new Set(list.map((a) => a.format))).slice(0, 3);
+
+    if (state.chip === "all") {
+      if (typesIn.has("image")) opts.push({ id: "type:image", label: "فقط صور", kind: "type", value: "image" });
+      if (typesIn.has("sticker")) opts.push({ id: "type:sticker", label: "فقط ستيكرات", kind: "type", value: "sticker" });
+      if (typesIn.has("accessory")) opts.push({ id: "type:accessory", label: "فقط ملحقات", kind: "type", value: "accessory" });
+      if (typesIn.has("idea")) opts.push({ id: "type:idea", label: "فقط أفكار", kind: "type", value: "idea" });
+    }
+    if (hasFree) opts.push({ id: "premium:free", label: "مجاني", kind: "premium", value: "free" });
+    if (hasPremium) opts.push({ id: "premium:premium", label: "مدفوع", kind: "premium", value: "premium" });
+    formats.forEach((f) => {
+      opts.push({ id: "fmt:" + f, label: f, kind: "format", value: f });
+    });
+    return opts.slice(0, 8);
+  }
+
+  function renderRefineChips() {
+    const el = $("#refine-chips");
+    if (!el) return;
+    const q = state.query.trim();
+    if (!q && !state.refine.premium) {
+      el.hidden = true;
+      el.innerHTML = "";
+      return;
+    }
+    const list = baseFiltered();
+    if (!list.length && !state.refine.premium) {
+      el.hidden = true;
+      el.innerHTML = "";
+      return;
+    }
+    const opts = buildRefineOptions(list.length ? list : assets);
+    if (!opts.length) {
+      el.hidden = true;
+      el.innerHTML = "";
+      return;
+    }
+    el.hidden = false;
+    el.innerHTML = opts
+      .map((o) => {
+        let selected = false;
+        if (o.kind === "premium") selected = state.refine.premium === o.value;
+        if (o.kind === "type") selected = state.chip === o.value;
+        if (o.kind === "format") selected = normalizeAr(state.query) === normalizeAr(o.value);
+        return `<button type="button" class="refine-chip ${selected ? "selected" : ""}" data-refine-kind="${o.kind}" data-refine-value="${o.value}">${o.label}</button>`;
+      })
+      .join("");
+
+    $$("[data-refine-kind]", el).forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const kind = btn.dataset.refineKind;
+        const value = btn.dataset.refineValue;
+        if (kind === "premium") {
+          state.refine.premium = state.refine.premium === value ? null : value;
+        } else if (kind === "type") {
+          state.chip = state.chip === value ? "all" : value;
+          renderChips();
+        } else if (kind === "format") {
+          applySearch(value, { hide: true });
+          return;
+        }
+        renderRefineChips();
+        renderLibrary();
+      });
+    });
+  }
+
+  function renderEmptyRescue() {
+    const rescue = $("#empty-rescue");
+    const msg = $("#empty-message");
+    if (!rescue) return;
+    const suggestions = [];
+    // catalog-derived chips
+    const tagCounts = {};
+    assets.forEach((a) => {
+      a.tags.forEach((t) => {
+        tagCounts[t] = (tagCounts[t] || 0) + 1;
+      });
+    });
+    const topTags = Object.keys(tagCounts)
+      .sort((a, b) => tagCounts[b] - tagCounts[a])
+      .slice(0, 4);
+    POPULAR_QUERIES.slice(0, 3).forEach((q) => suggestions.push({ label: q, query: q }));
+    topTags.forEach((t) => {
+      if (!suggestions.some((s) => s.query === t)) suggestions.push({ label: t, query: t });
+    });
+    CHIPS.filter((c) => c.id !== "all").forEach((c) =>
+      suggestions.push({ label: c.label, chip: c.id })
+    );
+
+    if (msg) {
+      msg.textContent = state.query.trim()
+        ? `ما لقينا «${state.query.trim()}» — جرّب اقتراحاً من مكتبتك`
+        : "جرّب كلمات أخرى أو تصفّح اقتراحات من الكتالوج";
+    }
+
+    const uniq = [];
+    const seen = new Set();
+    suggestions.forEach((s) => {
+      const key = s.query || s.chip;
+      if (seen.has(key)) return;
+      seen.add(key);
+      uniq.push(s);
+    });
+
+    rescue.innerHTML = `
+      <div class="empty-rescue-label">جرّب من مكتبتك</div>
+      <div class="empty-rescue-chips">
+        ${uniq
+          .slice(0, 8)
+          .map((s) => {
+            if (s.chip) {
+              return `<button type="button" class="chip" data-rescue-chip="${s.chip}">${s.label}</button>`;
+            }
+            return `<button type="button" class="refine-chip" data-rescue-q="${escapeXml(s.query)}">${escapeXml(s.label)}</button>`;
+          })
+          .join("")}
+      </div>`;
+
+    $$("[data-rescue-q]", rescue).forEach((btn) => {
+      btn.addEventListener("click", () => {
+        state.chip = "all";
+        state.refine.premium = null;
+        renderChips();
+        applySearch(btn.dataset.rescueQ, { hide: true });
+      });
+    });
+    $$("[data-rescue-chip]", rescue).forEach((btn) => {
+      btn.addEventListener("click", () => {
+        state.query = "";
+        state.refine.premium = null;
+        $("#search-input").value = "";
+        updateClearBtn();
+        syncUrlQuery();
+        state.chip = btn.dataset.rescueChip;
+        renderChips();
+        renderRefineChips();
+        renderLibrary();
+      });
+    });
+  }
+
   function renderLibrary() {
     const grid = $("#library-grid");
     const end = $("#library-end");
@@ -743,11 +1507,13 @@
     }
 
     const list = filtered();
+    renderRefineChips();
     if (!list.length) {
       grid.className = "masonry";
       grid.innerHTML = "";
       empty.hidden = false;
       end.hidden = true;
+      renderEmptyRescue();
       return;
     }
     empty.hidden = true;
@@ -807,6 +1573,7 @@
 
   function openDetail(id) {
     state.detailId = id;
+    hideSuggestions();
     $("#app").classList.add("detail-open");
     $("#screen-library").classList.remove("active");
     $("#screen-saved").classList.remove("active");
@@ -841,7 +1608,7 @@
       <span class="meta-pill brand">${TYPES[asset.type].label}</span>
       <span class="meta-pill">${asset.format}</span>
       <span class="meta-pill">${asset.aspect}</span>
-      ${asset.isPremium ? `<span class="meta-pill premium">${CROWN_SVG} مدفوع</span>` : ""}
+      ${asset.isPremium ? `<span class="meta-pill premium">${CROWN_SVG} مدفوع</span>` : `<span class="meta-pill">مجاني</span>`}
       ${asset.isLocked ? `<span class="meta-pill">${LOCK_SVG} مقفل</span>` : ""}
     `;
     $("#detail-stats", root).textContent =
@@ -852,13 +1619,10 @@
       .join("");
     $$("[data-tag]", root).forEach((el) => {
       el.addEventListener("click", () => {
-        state.query = el.dataset.tag;
-        $("#search-input").value = state.query;
-        updateClearBtn();
         closeDetail();
         state.tab = "library";
         switchTab("library");
-        renderLibrary();
+        applySearch(el.dataset.tag, { hide: true });
       });
     });
 
@@ -905,6 +1669,7 @@
       btn.addEventListener("click", () => {
         state.chip = btn.dataset.chip;
         renderChips();
+        renderRefineChips();
         renderLibrary();
       });
     });
@@ -956,6 +1721,14 @@
     const savedTheme = localStorage.getItem("da-theme");
     if (savedTheme) document.documentElement.setAttribute("data-theme", savedTheme);
 
+    const urlQ = readUrlQuery();
+    if (urlQ) {
+      state.query = urlQ;
+      const searchEl = $("#search-input");
+      if (searchEl) searchEl.value = urlQ;
+      updateClearBtn();
+    }
+
     renderChips();
 
     state.loadState = "loading";
@@ -966,24 +1739,55 @@
     }, 420);
 
     const search = $("#search-input");
-    let debounce;
     search.addEventListener("input", () => {
       state.query = search.value;
       updateClearBtn();
-      clearTimeout(debounce);
-      debounce = setTimeout(renderLibrary, 300);
+      state.suggestOpen = true;
+      renderSuggestions();
+      clearTimeout(state.searchDebounce);
+      state.searchDebounce = setTimeout(() => {
+        state.refine.premium = null;
+        syncUrlQuery();
+        renderLibrary();
+      }, 250);
     });
+    search.addEventListener("focus", () => {
+      state.suggestOpen = true;
+      renderSuggestions();
+    });
+    search.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        hideSuggestions();
+        search.blur();
+      } else if (e.key === "Enter") {
+        hideSuggestions();
+        clearTimeout(state.searchDebounce);
+        syncUrlQuery();
+        renderLibrary();
+      }
+    });
+
     $("#search-clear").addEventListener("click", () => {
       search.value = "";
       state.query = "";
+      state.refine.premium = null;
       updateClearBtn();
+      syncUrlQuery();
+      hideSuggestions();
+      renderRefineChips();
       renderLibrary();
       search.focus();
+    });
+
+    document.addEventListener("click", (e) => {
+      const wrap = e.target.closest(".search-wrap");
+      if (!wrap) hideSuggestions();
     });
 
     $$(".tab-bar button").forEach((btn) => {
       btn.addEventListener("click", () => {
         if (state.detailId) closeDetail();
+        hideSuggestions();
         switchTab(btn.dataset.tab);
         renderAll();
       });

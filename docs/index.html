@@ -28,15 +28,18 @@
                 <circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/>
               </svg>
               <input id="search-input" type="search" enterkeyhint="search" autocomplete="off"
-                placeholder="ابحث عن صور، ستيكرات، ملحقات…" aria-label="بحث" />
+                placeholder="ابحث عن صور، ستيكرات، ملحقات…" aria-label="بحث"
+                aria-autocomplete="list" aria-controls="search-suggest" aria-expanded="false" />
               <button type="button" class="search-clear" id="search-clear" aria-label="مسح البحث" hidden>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d="M12 10.59L7.41 6 6 7.41 10.59 12 6 16.59 7.41 18 12 13.41 16.59 18 18 16.59 13.41 12 18 7.41 16.59 6 12 10.59z"/>
                 </svg>
               </button>
             </div>
+            <div id="search-suggest" class="search-suggest" hidden role="listbox" aria-label="اقتراحات البحث"></div>
           </div>
           <div class="chips" id="chips" role="tablist" aria-label="تصفية النوع"></div>
+          <div class="refine-chips" id="refine-chips" hidden role="toolbar" aria-label="تصفية ذكية"></div>
         </header>
 
         <div class="masonry" id="library-grid"></div>
@@ -46,8 +49,9 @@
               <circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/>
             </svg>
           </div>
-          <h3>لا نتائج</h3>
-          <p class="t-footnote">جرّب كلمات أخرى أو غيّر التصنيف</p>
+          <h3>لا نتائج في مكتبتك</h3>
+          <p class="t-footnote" id="empty-message">جرّب كلمات أخرى أو تصفّح اقتراحات من الكتالوج</p>
+          <div id="empty-rescue" class="empty-rescue"></div>
         </div>
         <p id="library-end" class="end-caption" hidden>وصلت إلى نهاية القائمة</p>
       </div>
